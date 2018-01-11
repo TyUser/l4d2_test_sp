@@ -1,0 +1,2892 @@
+Left 4 dead 2 events
+
+    Refer back to Game Events (Source) for more events. 
+
+Contents
+
+    1 player_death
+    2 player_hurt
+    3 player_team
+    4 player_bot_replace
+    5 bot_player_replace
+    6 player_afk
+    7 weapon_fire
+    8 weapon_fire_on_empty
+    9 weapon_reload
+    10 weapon_zoom
+    11 ability_use
+    12 ammo_pickup
+    13 item_pickup
+    14 grenade_bounce
+    15 hegrenade_detonate
+    16 bullet_impact
+    17 player_footstep
+    18 player_jump
+    19 player_blind
+    20 player_falldamage
+    21 player_ledge_grab
+    22 player_ledge_release
+    23 door_moving
+    24 door_open
+    25 door_close
+    26 door_unlocked
+    27 rescue_door_open
+    28 waiting_checkpoint_door_used
+    29 waiting_door_used_versus
+    30 waiting_checkpoint_button_used
+    31 success_checkpoint_button_used
+    32 round_freeze_end
+    33 round_start_pre_entity
+    34 round_start_post_nav
+    35 nav_blocked
+    36 nav_generate
+    37 round_end_message
+    38 round_end
+    39 vote_ended
+    40 vote_started
+    41 vote_changed
+    42 vote_passed
+    43 vote_failed
+    44 vote_cast_yes
+    45 vote_cast_no
+    46 infected_hurt
+    47 infected_death
+    48 hostname_changed
+    49 difficulty_changed
+    50 finale_start
+    51 finale_rush
+    52 finale_escape_start
+    53 finale_vehicle_incoming
+    54 finale_vehicle_ready
+    55 finale_vehicle_leaving
+    56 finale_win
+    57 mission_lost
+    58 finale_radio_start
+    59 finale_radio_damaged
+    60 final_reportscreen
+    61 map_transition
+    62 player_transitioned
+    63 heal_begin
+    64 heal_success
+    65 heal_end
+    66 heal_interrupted
+    67 ammo_pack_used
+    68 give_weapon
+    69 pills_used
+    70 pills_used_fail
+    71 ammo_pack_used_fail_no_weapon
+    72 ammo_pack_used_fail_full
+    73 ammo_pack_used_fail_doesnt_use_ammo
+    74 ammo_pile_weapon_cant_use_ammo
+    75 defibrillator_begin
+    76 defibrillator_used
+    77 defibrillator_used_fail
+    78 defibrillator_interrupted
+    79 upgrade_pack_begin
+    80 upgrade_pack_used
+    81 upgrade_item_already_used
+    82 upgrade_failed_no_primary
+    83 dead_survivor_visible
+    84 adrenaline_used
+    85 revive_begin
+    86 revive_success
+    87 revive_end
+    88 drag_begin
+    89 drag_end
+    90 player_incapacitated
+    91 player_incapacitated_start
+    92 player_entered_start_area
+    93 player_first_spawn
+    94 player_left_start_area
+    95 player_entered_checkpoint
+    96 player_left_checkpoint
+    97 player_shoved
+    98 entity_shoved
+    99 player_jump_apex
+    100 player_blocked
+    101 player_now_it
+    102 player_no_longer_it
+    103 witch_harasser_set
+    104 witch_spawn
+    105 witch_killed
+    106 tank_spawn
+    107 melee_kill
+    108 area_cleared
+    109 award_earned
+    110 tongue_grab
+    111 tongue_broke_bent
+    112 tongue_broke_victim_died
+    113 tongue_release
+    114 choke_start
+    115 choke_end
+    116 choke_stopped
+    117 tongue_pull_stopped
+    118 lunge_shove
+    119 lunge_pounce
+    120 pounce_end
+    121 pounce_stopped
+    122 fatal_vomit
+    123 survivor_call_for_help
+    124 survivor_rescued
+    125 survivor_rescue_abandoned
+    126 relocated
+    127 respawning
+    128 tank_frustrated
+    129 weapon_given
+    130 weapon_drop
+    131 break_breakable
+    132 achievement_earned
+    133 spec_target_updated
+    134 spawner_give_item
+    135 create_panic_event
+    136 explain_pills
+    137 explain_weapons
+    138 entity_visible
+    139 weapon_spawn_visible
+    140 boomer_near
+    141 explain_pre_radio
+    142 started_pre_radio
+    143 explain_radio
+    144 explain_gas_truck
+    145 explain_panic_button
+    146 explain_elevator_button
+    147 explain_lift_button
+    148 explain_church_door
+    149 explain_emergency_door
+    150 explain_crane
+    151 explain_bridge
+    152 explain_gas_can_panic
+    153 explain_van_panic
+    154 explain_mainstreet
+    155 explain_train_lever
+    156 explain_disturbance
+    157 explain_scavenge_goal
+    158 explain_scavenge_leave_area
+    159 begin_scavenge_overtime
+    160 scavenge_round_start
+    161 scavenge_round_halftime
+    162 scavenge_round_finished
+    163 scavenge_score_tied
+    164 versus_round_start
+    165 gascan_pour_blocked
+    166 gascan_pour_completed
+    167 gascan_dropped
+    168 gascan_pour_interrupted
+    169 scavenge_match_finished
+    170 versus_match_finished
+    171 use_target
+    172 player_use
+    173 friendly_fire
+    174 gameinstructor_draw
+    175 gameinstructor_nodraw
+    176 request_weapon_stats
+    177 player_talking_state
+    178 weapon_pickup
+    179 hunter_punched
+    180 hunter_headshot
+    181 zombie_ignited
+    182 boomer_exploded
+    183 non_pistol_fired
+    184 weapon_fire_at_40
+    185 total_ammo_below_40
+    186 player_hurt_concise
+    187 tank_killed
+    188 achievement_write_failed
+    189 ghost_spawn_time
+    190 survival_at_30min
+    191 explain_pre_drawbridge
+    192 explain_drawbridge
+    193 explain_perimeter
+    194 explain_deactivate_alarm
+    195 explain_impound_lot
+    196 explain_decon
+    197 explain_mall_window
+    198 explain_mall_alarm
+    199 explain_coaster
+    200 explain_coaster_stop
+    201 explain_decon_wait
+    202 gauntlet_finale_start
+    203 explain_float
+    204 explain_ferry_button
+    205 explain_hatch_button
+    206 explain_shack_button
+    207 upgrade_incendiary_ammo
+    208 upgrade_explosive_ammo
+    209 receive_upgrade
+    210 explain_vehicle_arrival
+    211 mounted_gun_start
+    212 mounted_gun_overheated
+    213 explain_burger_sign
+    214 explain_carousel_button
+    215 explain_carousel_destination
+    216 explain_stage_lighting
+    217 explain_stage_finale_start
+    218 explain_stage_survival_start
+    219 ability_out_of_range
+    220 explain_stage_pyrotechnics
+    221 explain_c3m4_radio1
+    222 explain_c3m4_radio2
+    223 explain_gates_are_open
+    224 explain_c2m4_ticketbooth
+    225 explain_c3m4_rescue
+    226 explain_hotel_elevator_doors
+    227 explain_gun_shop_tanker
+    228 explain_gun_shop
+    229 explain_store_alarm
+    230 explain_store_item
+    231 explain_store_item_stop
+    232 explain_survival_generic
+    233 explain_survival_alarm
+    234 explain_survival_radio
+    235 explain_survival_carousel
+    236 explain_return_item
+    237 explain_save_items
+    238 spit_burst
+    239 entered_spit
+    240 temp_c4m1_getgas
+    241 temp_c4m3_return_to_boat
+    242 explain_c1m4_finale
+    243 c1m4_scavenge_instructions
+    244 punched_clown
+    245 charger_killed
+    246 spitter_killed
+    247 jockey_ride
+    248 jockey_ride_end
+    249 jockey_killed
+    250 non_melee_fired
+    251 infected_decapitated
+    252 upgrade_pack_added
+    253 vomit_bomb_tank
+    254 triggered_car_alarm
+    255 panic_event_finished
+    256 charger_charge_start
+    257 charger_charge_end
+    258 charger_carry_start
+    259 charger_carry_end
+    260 charger_impact
+    261 charger_pummel_start
+    262 charger_pummel_end
+    263 strongman_bell_knocked_off
+    264 molotov_thrown
+    265 gas_can_forced_drop
+    266 explain_need_gnome_to_continue
+    267 explain_survivor_glows_disabled
+    268 explain_item_glows_disabled
+    269 explain_rescue_disabled
+    270 explain_bodyshots_reduced
+    271 explain_witch_instant_kill
+    272 set_instructor_group_enabled
+    273 stashwhacker_game_won
+    274 versus_marker_reached
+    275 start_score_animation
+    276 survival_round_start
+    277 scavenge_gas_can_destroyed
+    278 explain_sewer_gate
+    279 explain_sewer_run
+    280 explain_c6m3_finale
+    281 finale_bridge_lowering
+    282 m60_streak_ended
+    283 chair_charged
+    284 song_played
+    285 foot_locker_opened
+
+player_death
+
+Note: a game event, name may be 32 charaters long; this extents the original player_death by a new fields
+Name: 	player_death
+Structure: 	
+short 	userid 	user ID who died
+long 	entityid 	entity ID who died, userid should be used first, to get the dead Player. Otherwise, it is not a player, so use this.
+short 	attacker 	user ID who killed
+string 	attackername 	What type of zombie, so we don't have zombie names
+long 	attackerentid 	if killer not a player, the entindex of who killed. Again, use attacker first
+string 	weapon 	weapon name killer used
+bool 	headshot 	signals a headshot
+bool 	attackerisbot 	is the attacker a bot
+string 	victimname 	What type of zombie, so we don't have zombie names
+bool 	victimisbot 	is the victim a bot
+bool 	abort 	did the victim abort
+long 	type 	damage type
+float 	victim_x 	
+float 	victim_y 	
+float 	victim_z 	
+
+
+player_hurt
+
+Note: Registers all playable classes (Hunter, Smoker, Boomer, Tank, Survivors). See infected_hurt for Witch and Common Infected
+Name: 	player_hurt
+Structure: 	
+1 	local 	Not networked
+short 	userid 	user ID who was hurt
+short 	attacker 	user id who attacked
+long 	attackerentid 	entity id who attacked, if attacker not a player, and userid therefore invalid
+short 	health 	remaining health points
+byte 	armor 	remaining armor points
+string 	weapon 	weapon name attacker used, if not the world
+short 	dmg_health 	damage done to health
+byte 	dmg_armor 	damage done to armor
+byte 	hitgroup 	hitgroup that was damaged
+long 	type 	damage type
+
+
+player_team
+
+Note: player change his team
+Name: 	player_team
+Structure: 	
+short 	userid 	user ID on server
+byte 	team 	team id
+byte 	oldteam 	old team id
+bool 	disconnect 	team change because player disconnects
+string 	name 	
+bool 	isbot 	
+
+
+player_bot_replace
+
+Note: Bot replaced a player
+Name: 	player_bot_replace
+Structure: 	
+short 	player 	user ID of the player
+short 	bot 	user ID of the bot
+
+
+bot_player_replace
+
+Note: Player replaced a bot
+Name: 	bot_player_replace
+Structure: 	
+short 	bot 	user ID of the bot
+short 	player 	user ID of the player
+
+
+player_afk
+
+Note:
+Name: 	player_afk
+Structure: 	
+short 	player 	user ID of the player
+
+
+weapon_fire
+
+Note:
+Name: 	weapon_fire
+Structure: 	
+1 	local 	don't network this, its way too spammy
+short 	userid 	
+string 	weapon 	used weapon name
+short 	weaponid 	used weapon ID
+short 	count 	number of bullets
+
+
+weapon_fire_on_empty
+
+Note:
+Name: 	weapon_fire_on_empty
+Structure: 	
+1 	local 	don't network this, its way too spammy
+short 	userid 	
+string 	weapon 	weapon name used
+short 	count 	number of bullets
+
+
+weapon_reload
+
+Note:
+Name: 	weapon_reload
+Structure: 	
+short 	userid 	
+bool 	manual 	player manually started the reload
+
+
+weapon_zoom
+
+Note:
+Name: 	weapon_zoom
+Structure: 	
+short 	userid 	
+
+
+ability_use
+
+Note:
+Called: When an infected uses their ability
+Issues: Doesn't fire for jockey
+Name: 	ability_use
+Structure: 	
+short 	userid 	
+string 	ability 	Classname of ability. Possible values:
+
+    ability_lunge
+    ability_toungue
+    ability_vomit
+    ability_charge
+    ability_spit
+
+for the Hunter, Smoker, Boomer, Charger, and Spitter respectively.
+short 	context 	enum of the way it was used (different for each ability)
+
+
+ammo_pickup
+
+Note:
+Name: 	ammo_pickup
+Structure: 	
+short 	userid 	The player who got some ammo from a weapon_ammo_spawner
+
+
+item_pickup
+
+Note:
+Name: 	item_pickup
+Structure: 	
+short 	userid 	
+string 	item 	either a weapon such as 'tmp' or 'hegrenade', or an item such as 'nvgs'
+
+
+grenade_bounce
+
+Note:
+Name: 	grenade_bounce
+Structure: 	
+short 	userid 	
+
+
+hegrenade_detonate
+
+Note:
+Name: 	hegrenade_detonate
+Structure: 	
+short 	userid 	
+
+
+bullet_impact
+
+Note:
+Name: 	bullet_impact
+Structure: 	
+short 	userid 	
+float 	x 	
+float 	y 	
+float 	z 	
+
+
+player_footstep
+
+Note:
+Name: 	player_footstep
+Structure: 	
+short 	userid 	
+
+
+player_jump
+
+Note:
+Name: 	player_jump
+Structure: 	
+short 	userid 	
+
+
+player_blind
+
+Note:
+Name: 	player_blind
+Structure: 	
+short 	userid 	
+
+
+player_falldamage
+
+Note:
+Name: 	player_falldamage
+Structure: 	
+short 	userid 	Who got hurt
+float 	damage 	for how much
+short 	causer 	Who caused them to do so (if anyone)
+
+
+player_ledge_grab
+
+Note:
+Name: 	player_ledge_grab
+Structure: 	
+short 	userid 	Who grabbed the ledge
+short 	causer 	Who caused them to do so (if anyone)
+
+
+player_ledge_release
+
+Note:
+Name: 	player_ledge_release
+Structure: 	
+short 	userid 	person who released from the ledge
+
+
+door_moving
+
+Note:
+Name: 	door_moving
+Structure: 	
+long 	entindex 	
+short 	userid 	
+
+
+door_open
+
+Note:
+Name: 	door_open
+Structure: 	
+short 	userid 	Who opened the door
+bool 	checkpoint 	Is the door a checkpoint door
+bool 	closed 	Was the door closed when it started opening?
+
+
+door_close
+
+Note:
+Name: 	door_close
+Structure: 	
+short 	userid 	Who closed the door
+bool 	checkpoint 	Is the door a checkpoint door
+
+
+door_unlocked
+
+Note:
+Name: 	door_unlocked
+Structure: 	
+short 	userid 	Who opened the door
+bool 	checkpoint 	Is the door a checkpoint door
+
+
+rescue_door_open
+
+Note:
+Name: 	rescue_door_open
+Structure: 	
+short 	userid 	Who opened the door
+long 	entindex 	door that opened
+
+
+waiting_checkpoint_door_used
+
+Note: Someone tried to open a checkpoint door that is locked till everyone loads in
+Name: 	waiting_checkpoint_door_used
+Structure: 	
+short 	userid 	player who tried to open it
+long 	entindex 	door that was used
+
+
+waiting_door_used_versus
+
+Note: Someone tried to open a checkpoint door that is locked till everyone loads in
+Name: 	waiting_door_used_versus
+Structure: 	
+short 	userid 	player who tried to open it
+long 	entindex 	door that was used
+
+
+waiting_checkpoint_button_used
+
+Note: Someone tried to push a button that's locked until everyone is gathered
+Name: 	waiting_checkpoint_button_used
+Structure: 	
+short 	userid 	player who tried to open it
+
+
+success_checkpoint_button_used
+
+Note: Someone pushed a button that's locked until everyone is gathered
+Name: 	success_checkpoint_button_used
+Structure: 	
+short 	userid 	player who openned it
+
+
+round_freeze_end
+
+Note:
+Name: 	round_freeze_end
+Structure: 	
+None 	None 	
+
+
+round_start_pre_entity
+
+Note:
+Name: 	round_start_pre_entity
+Structure: 	
+None 	None 	
+
+
+round_start_post_nav
+
+Note:
+Name: 	round_start_post_nav
+Structure: 	
+None 	None 	
+
+
+nav_blocked
+
+Note:
+Name: 	nav_blocked
+Structure: 	
+long 	area 	
+bool 	blocked 	
+
+
+nav_generate
+
+Note:
+Name: 	nav_generate
+Structure: 	
+None 	None 	
+
+
+round_end_message
+
+Note:
+Name: 	round_end_message
+Structure: 	
+byte 	winner 	winner team/user i
+byte 	reason 	reson why team won
+string 	message 	end round message
+
+
+round_end
+
+Note:
+Name: 	round_end
+Structure: 	
+byte 	winner 	winner team/user i
+byte 	reason 	reson why team won
+string 	message 	end round message
+float 	time 	
+
+
+vote_ended
+
+Note:
+Name: 	vote_ended
+Structure: 	
+None 	None 	
+
+
+vote_started
+
+Note:
+Name: 	vote_started
+Structure: 	
+string 	issue 	
+string 	param1 	
+string 	votedata 	
+byte 	team 	
+long 	initiator 	entity id of the player who initiated the vote
+1 	reliable 	this event is reliable
+
+
+vote_changed
+
+Note:
+Name: 	vote_changed
+Structure: 	
+byte 	yesVotes 	
+byte 	noVotes 	
+byte 	potentialVotes 	
+
+
+vote_passed
+
+Note:
+Name: 	vote_passed
+Structure: 	
+string 	details 	
+string 	param1 	
+byte 	team 	
+1 	reliable 	this event is reliable
+
+
+vote_failed
+
+Note:
+Name: 	vote_failed
+Structure: 	
+byte 	team 	
+1 	reliable 	this event is reliable
+
+
+vote_cast_yes
+
+Note:
+Name: 	vote_cast_yes
+Structure: 	
+byte 	team 	
+long 	entityid 	entity id of the voter
+
+
+vote_cast_no
+
+Note:
+Name: 	vote_cast_no
+Structure: 	
+byte 	team 	
+long 	entityid 	entity id of the voter
+
+
+infected_hurt
+
+Note: Registers for non-playable classes (Common Infected, Witch). See player_hurt for other playable classes
+Name: 	infected_hurt
+Structure: 	
+1 	local 	don't network this, its way too spammy
+short 	attacker 	player userid who attacked
+long 	entityid 	entity id of infected
+byte 	hitgroup 	hitgroup that was damaged
+short 	amount 	how much damage was done
+long 	type 	damage type
+
+
+infected_death
+
+Note:
+Name: 	infected_death
+Structure: 	
+short 	attacker 	user ID who killed
+short 	infected_id 	ID of the infected that died
+short 	gender 	gender (type) of the infected
+short 	weapon_id 	ID of the weapon used
+bool 	headshot 	signals a headshot
+bool 	minigun 	signals a minigun kill
+bool 	blast 	signals a death from blast damage
+bool 	submerged 	indicates the infected was submerged
+
+
+hostname_changed
+
+Note:
+Name: 	hostname_changed
+Structure: 	
+string 	hostname 	
+
+
+difficulty_changed
+
+Note:
+Name: 	difficulty_changed
+Structure: 	
+short 	newDifficulty 	
+short 	oldDifficulty 	
+
+
+finale_start
+
+Note:
+Name: 	finale_start
+Structure: 	
+short 	rushes 	
+
+
+finale_rush
+
+Note:
+Name: 	finale_rush
+Structure: 	
+None 	None 	
+
+
+finale_escape_start
+
+Note:
+Name: 	finale_escape_start
+Structure: 	
+None 	None 	
+
+
+finale_vehicle_incoming
+
+Note:
+Name: 	finale_vehicle_incoming
+Structure: 	
+string 	campaign 	
+
+
+finale_vehicle_ready
+
+Note:
+Name: 	finale_vehicle_ready
+Structure: 	
+string 	campaign 	
+
+
+finale_vehicle_leaving
+
+Note:
+Name: 	finale_vehicle_leaving
+Structure: 	
+short 	survivorcount 	number of survivors that made it out
+
+
+finale_win
+
+Note:
+Name: 	finale_win
+Structure: 	
+string 	map_name 	
+short 	difficulty 	
+
+
+mission_lost
+
+Note: As in, the survivor team failed. Opposite of finale_win, but not necessarily during the finale.
+Name: 	mission_lost
+Structure: 	
+None 	None 	
+
+
+finale_radio_start
+
+Note:
+Name: 	finale_radio_start
+Structure: 	
+short 	health 	
+
+
+finale_radio_damaged
+
+Note:
+Name: 	finale_radio_damaged
+Structure: 	
+short 	health 	
+
+
+final_reportscreen
+
+Note: Right before the final report screen comes up, let awards possibly fire
+Name: 	final_reportscreen
+Structure: 	
+None 	None 	
+
+
+map_transition
+
+Note: When campaign cinematics start
+Name: 	map_transition
+Structure: 	
+None 	None 	
+
+
+player_transitioned
+
+Note: When campaign cinematics end and player is transitioned to first person view
+Name: 	player_transitioned
+Structure: 	
+short 	userid 	the person that just finished transitioning
+
+
+heal_begin
+
+Note:
+Name: 	heal_begin
+Structure: 	
+short 	userid 	person doing the healing
+short 	subject 	person being healed
+
+
+heal_success
+
+Note:
+Name: 	heal_success
+Structure: 	
+short 	userid 	person doing the healing
+short 	subject 	person being healed
+short 	health_restored 	amount of health restored
+
+
+heal_end
+
+Note:
+Issues: subject is broken for this event, it always appears to be the player doing the healing
+Name: 	heal_end
+Structure: 	
+short 	userid 	person doing the healing
+short 	subject 	person being healed
+
+
+heal_interrupted
+
+Note:
+Name: 	heal_interrupted
+Structure: 	
+short 	userid 	person who was being healed, but moved.
+short 	subject 	person being healed
+
+
+ammo_pack_used
+
+Note:
+Name: 	ammo_pack_used
+Structure: 	
+short 	userid 	person giving the ammo
+short 	subject 	person receiving ammo
+
+
+give_weapon
+
+Note:
+Name: 	give_weapon
+Structure: 	
+short 	userid 	The giver of the weapon
+short 	recipient 	The recipient of the weapon
+short 	weapon 	The ID of the weapon given
+
+
+pills_used
+
+Note:
+Name: 	pills_used
+Structure: 	
+short 	userid 	person who had the pills
+short 	subject 	person swallowing the pills
+
+
+pills_used_fail
+
+Note:
+Name: 	pills_used_fail
+Structure: 	
+short 	userid 	person who tried to use the pills
+
+
+ammo_pack_used_fail_no_weapon
+
+Note:
+Name: 	ammo_pack_used_fail_no_weapon
+Structure: 	
+short 	userid 	person who tried to use the ammo pack
+short 	subject 	person it failed to help
+
+
+ammo_pack_used_fail_full
+
+Note:
+Name: 	ammo_pack_used_fail_full
+Structure: 	
+short 	userid 	person who tried to use the ammo pack
+short 	subject 	person it failed to help
+
+
+ammo_pack_used_fail_doesnt_use_ammo
+
+Note:
+Name: 	ammo_pack_used_fail_doesnt_use_ammo
+Structure: 	
+short 	userid 	person who tried to use the ammo pack
+short 	subject 	person it failed to help
+
+
+ammo_pile_weapon_cant_use_ammo
+
+Note:
+Name: 	ammo_pile_weapon_cant_use_ammo
+Structure: 	
+short 	userid 	person who tried to use an ammo pile with a grenade launcher
+
+
+defibrillator_begin
+
+Note:
+Name: 	defibrillator_begin
+Structure: 	
+short 	userid 	person who is defibrillating.
+short 	subject 	person being revived
+
+
+defibrillator_used
+
+Note:
+Name: 	defibrillator_used
+Structure: 	
+short 	userid 	person who used the defibrillator
+short 	subject 	person it helped
+
+
+defibrillator_used_fail
+
+Note:
+Name: 	defibrillator_used_fail
+Structure: 	
+short 	userid 	person who tried to use the defibrillator
+short 	subject 	person it failed to help
+
+
+defibrillator_interrupted
+
+Note:
+Name: 	defibrillator_interrupted
+Structure: 	
+short 	userid 	person who was defibrillating, but moved.
+short 	subject 	person being revived
+
+
+upgrade_pack_begin
+
+Note:
+Name: 	upgrade_pack_begin
+Structure: 	
+short 	userid 	person who is deploying the pack
+
+
+upgrade_pack_used
+
+Note:
+Name: 	upgrade_pack_used
+Structure: 	
+short 	upgradeid 	
+short 	userid 	person who is deploying the pack
+
+
+upgrade_item_already_used
+
+Note:
+Name: 	upgrade_item_already_used
+Structure: 	
+short 	userid 	person who tried to use an ammo upgrade twice
+string 	upgradeclass 	classname of the upgrade we tried to use
+
+
+upgrade_failed_no_primary
+
+Note:
+Name: 	upgrade_failed_no_primary
+Structure: 	
+short 	userid 	person who tried to use an upgrade without having a primary weapon
+string 	upgrade 	name of the upgrade we tried to use, eg "INCENDIARY_AMMO"
+
+
+dead_survivor_visible
+
+Note:
+Name: 	dead_survivor_visible
+Structure: 	
+short 	userid 	The player who sees the entity
+long 	subject 	Entindex of the entity they see
+short 	deadplayer 	user id of the dead player represented
+
+
+adrenaline_used
+
+Note:
+Name: 	adrenaline_used
+Structure: 	
+short 	userid 	person who had and used the adrenaline
+
+
+revive_begin
+
+Note:
+Name: 	revive_begin
+Structure: 	
+short 	userid 	person doing the reviving
+short 	subject 	person being revived
+
+
+revive_success
+
+Note:
+Name: 	revive_success
+Structure: 	
+short 	userid 	person doing the reviving
+short 	subject 	person who was revived
+bool 	lastlife 	person revived will die if they fall again
+bool 	ledge_hang 	1 if person revived was ledge hanging
+
+
+revive_end
+
+Note:
+Name: 	revive_end
+Structure: 	
+short 	userid 	person doing the reviving
+short 	subject 	person being revived
+bool 	ledge_hang 	person is ledge hanging
+
+
+drag_begin
+
+Note:
+Name: 	drag_begin
+Structure: 	
+short 	userid 	person doing the dragging
+short 	subject 	person being dragged
+
+
+drag_end
+
+Note:
+Name: 	drag_end
+Structure: 	
+short 	userid 	person doing the dragging
+short 	subject 	person being dragged
+
+
+player_incapacitated
+
+Note: when a player becomes incapacitated. This is also called when a tank is killed.
+Name: 	player_incapacitated
+Structure: 	
+short 	userid 	person who became incapacitated
+short 	attacker 	user ID who made us incapacitated
+long 	attackerentid 	if attacker not player, entindex of who made us incapacitated
+string 	weapon 	weapon name attacker used
+long 	type 	damage type
+
+
+player_incapacitated_start
+
+Note: when a player is about to become incapacitated, so you can see his last living state
+Name: 	player_incapacitated_start
+Structure: 	
+short 	userid 	person who became incapacitated
+short 	attacker 	user ID who made us incapacitated
+long 	attackerentid 	if attacker not player, entindex of who made us incapacitated
+string 	weapon 	weapon name attacker used
+long 	type 	damage type
+
+
+player_entered_start_area
+
+Note: when a player spawns into the player start area
+Name: 	player_entered_start_area
+Structure: 	
+short 	userid 	person who entered
+
+
+player_first_spawn
+
+Note: when a player spawns for the first time in a given mission
+Name: 	player_first_spawn
+Structure: 	
+short 	userid 	person who spawned
+string 	map_name 	
+bool 	isbot 	
+
+
+Note: This Event doesnt exist anymore 1.10.2012
+
+player_left_start_area
+
+Note: when a player leaves the player start area
+Name: 	player_left_start_area
+Structure: 	
+short 	userid 	person who left
+
+
+player_entered_checkpoint
+
+Note: when a basecombatcharacter enters a checkpoint area
+Name: 	player_entered_checkpoint
+Structure: 	
+short 	userid 	player who entered
+long 	entityid 	If not a player, the entity index of the one entering
+long 	door 	Entindex of the checkpoint door the player entered to get here.
+long 	area 	
+string 	doorname 	name of the entity they see
+
+
+player_left_checkpoint
+
+Note: when a player leaves a checkpoint area
+Name: 	player_left_checkpoint
+Structure: 	
+short 	userid 	player who left
+long 	entityid 	If not a player, the entity index of the one exiting
+long 	area 	
+
+
+player_shoved
+
+Note:
+Name: 	player_shoved
+Structure: 	
+short 	userid 	player index who was shoved
+short 	attacker 	player index who attacked them
+
+
+entity_shoved
+
+Note:
+Name: 	entity_shoved
+Structure: 	
+short 	entityid 	the entity index of the one who was shoved
+short 	attacker 	player index who attacked them
+
+
+player_jump_apex
+
+Note:
+Name: 	player_jump_apex
+Structure: 	
+short 	userid 	player who jumped
+
+
+player_blocked
+
+Note:
+Name: 	player_blocked
+Structure: 	
+short 	userid 	player index who was trying to move
+short 	blocker 	player index who kept them from moving
+
+
+player_now_it
+
+Note:
+Name: 	player_now_it
+Structure: 	
+short 	userid 	Player who is now it
+short 	attacker 	player that did the it-ing
+bool 	exploded 	whether it was vomit or explosion
+bool 	infected 	is the vomit infectious
+bool 	by_boomer 	came from a boomer
+
+
+player_no_longer_it
+
+Note:
+Name: 	player_no_longer_it
+Structure: 	
+short 	userid 	Player who is now no longer it
+
+
+witch_harasser_set
+
+Note:
+Name: 	witch_harasser_set
+Structure: 	
+short 	userid 	Player who woke up the witch
+long 	witchid 	Entindex of witch woken up
+bool 	first 	First time the witch set a harasser
+
+
+witch_spawn
+
+Note:
+Name: 	witch_spawn
+Structure: 	
+long 	witchid 	Entindex of witch spawning right now.
+
+
+witch_killed
+
+Note:
+Name: 	witch_killed
+Structure: 	
+short 	userid 	Player who killed the witch
+long 	witchid 	Entindex of witch that was killed.
+bool 	oneshot 	TRUE if the Witch was killed with one shot
+
+
+tank_spawn
+
+Note:
+Name: 	tank_spawn
+Structure: 	
+short 	userid 	User ID of the tank spawning now
+long 	tankid 	Entindex of tank spawning right now.
+
+
+melee_kill
+
+Note:
+Name: 	melee_kill
+Structure: 	
+short 	userid 	Player who bashed the infected
+long 	entityid 	Entindex of infected what got killed
+bool 	ambush 	Infected was unaware when killed
+
+
+area_cleared
+
+Note:
+Name: 	area_cleared
+Structure: 	
+short 	userid 	person who cleared the area
+long 	area 	id of the cleared area
+
+
+award_earned
+
+Note:
+Name: 	award_earned
+Structure: 	
+short 	userid 	player who earned the award
+long 	entityid 	client likes ent id
+long 	subjectentid 	entity id of other party in the award, if any
+short 	award 	id of award earned
+
+
+tongue_grab
+
+Note:
+Name: 	tongue_grab
+Structure: 	
+short 	userid 	player who did the grabbing
+short 	victim 	player that got grabbed
+
+
+tongue_broke_bent
+
+Note:
+Name: 	tongue_broke_bent
+Structure: 	
+short 	userid 	Tongue owner
+
+
+tongue_broke_victim_died
+
+Note:
+Name: 	tongue_broke_victim_died
+Structure: 	
+short 	userid 	Tongue owner
+
+
+tongue_release
+
+Note: Fired in all cases where the tongue releases a victim, whether choked or not, etc.
+Name: 	tongue_release
+Structure: 	
+short 	userid 	The tongue owner
+short 	victim 	The (now released) victim
+long 	distance 	Distance the victim was dragged.
+
+
+choke_start
+
+Note:
+Name: 	choke_start
+Structure: 	
+short 	userid 	The choker
+short 	victim 	The person being choked
+
+
+choke_end
+
+Note:
+Name: 	choke_end
+Structure: 	
+short 	userid 	The choker
+short 	victim 	The person being choked
+
+
+choke_stopped
+
+Note:
+Name: 	choke_stopped
+Structure: 	
+short 	userid 	Who stopped it
+short 	victim 	And who was being choked
+short 	smoker 	The tongue owner
+short 	release_type 	How did it break?
+
+
+tongue_pull_stopped
+
+Note: Called when a smoker tongue is cleared on a dragging player. Includes cuts.
+Name: 	tongue_pull_stopped
+Structure: 	
+short 	userid 	Who stopped it
+short 	victim 	And who was being pulled
+short 	smoker 	The tongue owner
+short 	release_type 	How did it break?
+
+
+lunge_shove
+
+Note:
+Name: 	lunge_shove
+Structure: 	
+short 	userid 	player who did the lunging
+short 	victim 	player that got lunged
+
+
+lunge_pounce
+
+Note:
+Name: 	lunge_pounce
+Structure: 	
+short 	userid 	player who did the lunging
+short 	victim 	player that got lunged
+long 	distance 	Distance from pounce start to contact
+
+
+pounce_end
+
+Note:
+Name: 	pounce_end
+Structure: 	
+short 	userid 	Who stopped it
+short 	victim 	And who was being pounced
+
+
+pounce_stopped
+
+Note:
+Name: 	pounce_stopped
+Structure: 	
+short 	userid 	Who stopped it
+short 	victim 	And who was being pounced
+
+
+fatal_vomit
+
+Note:
+Name: 	fatal_vomit
+Structure: 	
+short 	userid 	Who vomited
+short 	victim 	And who was killed or incapped
+
+
+survivor_call_for_help
+
+Note:
+Name: 	survivor_call_for_help
+Structure: 	
+short 	userid 	The actual player entity who is awaiting rescue.
+long 	subject 	SurvivorRescue entity representing the player who needs to be rescued from the closet (used for position)
+
+
+survivor_rescued
+
+Note:
+Name: 	survivor_rescued
+Structure: 	
+short 	rescuer 	player that did the rescuing
+short 	victim 	the survivor being rescued
+
+
+survivor_rescue_abandoned
+
+Note:
+Name: 	survivor_rescue_abandoned
+Structure: 	
+None 	None 	
+
+
+relocated
+
+Note:
+Name: 	relocated
+Structure: 	
+short 	userid 	player who was relocated
+
+
+respawning
+
+Note:
+Name: 	respawning
+Structure: 	
+short 	userid 	player who started respawning
+
+
+tank_frustrated
+
+Note:
+Name: 	tank_frustrated
+Structure: 	
+short 	userid 	player who was culled
+
+
+weapon_given
+
+Note:
+Name: 	weapon_given
+Structure: 	
+short 	userid 	player who got the weapon
+short 	giver 	player that did the giving
+short 	weapon 	weapon id given
+short 	weaponentid 	weapon entity id
+
+
+weapon_drop
+
+Note:
+Called: When an item is removed from a survivor's inventory
+Related Events: Called before heal_success, defibrillator_used, upgrade_pack_used, but called after pills_used and adrenaline_used
+Name: 	weapon_drop
+Structure: 	
+short 	userid 	player who dropped the weapon
+string 	item 	either a weapon such as 'tmp' or 'hegrenade', or an item such as 'nvgs'
+short 	propid 	entindex of the dropped weapon
+
+
+break_breakable
+
+Note: Override from gameevents.res
+Name: 	break_breakable
+Structure: 	
+short 	userid 	userid of breaker
+long 	entindex 	entindex of thing breaking
+byte 	material 	BREAK_GLASS, BREAK_WOOD, etc
+bool 	hulkonly 	SF_BREAK_HULK_ONLY
+
+
+achievement_earned
+
+Note:
+Name: 	achievement_earned
+Structure: 	
+byte 	player 	entindex of the player
+short 	achievement 	achievement ID
+
+
+spec_target_updated
+
+Note:
+Name: 	spec_target_updated
+Structure: 	
+None 	None 	
+
+
+spawner_give_item
+
+Note: A spawner has given a player an item (weapon, pills, ammo, health kit, etc)
+Name: 	spawner_give_item
+Structure: 	
+short 	userid 	Item recipient
+string 	item 	Name of item given
+long 	spawner 	entindex of the spawner entity
+
+
+create_panic_event
+
+Note: A panic event has been created, though not necessarily started
+Name: 	create_panic_event
+Structure: 	
+short 	userid 	player who was started the panic
+
+
+explain_pills
+
+Note:
+Name: 	explain_pills
+Structure: 	
+long 	subject 	The weapon_pain_pills spawner that will be indicated
+
+
+explain_weapons
+
+Note:
+Name: 	explain_weapons
+Structure: 	
+long 	subject 	The weapon_pain_pills spawner that will be indicated
+
+
+entity_visible
+
+Note:
+Name: 	entity_visible
+Structure: 	
+short 	userid 	The player who sees the entity
+long 	subject 	Entindex of the entity they see
+string 	classname 	Classname of the entity they see
+string 	entityname 	name of the entity they see
+
+
+weapon_spawn_visible
+
+Note:
+Name: 	weapon_spawn_visible
+Structure: 	
+short 	userid 	The player who sees the entity
+long 	subject 	Entindex of the entity they see
+string 	weaponname 	weapon name, or "melee"
+string 	subtype 	melee weapon name
+
+
+boomer_near
+
+Note:
+Name: 	boomer_near
+Structure: 	
+short 	userid 	The boomer
+short 	victim 	The survivor whom the boomer has gotten very close to
+
+
+explain_pre_radio
+
+Note: explain the rescue radio will remind you to ready for the finale
+Name: 	explain_pre_radio
+Structure: 	
+short 	userid 	
+long 	subject 	
+
+
+started_pre_radio
+
+Note: explain the rescue radio will remind you to ready for the finale
+Name: 	started_pre_radio
+Structure: 	
+short 	userid 	
+long 	subject 	
+
+
+explain_radio
+
+Note: explain the rescue radio will start the finale
+Name: 	explain_radio
+Structure: 	
+short 	userid 	
+long 	subject 	
+
+
+explain_gas_truck
+
+Note: explain how pulling the lever on the gas truck will start the finale
+Name: 	explain_gas_truck
+Structure: 	
+short 	userid 	
+long 	subject 	The lever
+
+
+explain_panic_button
+
+Note: explain that pressing this button will start a panic event.
+Name: 	explain_panic_button
+Structure: 	
+short 	userid 	
+long 	subject 	The panic button
+
+
+explain_elevator_button
+
+Note: explain how to operate the hospital elevator button.
+Name: 	explain_elevator_button
+Structure: 	
+short 	userid 	
+long 	subject 	The button
+
+
+explain_lift_button
+
+Note: explain how to operate the lift button.
+Name: 	explain_lift_button
+Structure: 	
+short 	userid 	
+long 	subject 	The lift button
+
+
+explain_church_door
+
+Note: explain how to provoke the crazy church guy.
+Name: 	explain_church_door
+Structure: 	
+short 	userid 	
+long 	subject 	The saferoom door
+
+
+explain_emergency_door
+
+Note: explain how to open the emergency door.
+Name: 	explain_emergency_door
+Structure: 	
+short 	userid 	
+long 	subject 	The door
+
+
+explain_crane
+
+Note: explain how to lower the box on the crane.
+Name: 	explain_crane
+Structure: 	
+short 	userid 	
+long 	subject 	The lever/button
+
+
+explain_bridge
+
+Note: explain how to close the gates to make a bridge.
+Name: 	explain_bridge
+Structure: 	
+short 	userid 	
+long 	subject 	The button
+
+
+explain_gas_can_panic
+
+Note: explain how to shoot the gas can.
+Name: 	explain_gas_can_panic
+Structure: 	
+short 	userid 	
+long 	subject 	The gas can
+
+
+explain_van_panic
+
+Note: explain how to start the van.
+Name: 	explain_van_panic
+Structure: 	
+short 	userid 	
+long 	subject 	The van
+
+
+explain_mainstreet
+
+Note: explain how to lower the forklift
+Name: 	explain_mainstreet
+Structure: 	
+short 	userid 	
+long 	subject 	The forklift
+
+
+explain_train_lever
+
+Note: explain how to operate the train lever.
+Name: 	explain_train_lever
+Structure: 	
+short 	userid 	
+long 	subject 	The lever on box car
+
+
+explain_disturbance
+
+Note: explain that disturbances (car alarm) attract infected horde
+Name: 	explain_disturbance
+Structure: 	
+short 	userid 	
+long 	subject 	The source of disturbance
+
+
+explain_scavenge_goal
+
+Note: explain where to put the scavenge mode items
+Name: 	explain_scavenge_goal
+Structure: 	
+short 	userid 	
+long 	subject 	The collection device
+
+
+explain_scavenge_leave_area
+
+Note: explain that leaving the area, starts round
+Name: 	explain_scavenge_leave_area
+Structure: 	
+short 	userid 	
+long 	subject 	The entity
+
+
+begin_scavenge_overtime
+
+Note: enter overtime in a scavenge round
+Name: 	begin_scavenge_overtime
+Structure: 	
+
+
+scavenge_round_start
+
+Note: a scavenge round has begun
+Name: 	scavenge_round_start
+Structure: 	
+byte 	round 	round number, 1 based
+bool 	firsthalf 	start of the first half of the round
+
+
+scavenge_round_halftime
+
+Note: a scavenge round is in halftime
+Name: 	scavenge_round_halftime
+Structure: 	
+
+
+scavenge_round_finished
+
+Note: a scavenge round has ended
+Name: 	scavenge_round_finished
+Structure: 	
+
+
+scavenge_score_tied
+
+Note: a team just tied the score
+Name: 	scavenge_score_tied
+Structure: 	
+
+
+versus_round_start
+
+Note: a versus round has begun
+Name: 	versus_round_start
+Structure: 	
+
+
+gascan_pour_blocked
+
+Note: can't pour the gas, someone else already is
+Name: 	gascan_pour_blocked
+Structure: 	
+short 	userid 	
+
+
+gascan_pour_completed
+
+Note: player finished pouring a can
+Name: 	gascan_pour_completed
+Structure: 	
+short 	userid 	
+
+
+gascan_dropped
+
+Note:
+Name: 	gascan_dropped
+Structure: 	
+short 	userid 	
+
+
+gascan_pour_interrupted
+
+Note: we got interuppted pouring the gas can
+Name: 	gascan_pour_interrupted
+Structure: 	
+short 	userid 	person who interuppted us
+
+
+scavenge_match_finished
+
+Note:
+Name: 	scavenge_match_finished
+Structure: 	
+byte 	winners 	winner team
+
+
+versus_match_finished
+
+Note:
+Name: 	versus_match_finished
+Structure: 	
+byte 	winners 	winner team
+
+
+use_target
+
+Note: a new use target has been found
+Name: 	use_target
+Structure: 	
+long 	targetid 	Entindex of the use target
+string 	classname 	classname of the use target
+bool 	isprop 	is this a prop that can be carried
+
+
+player_use
+
+Note: a new use target has been found
+Called: When a Survivor presses +USE on a useable entity. i.e. Weapons, items, doors
+Related Events: If targetid is an item, item_pickup will be called prior to player_use
+Name: 	player_use
+Structure: 	
+short 	userid 	userid of user
+long 	targetid 	Entindex of the used entity
+
+
+friendly_fire
+
+Note:
+Name: 	friendly_fire
+Structure: 	
+short 	attacker 	player who fired the weapon
+short 	victim 	player who got shot
+short 	guilty 	player who was at fault
+long 	type 	damage type
+
+
+gameinstructor_draw
+
+Note:
+Name: 	gameinstructor_draw
+Structure: 	
+None 	None 	
+
+
+gameinstructor_nodraw
+
+Note:
+Name: 	gameinstructor_nodraw
+Structure: 	
+None 	None 	
+
+
+request_weapon_stats
+
+Note:
+Name: 	request_weapon_stats
+Structure: 	
+short 	userid 	userid of user requesting their stats
+
+
+player_talking_state
+
+Note:
+Name: 	player_talking_state
+Structure: 	
+byte 	player 	
+bool 	istalking 	
+
+
+weapon_pickup
+
+Note: client event for player has picked up a weapon
+Name: 	weapon_pickup
+Structure: 	
+byte 	context 	split screen message context
+byte 	weaponid 	
+byte 	weaponslot 	
+byte 	dropped_by_infected 	gender of the Infected that dropped the weapon
+
+
+hunter_punched
+
+Note:
+Name: 	hunter_punched
+Structure: 	
+short 	userid 	player who caused ignition
+long 	hunteruserid 	user ID of Hunter
+bool 	islunging 	TRUE if the Hunter was in the act of lunging
+
+
+hunter_headshot
+
+Note:
+Name: 	hunter_headshot
+Structure: 	
+short 	userid 	player who made the headshot
+long 	hunteruserid 	user ID of Hunter
+bool 	islunging 	TRUE if the Hunter was in the act of lunging
+
+
+zombie_ignited
+
+Note:
+Name: 	zombie_ignited
+Structure: 	
+short 	userid 	player who caused ignition
+short 	gender 	gender (type) of the infected
+long 	entityid 	entity ID of Tank
+string 	victimname 	"Witch", "Tank", "Hunter", "Smoker", or "Infected"
+bool 	fire_ammo 	true if incendiary ammo was used
+
+
+boomer_exploded
+
+Note:
+Name: 	boomer_exploded
+Structure: 	
+short 	userid 	Boomer that exploded
+short 	attacker 	player who caused the explosion
+bool 	splashedbile 	Exploding boomer splashed bile on Survivors
+
+
+non_pistol_fired
+
+Note:
+Name: 	non_pistol_fired
+Structure: 	
+short 	userid 	User that fired a non-pistol weapon
+
+
+weapon_fire_at_40
+
+Note: This is networked, special event for game instructor
+Name: 	weapon_fire_at_40
+Structure: 	
+short 	userid 	
+string 	weapon 	used weapon name
+short 	weaponid 	used weapon ID
+short 	count 	number of bullets
+
+
+total_ammo_below_40
+
+Note: sent for any ammo type, except those with max ammo 1, or infinite ammo, like pistols
+Name: 	total_ammo_below_40
+Structure: 	
+short 	userid 	
+
+
+player_hurt_concise
+
+Note: Abbreviated version of 'player_hurt' that is networked
+Name: 	player_hurt_concise
+Structure: 	
+short 	userid 	user ID who was hurt
+long 	attackerentid 	entity id who attacked, if attacker not a player, and userid therefore invalid
+long 	type 	damage type
+short 	dmg_health 	damage done to health
+
+
+tank_killed
+
+Note:
+Name: 	tank_killed
+Structure: 	
+short 	userid 	user ID of dead tank
+short 	attacker 	user id of killer
+bool 	solo 	TRUE if a player single-handedly killed the Tank
+bool 	melee_only 	TRUE if the tank was only killed by melee attacks (no blast, burn, or bullet damage)
+bool 	l4d1_only 	TRUE if l4d1 survivors inflicted damage and the l4d2 survivors did not)
+
+
+achievement_write_failed
+
+Note: Used for a notification message when an achievement fails to write
+Name: 	achievement_write_failed
+Structure: 	
+None 	None 	
+
+
+ghost_spawn_time
+
+Note: Used for clients to know how long until they become a ghost (and can spawn)
+Name: 	ghost_spawn_time
+Structure: 	
+short 	userid 	user ID of the player that is becoming a ghost
+short 	spawntime 	How long of a wait until player is a ghost
+
+
+survival_at_30min
+
+Note: Used to know when we elapse 30 minutes on a survival map
+Name: 	survival_at_30min
+Structure: 	
+
+
+explain_pre_drawbridge
+
+Note: Point out the button that will start the gauntlet finale.
+Name: 	explain_pre_drawbridge
+Structure: 	
+short 	userid 	
+long 	subject 	
+
+
+explain_drawbridge
+
+Note:
+Name: 	explain_drawbridge
+Structure: 	
+short 	userid 	
+long 	subject 	
+
+
+explain_perimeter
+
+Note:
+Name: 	explain_perimeter
+Structure: 	
+short 	userid 	
+long 	subject 	
+
+
+explain_deactivate_alarm
+
+Note:
+Name: 	explain_deactivate_alarm
+Structure: 	
+short 	userid 	
+long 	subject 	
+
+
+explain_impound_lot
+
+Note:
+Name: 	explain_impound_lot
+Structure: 	
+short 	userid 	
+long 	subject 	
+
+
+explain_decon
+
+Note:
+Name: 	explain_decon
+Structure: 	
+short 	userid 	
+long 	subject 	
+
+
+explain_mall_window
+
+Note:
+Name: 	explain_mall_window
+Structure: 	
+short 	userid 	
+long 	subject 	
+
+
+explain_mall_alarm
+
+Note:
+Name: 	explain_mall_alarm
+Structure: 	
+short 	userid 	
+long 	subject 	
+
+
+explain_coaster
+
+Note:
+Name: 	explain_coaster
+Structure: 	
+short 	userid 	
+long 	subject 	
+
+
+explain_coaster_stop
+
+Note:
+Name: 	explain_coaster_stop
+Structure: 	
+short 	userid 	
+long 	subject 	
+
+
+explain_decon_wait
+
+Note:
+Name: 	explain_decon_wait
+Structure: 	
+short 	userid 	
+long 	subject 	
+
+
+gauntlet_finale_start
+
+Note:
+Name: 	gauntlet_finale_start
+Structure: 	
+
+
+explain_float
+
+Note:
+Name: 	explain_float
+Structure: 	
+short 	userid 	
+long 	subject 	
+
+
+explain_ferry_button
+
+Note:
+Name: 	explain_ferry_button
+Structure: 	
+short 	userid 	
+long 	subject 	
+
+
+explain_hatch_button
+
+Note:
+Name: 	explain_hatch_button
+Structure: 	
+short 	userid 	
+long 	subject 	
+
+
+explain_shack_button
+
+Note:
+Name: 	explain_shack_button
+Structure: 	
+short 	userid 	
+long 	subject 	
+
+
+upgrade_incendiary_ammo
+
+Note:
+Name: 	upgrade_incendiary_ammo
+Structure: 	
+short 	userid 	
+
+
+upgrade_explosive_ammo
+
+Note:
+Name: 	upgrade_explosive_ammo
+Structure: 	
+short 	userid 	
+
+
+receive_upgrade
+
+Note:
+Name: 	receive_upgrade
+Structure: 	
+short 	userid 	
+string 	upgrade 	
+
+
+explain_vehicle_arrival
+
+Note:
+Name: 	explain_vehicle_arrival
+Structure: 	
+long 	subject 	
+
+
+mounted_gun_start
+
+Note:
+Name: 	mounted_gun_start
+Structure: 	
+short 	userid 	
+long 	subject 	
+
+
+mounted_gun_overheated
+
+Note:
+Name: 	mounted_gun_overheated
+Structure: 	
+short 	userid 	
+
+
+explain_burger_sign
+
+Note:
+Name: 	explain_burger_sign
+Structure: 	
+short 	userid 	
+long 	subject 	
+
+
+explain_carousel_button
+
+Note:
+Name: 	explain_carousel_button
+Structure: 	
+short 	userid 	
+long 	subject 	
+
+
+explain_carousel_destination
+
+Note:
+Name: 	explain_carousel_destination
+Structure: 	
+short 	userid 	
+long 	subject 	
+
+
+explain_stage_lighting
+
+Note:
+Name: 	explain_stage_lighting
+Structure: 	
+short 	userid 	
+long 	subject 	
+
+
+explain_stage_finale_start
+
+Note:
+Name: 	explain_stage_finale_start
+Structure: 	
+short 	userid 	
+long 	subject 	
+
+
+explain_stage_survival_start
+
+Note:
+Name: 	explain_stage_survival_start
+Structure: 	
+short 	userid 	
+long 	subject 	
+
+
+ability_out_of_range
+
+Note:
+Name: 	ability_out_of_range
+Structure: 	
+short 	userid 	
+string 	ability 	ability classname
+
+
+explain_stage_pyrotechnics
+
+Note:
+Name: 	explain_stage_pyrotechnics
+Structure: 	
+short 	userid 	
+long 	subject 	
+
+
+explain_c3m4_radio1
+
+Note:
+Name: 	explain_c3m4_radio1
+Structure: 	
+short 	userid 	
+long 	subject 	
+
+
+explain_c3m4_radio2
+
+Note:
+Name: 	explain_c3m4_radio2
+Structure: 	
+short 	userid 	
+long 	subject 	
+
+
+explain_gates_are_open
+
+Note:
+Name: 	explain_gates_are_open
+Structure: 	
+short 	userid 	
+long 	subject 	
+
+
+explain_c2m4_ticketbooth
+
+Note:
+Name: 	explain_c2m4_ticketbooth
+Structure: 	
+short 	userid 	
+long 	subject 	
+
+
+explain_c3m4_rescue
+
+Note:
+Name: 	explain_c3m4_rescue
+Structure: 	
+short 	userid 	
+long 	subject 	
+
+
+explain_hotel_elevator_doors
+
+Note:
+Name: 	explain_hotel_elevator_doors
+Structure: 	
+short 	userid 	
+long 	subject 	
+
+
+explain_gun_shop_tanker
+
+Note:
+Name: 	explain_gun_shop_tanker
+Structure: 	
+short 	userid 	
+long 	subject 	
+
+
+explain_gun_shop
+
+Note:
+Name: 	explain_gun_shop
+Structure: 	
+short 	userid 	
+long 	subject 	
+
+
+explain_store_alarm
+
+Note:
+Name: 	explain_store_alarm
+Structure: 	
+short 	userid 	
+long 	subject 	
+
+
+explain_store_item
+
+Note:
+Name: 	explain_store_item
+Structure: 	
+short 	userid 	
+long 	subject 	
+
+
+explain_store_item_stop
+
+Note:
+Name: 	explain_store_item_stop
+Structure: 	
+short 	userid 	
+long 	subject 	
+
+
+explain_survival_generic
+
+Note:
+Name: 	explain_survival_generic
+Structure: 	
+short 	userid 	
+long 	subject 	
+
+
+explain_survival_alarm
+
+Note:
+Name: 	explain_survival_alarm
+Structure: 	
+short 	userid 	
+long 	subject 	
+
+
+explain_survival_radio
+
+Note:
+Name: 	explain_survival_radio
+Structure: 	
+short 	userid 	
+long 	subject 	
+
+
+explain_survival_carousel
+
+Note:
+Name: 	explain_survival_carousel
+Structure: 	
+short 	userid 	
+long 	subject 	
+
+
+explain_return_item
+
+Note:
+Name: 	explain_return_item
+Structure: 	
+short 	userid 	
+long 	subject 	
+
+
+explain_save_items
+
+Note:
+Name: 	explain_save_items
+Structure: 	
+short 	userid 	
+long 	subject 	
+
+
+spit_burst
+
+Note:
+Name: 	spit_burst
+Structure: 	
+short 	userid 	
+long 	subject 	
+
+
+entered_spit
+
+Note:
+Name: 	entered_spit
+Structure: 	
+short 	userid 	
+long 	subject 	
+
+
+temp_c4m1_getgas
+
+Note:
+Name: 	temp_c4m1_getgas
+Structure: 	
+short 	userid 	
+long 	subject 	
+
+
+temp_c4m3_return_to_boat
+
+Note:
+Name: 	temp_c4m3_return_to_boat
+Structure: 	
+short 	userid 	
+long 	subject 	
+
+
+explain_c1m4_finale
+
+Note:
+Name: 	explain_c1m4_finale
+Structure: 	
+short 	userid 	
+long 	subject 	
+
+
+c1m4_scavenge_instructions
+
+Note:
+Name: 	c1m4_scavenge_instructions
+Structure: 	
+short 	userid 	
+long 	subject 	
+
+
+punched_clown
+
+Note:
+Name: 	punched_clown
+Structure: 	
+short 	userid 	player who punched the clown
+
+
+charger_killed
+
+Note:
+Name: 	charger_killed
+Structure: 	
+short 	userid 	user ID of dead charger
+short 	attacker 	user id of killer
+bool 	melee 	TRUE if a player killed the charger with a melee weapon
+bool 	charging 	TRUE if the charger was charging when it died
+
+
+spitter_killed
+
+Note:
+Name: 	spitter_killed
+Structure: 	
+short 	userid 	user ID of dead spitter
+short 	attacker 	user id of killer
+bool 	has_spit 	TRUE if the spitter spit at some point
+
+
+jockey_ride
+
+Note:
+Name: 	jockey_ride
+Structure: 	
+short 	userid 	player who did the lunging
+short 	victim 	player that got lunged
+
+
+jockey_ride_end
+
+Note:
+Name: 	jockey_ride_end
+Structure: 	
+short 	userid 	player who did the lunging
+short 	victim 	player that got lunged
+short 	rescuer 	Who stopped it
+float 	ride_length 	Duration of our ride
+
+
+jockey_killed
+
+Note:
+Name: 	jockey_killed
+Structure: 	
+short 	userid 	user ID of dead jockey
+short 	attacker 	user id of killer
+
+
+non_melee_fired
+
+Note:
+Name: 	non_melee_fired
+Structure: 	
+short 	userid 	User that fired a non-melee weapon
+
+
+infected_decapitated
+
+Note:
+Name: 	infected_decapitated
+Structure: 	
+short 	userid 	userid of the player who did the decapitation
+string 	weapon 	melee weapon name
+
+
+upgrade_pack_added
+
+Note:
+Name: 	upgrade_pack_added
+Structure: 	
+short 	upgradeid 	
+short 	userid 	
+
+
+vomit_bomb_tank
+
+Note:
+Name: 	vomit_bomb_tank
+Structure: 	
+short 	userid 	userid of the player who used the bomb
+
+
+triggered_car_alarm
+
+Note:
+Name: 	triggered_car_alarm
+Structure: 	
+
+
+panic_event_finished
+
+Note:
+Name: 	panic_event_finished
+Structure: 	
+
+
+charger_charge_start
+
+Note: The moment when the charger starts charging
+Name: 	charger_charge_start
+Structure: 	
+short 	userid 	user ID of the charger
+
+
+charger_charge_end
+
+Note:
+Name: 	charger_charge_end
+Structure: 	
+short 	userid 	user ID of the charger
+
+
+charger_carry_start
+
+Note: The moment when the charger grabs a survivor
+Name: 	charger_carry_start
+Structure: 	
+short 	userid 	user ID of the charger
+short 	victim 	user ID of the player who was charged
+
+
+charger_carry_end
+
+Note: The moment when the charger stops charging a survivor (and will soon start pummeling)
+Name: 	charger_carry_end
+Structure: 	
+short 	userid 	user ID of the charger
+short 	victim 	user ID of the player who was charged
+
+
+charger_impact
+
+Note: When a charger impacts a survivor they aren't carrying
+Name: 	charger_impact
+Structure: 	
+short 	userid 	user ID of the charger
+short 	victim 	user ID of the player who was impacted
+
+
+charger_pummel_start
+
+Note: The moment when the charger starts pummeling a survivor
+Name: 	charger_pummel_start
+Structure: 	
+short 	userid 	user ID of the charger
+short 	victim 	user ID of the player who was charged
+
+
+charger_pummel_end
+
+Note: When the charger is cleared from the survivor or the survivor dies.
+Name: 	charger_pummel_end
+Structure: 	
+short 	userid 	user ID of the charger
+short 	victim 	
+short 	rescuer 	user ID of the player who rescued them
+
+
+strongman_bell_knocked_off
+
+Note: The arcade bell on c2m4_barns
+Name: 	strongman_bell_knocked_off
+Structure: 	
+short 	userid 	
+short 	subject 	
+
+
+molotov_thrown
+
+Note:
+Name: 	molotov_thrown
+Structure: 	
+short 	userid 	
+
+
+gas_can_forced_drop
+
+Note:
+Name: 	gas_can_forced_drop
+Structure: 	
+short 	userid 	player that forced the drop
+short 	victim 	player that dropped it
+
+
+explain_need_gnome_to_continue
+
+Note:
+Name: 	explain_need_gnome_to_continue
+Structure: 	
+none 	none 	
+
+
+explain_survivor_glows_disabled
+
+Note:
+Name: 	explain_survivor_glows_disabled
+Structure: 	
+short 	userid 	The player we're explaining to
+
+
+explain_item_glows_disabled
+
+Note:
+Name: 	explain_item_glows_disabled
+Structure: 	
+short 	userid 	The player we're explaining to
+
+
+explain_rescue_disabled
+
+Note:
+Name: 	explain_rescue_disabled
+Structure: 	
+short 	userid 	The player we're explaining to
+
+
+explain_bodyshots_reduced
+
+Note:
+Name: 	explain_bodyshots_reduced
+Structure: 	
+short 	userid 	The player we're explaining to
+
+
+explain_witch_instant_kill
+
+Note:
+Name: 	explain_witch_instant_kill
+Structure: 	
+short 	userid 	The player we're explaining to
+
+
+set_instructor_group_enabled
+
+Note:
+Name: 	set_instructor_group_enabled
+Structure: 	
+string 	group 	
+short 	enabled 	
+
+
+stashwhacker_game_won
+
+Note:
+Name: 	stashwhacker_game_won
+Structure: 	
+short 	userid 	
+short 	subject 	
+
+
+versus_marker_reached
+
+Note:
+Name: 	versus_marker_reached
+Structure: 	
+short 	userid 	
+short 	marker 	
+
+
+start_score_animation
+
+Note:
+Name: 	start_score_animation
+Structure: 	
+
+
+survival_round_start
+
+Note:
+Name: 	survival_round_start
+Structure: 	
+
+
+scavenge_gas_can_destroyed
+
+Note:
+Name: 	scavenge_gas_can_destroyed
+Structure: 	
+short 	userid 	The player that destroyed it
+
+
+explain_sewer_gate
+
+Note:
+Name: 	explain_sewer_gate
+Structure: 	
+short 	userid 	
+long 	subject 	
+
+
+explain_sewer_run
+
+Note:
+Name: 	explain_sewer_run
+Structure: 	
+short 	userid 	
+long 	subject 	
+
+
+explain_c6m3_finale
+
+Note:
+Name: 	explain_c6m3_finale
+Structure: 	
+short 	userid 	
+long 	subject 	
+
+
+finale_bridge_lowering
+
+Note:
+Name: 	finale_bridge_lowering
+Structure: 	
+short 	userid 	
+long 	subject 	
+
+
+m60_streak_ended
+
+Note: I was holding down the m60 trigger, and now I'm not
+Name: 	m60_streak_ended
+Structure: 	
+none 	none 	
+
+
+chair_charged
+
+Note:
+Name: 	chair_charged
+Structure: 	
+short 	userid 	
+
+
+song_played
+
+Note:
+Name: 	song_played
+Structure: 	
+none 	none 	
+
+
+foot_locker_opened
+
+Note:
+Name: 	foot_locker_opened
+Structure: 	
+short 	userid 	
+
+
