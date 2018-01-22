@@ -1,0 +1,15 @@
+clang++ -S -emit-llvm -pipe -fno-strict-aliasing -fvisibility=hidden -Wall -Werror -Wno-uninitialized -Wno-unused -Wno-switch -msse -m32 -O0 -Dstricmp=strcasecmp -D_stricmp=strcasecmp -D_snprintf=snprintf -D_vsnprintf=vsnprintf -DHAVE_STDINT_H -DGNUC -DNDEBUG -D_LINUX -DPOSIX -DNO_MALLOC_OVERRIDE -DSOURCEMOD_BUILD -DSM_GENERATED_BUILD -I /home/imac/alliedmodders/accelerator/build/includes -fvisibility-inlines-hidden -std=c++11 -fno-exceptions -fno-threadsafe-statics -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-delete-non-virtual-dtor -Wno-implicit-exception-spec-mismatch -I /home/imac/alliedmodders/accelerator/extension -I /home/imac/alliedmodders/sourcemod/public -I /home/imac/alliedmodders/sourcemod/public/extensions -I /home/imac/alliedmodders/sourcemod/public/sourcepawn -I /home/imac/alliedmodders/accelerator/breakpad/src/src -H /home/imac/alliedmodders/accelerator/extension/extension.cpp -o extension_extension.ll
+
+
+-------
+
+
+clang++ -S -emit-llvm -pipe -fno-strict-aliasing -fvisibility=hidden -Wall -Werror -Wno-uninitialized -Wno-unused -Wno-switch -msse -m32 -O0 -Dstricmp=strcasecmp -D_stricmp=strcasecmp -D_snprintf=snprintf -D_vsnprintf=vsnprintf -DHAVE_STDINT_H -DGNUC -DNDEBUG -D_LINUX -DPOSIX -DNO_MALLOC_OVERRIDE -DSOURCEMOD_BUILD -DSM_GENERATED_BUILD -I /home/imac/alliedmodders/accelerator/build/includes -fvisibility-inlines-hidden -std=c++11 -fno-exceptions -fno-threadsafe-statics -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-delete-non-virtual-dtor -Wno-implicit-exception-spec-mismatch -I /home/imac/alliedmodders/accelerator/extension -I /home/imac/alliedmodders/sourcemod/public -I /home/imac/alliedmodders/sourcemod/public/extensions -I /home/imac/alliedmodders/sourcemod/public/sourcepawn -I /home/imac/alliedmodders/accelerator/breakpad/src/src -H /home/imac/alliedmodders/accelerator/extension/MemoryDownloader.cpp -o extension_MemoryDownloader.ll
+
+
+-------
+
+
+clang++ -S -emit-llvm -pipe -fno-strict-aliasing -fvisibility=hidden -Wall -Werror -Wno-uninitialized -Wno-unused -Wno-switch -msse -m32 -O0 -Dstricmp=strcasecmp -D_stricmp=strcasecmp -D_snprintf=snprintf -D_vsnprintf=vsnprintf -DHAVE_STDINT_H -DGNUC -DNDEBUG -D_LINUX -DPOSIX -DNO_MALLOC_OVERRIDE -DSOURCEMOD_BUILD -DSM_GENERATED_BUILD -I /home/imac/alliedmodders/accelerator/build/includes -fvisibility-inlines-hidden -std=c++11 -fno-exceptions -fno-threadsafe-statics -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-delete-non-virtual-dtor -Wno-implicit-exception-spec-mismatch -I /home/imac/alliedmodders/accelerator/extension -I /home/imac/alliedmodders/sourcemod/public -I /home/imac/alliedmodders/sourcemod/public/extensions -I /home/imac/alliedmodders/sourcemod/public/sourcepawn -I /home/imac/alliedmodders/accelerator/breakpad/src/src -H /home/imac/alliedmodders/sourcemod/public/smsdk_ext.cpp -o _home_travis_build_asherkin_sourcemod_1_7_public_smsdk_ext.ll
+
+
