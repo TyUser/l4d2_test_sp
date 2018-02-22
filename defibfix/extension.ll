@@ -687,7 +687,7 @@ define hidden %class.CBaseEntity* @_Z12HxDeathModelP11CBasePlayer(%class.CBasePl
   %26 = load %class.Vector* (%class.ICollideable*)*** %25
   %27 = getelementptr inbounds %class.Vector* (%class.ICollideable*)** %26, i64 8
   %28 = load %class.Vector* (%class.ICollideable*)** %27
-  %29 = call dereferenceable(12) %class.Vector* %28(%class.ICollideable* %24)
+  %29 = call %class.Vector* %28(%class.ICollideable* %24)
   %30 = bitcast %class.Vector* %PlayerOrigin to i8*
   %31 = bitcast %class.Vector* %29 to i8*
   call void @llvm.memcpy.p0i8.p0i8.i32(i8* %30, i8* %31, i32 12, i32 4, i1 false)
