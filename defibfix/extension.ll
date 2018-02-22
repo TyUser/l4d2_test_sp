@@ -1,5 +1,5 @@
 ; ModuleID = 'extension.cpp'
-target datalayout = "e-p:32:32:32-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:32:64-f32:32:32-f64:32:64-v64:64:64-v128:128:128-a0:0:64-f80:32:32-n8:16:32-S128"
+target datalayout = "e-m:e-p:32:32-f64:32:64-f80:32-n8:16:32-S128"
 target triple = "i386-pc-linux-gnu"
 
 %class.Color = type { [4 x i8] }
@@ -11,10 +11,11 @@ target triple = "i386-pc-linux-gnu"
 %class.CBaseEntity = type opaque
 %class.Vector = type { float, float, float }
 %class.IServerGameEnts = type { i32 (...)** }
-%class.DefibFix = type { %class.SDKExtension }
-%class.SDKExtension = type { %"class.SourceMM::ISmmPlugin", %"class.SourceMod::IExtensionInterface", i8, i8, i8 }
+%class.DefibFix = type { %class.SDKExtension.base, i8 }
+%class.SDKExtension.base = type <{ %"class.SourceMM::ISmmPlugin", %"class.SourceMod::IExtensionInterface", i8, i8, i8 }>
 %"class.SourceMM::ISmmPlugin" = type { i32 (...)** }
 %"class.SourceMod::IExtensionInterface" = type { i32 (...)** }
+%class.SDKExtension = type { %"class.SourceMM::ISmmPlugin", %"class.SourceMod::IExtensionInterface", i8, i8, i8 }
 %"class.SourceMod::IPlayerManager" = type { %"class.SourceMod::SMInterface" }
 %"class.SourceMod::SMInterface" = type { i32 (...)** }
 %"class.SourceMod::ISourceMod" = type { %"class.SourceMod::SMInterface" }
@@ -25,13 +26,13 @@ target triple = "i386-pc-linux-gnu"
 %"class.SourceMod::IGameConfigManager" = type { %"class.SourceMod::SMInterface" }
 %"class.SourceMod::IGamePlayer" = type { i32 (...)** }
 %class.IPlayerInfo = type { i32 (...)** }
-%class.DefibrillatorOnStartActionClass = type { i8 }
+%class.HxDefibStartClass = type { i8 }
 %struct.edict_t = type { %class.CBaseEdict }
 %class.CBaseEdict = type { i32, i32, %class.IServerNetworkable*, %class.IServerUnknown* }
 %class.IServerNetworkable = type { i32 (...)** }
 %class.IServerUnknown = type { %class.IHandleEntity }
 %class.IHandleEntity = type { i32 (...)** }
-%class.DefibrillatorOnActionCompleteClass = type { i8 }
+%class.HxDefibEndClass = type { i8 }
 %class.ICollideable = type { i32 (...)** }
 %class.IServerEntity = type { %class.IServerUnknown }
 %"class.SourceMM::ISmmAPI" = type { i32 (...)** }
@@ -49,7 +50,7 @@ target triple = "i386-pc-linux-gnu"
 @gameents = hidden global %class.IServerGameEnts* null, align 4
 @g_DefibFix = hidden global %class.DefibFix zeroinitializer, align 4
 @__dso_handle = external global i8
-@g_pExtensionIface = hidden global %class.SDKExtension* getelementptr inbounds (%class.DefibFix* @g_DefibFix, i32 0, i32 0), align 4
+@g_pExtensionIface = hidden global %class.SDKExtension* bitcast (%class.DefibFix* @g_DefibFix to %class.SDKExtension*), align 4
 @ig_defib = hidden global i32 0, align 4
 @ig_noob = hidden global i32 0, align 4
 @playerhelpers = external global %"class.SourceMod::IPlayerManager"*
@@ -57,31 +58,31 @@ target triple = "i386-pc-linux-gnu"
 @myself = external global %"class.SourceMod::IExtension"*
 @.str = private unnamed_addr constant [13 x i8] c"Dead %d [%s]\00", align 1
 @.str4 = private unnamed_addr constant [16 x i8] c"\D0\92\D1\8B\D0\B1\D1\80\D0\B0\D0\BD %d\00", align 1
-@GetPlayerByCharacter_Actual = hidden global i8* (i32)* null, align 4
+@HxPlayerSpawn_Actual = hidden global i8* (i32)* null, align 4
 @.str5 = private unnamed_addr constant [28 x i8] c"\D0\92\D0\BE\D1\81\D0\BA\D1\80\D0\B5\D1\88\D0\B0\D0\B5\D1\82\D1\81\D1\8F %d\00", align 1
 @gamehelpers = external global %"class.SourceMod::IGameHelpers"*
 @.str6 = private unnamed_addr constant [13 x i8] c"\D0\9E\D1\88\D0\B8\D0\B1\D0\BA\D0\B0\00", align 1
-@_ZN31DefibrillatorOnStartActionClass33DefibrillatorOnStartAction_ActualE = hidden global { i32, i32 } zeroinitializer, align 4
+@_ZN17HxDefibStartClass19HxDefibStart_ActualE = hidden global { i32, i32 } zeroinitializer, align 4
 @.str7 = private unnamed_addr constant [40 x i8] c"\D0\9D\D0\B0\D1\87\D0\B0\D0\BB\D0\BE \D0\B4\D0\B5\D1\84\D0\B8\D0\B1\D1\80\D0\B8\D0\BB\D0\BB\D1\8F\D1\86\D0\B8\D0\B8\00", align 1
 @.str8 = private unnamed_addr constant [28 x i8] c"\D0\A2\D1\80\D1\83\D0\BF \D1\83\D0\B4\D0\B0\D0\BB\D1\8F\D0\B5\D1\82\D1\81\D1\8F\00", align 1
 @engine = external global %class.IVEngineServer*
-@_ZN34DefibrillatorOnActionCompleteClass36DefibrillatorOnActionComplete_ActualE = hidden global { i32, i32 } zeroinitializer, align 4
+@_ZN15HxDefibEndClass17HxDefibEnd_ActualE = hidden global { i32, i32 } zeroinitializer, align 4
 @.str9 = private unnamed_addr constant [46 x i8] c"\D0\9E\D0\BA\D0\BE\D0\BD\D1\87\D0\B0\D0\BD\D0\B8\D0\B5 \D0\B4\D0\B5\D1\84\D0\B8\D0\B1\D1\80\D0\B8\D0\BB\D0\BB\D1\8F\D1\86\D0\B8\D0\B8\00", align 1
-@CSurvivorDeathModel__Create_Actual = hidden global %class.CBaseEntity* (%class.CBasePlayer*)* null, align 4
-@.str10 = private unnamed_addr constant [17 x i8] c"VEngineServer022\00", align 1
-@.str11 = private unnamed_addr constant [29 x i8] c"Could not find interface: %s\00", align 1
-@.str12 = private unnamed_addr constant [18 x i8] c"ServerGameEnts001\00", align 1
+@HxDeathModel_Actual = hidden global %class.CBaseEntity* (%class.CBasePlayer*)* null, align 4
+@.str10 = private unnamed_addr constant [26 x i8] c"CBaseEntity::SetAbsOrigin\00", align 1
+@.str11 = private unnamed_addr constant [21 x i8] c"GetPlayerByCharacter\00", align 1
+@.str12 = private unnamed_addr constant [27 x i8] c"DefibrillatorOnStartAction\00", align 1
+@.str13 = private unnamed_addr constant [30 x i8] c"DefibrillatorOnActionComplete\00", align 1
+@.str14 = private unnamed_addr constant [28 x i8] c"CSurvivorDeathModel::Create\00", align 1
+@.str15 = private unnamed_addr constant [17 x i8] c"VEngineServer022\00", align 1
+@.str16 = private unnamed_addr constant [29 x i8] c"Could not find interface: %s\00", align 1
+@.str17 = private unnamed_addr constant [18 x i8] c"ServerGameEnts001\00", align 1
 @gameconfs = external global %"class.SourceMod::IGameConfigManager"*
-@.str13 = private unnamed_addr constant [9 x i8] c"defibfix\00", align 1
-@.str14 = private unnamed_addr constant [32 x i8] c"Could not read defibfix.txt: %s\00", align 1
-@.str15 = private unnamed_addr constant [32 x i8] c"Cannot SetupHooks or GetOffset.\00", align 1
-@.str16 = private unnamed_addr constant [26 x i8] c"CBaseEntity::SetAbsOrigin\00", align 1
-@.str17 = private unnamed_addr constant [21 x i8] c"GetPlayerByCharacter\00", align 1
-@.str18 = private unnamed_addr constant [27 x i8] c"DefibrillatorOnStartAction\00", align 1
-@.str19 = private unnamed_addr constant [30 x i8] c"DefibrillatorOnActionComplete\00", align 1
-@.str20 = private unnamed_addr constant [28 x i8] c"CSurvivorDeathModel::Create\00", align 1
+@.str18 = private unnamed_addr constant [9 x i8] c"defibfix\00", align 1
+@.str19 = private unnamed_addr constant [37 x i8] c"\D0\9F\D1\80\D0\BE\D0\B1\D0\BB\D0\B5\D0\BC\D0\B0 \D1\81 defibfix.txt: %s\00", align 1
+@.str20 = private unnamed_addr constant [27 x i8] c"\D0\9F\D1\80\D0\BE\D0\B1\D0\BB\D0\B5\D0\BC\D0\B0 \D1\81 Offset\00", align 1
 @_ZTV8DefibFix = hidden unnamed_addr constant [61 x i8*] [i8* null, i8* null, i8* bitcast (i32 (%"class.SourceMM::ISmmPlugin"*)* @_ZN8SourceMM10ISmmPlugin13GetApiVersionEv to i8*), i8* bitcast (void (%class.DefibFix*)* @_ZN8DefibFixD2Ev to i8*), i8* bitcast (void (%class.DefibFix*)* @_ZN8DefibFixD0Ev to i8*), i8* bitcast (i1 (%class.SDKExtension*, i32, %"class.SourceMM::ISmmAPI"*, i8*, i32, i1)* @_ZN12SDKExtension4LoadEiPN8SourceMM7ISmmAPIEPcjb to i8*), i8* bitcast (void (%"class.SourceMM::ISmmPlugin"*)* @_ZN8SourceMM10ISmmPlugin16AllPluginsLoadedEv to i8*), i8* bitcast (i1 (%"class.SourceMM::ISmmPlugin"*, i8*, i32)* @_ZN8SourceMM10ISmmPlugin12QueryRunningEPcj to i8*), i8* bitcast (i1 (%class.SDKExtension*, i8*, i32)* @_ZN12SDKExtension6UnloadEPcj to i8*), i8* bitcast (i1 (%class.SDKExtension*, i8*, i32)* @_ZN12SDKExtension5PauseEPcj to i8*), i8* bitcast (i1 (%class.SDKExtension*, i8*, i32)* @_ZN12SDKExtension7UnpauseEPcj to i8*), i8* bitcast (i8* (%class.SDKExtension*)* @_ZN12SDKExtension9GetAuthorEv to i8*), i8* bitcast (i8* (%class.SDKExtension*)* @_ZN12SDKExtension7GetNameEv to i8*), i8* bitcast (i8* (%class.SDKExtension*)* @_ZN12SDKExtension14GetDescriptionEv to i8*), i8* bitcast (i8* (%class.SDKExtension*)* @_ZN12SDKExtension6GetURLEv to i8*), i8* bitcast (i8* (%class.SDKExtension*)* @_ZN12SDKExtension10GetLicenseEv to i8*), i8* bitcast (i8* (%class.SDKExtension*)* @_ZN12SDKExtension10GetVersionEv to i8*), i8* bitcast (i8* (%class.SDKExtension*)* @_ZN12SDKExtension7GetDateEv to i8*), i8* bitcast (i8* (%class.SDKExtension*)* @_ZN12SDKExtension9GetLogTagEv to i8*), i8* bitcast (i1 (%class.DefibFix*, i8*, i32, i1)* @_ZN8DefibFix10SDK_OnLoadEPcjb to i8*), i8* bitcast (void (%class.DefibFix*)* @_ZN8DefibFix12SDK_OnUnloadEv to i8*), i8* bitcast (void (%class.SDKExtension*)* @_ZN12SDKExtension15SDK_OnAllLoadedEv to i8*), i8* bitcast (void (%class.SDKExtension*, i1)* @_ZN12SDKExtension17SDK_OnPauseChangeEb to i8*), i8* bitcast (void (%class.SDKExtension*)* @_ZN12SDKExtension25SDK_OnDependenciesDroppedEv to i8*), i8* bitcast (i1 (%class.DefibFix*, %"class.SourceMM::ISmmAPI"*, i8*, i32, i1)* @_ZN8DefibFix17SDK_OnMetamodLoadEPN8SourceMM7ISmmAPIEPcjb to i8*), i8* bitcast (i1 (%class.SDKExtension*, i8*, i32)* @_ZN12SDKExtension19SDK_OnMetamodUnloadEPcj to i8*), i8* bitcast (i1 (%class.SDKExtension*, i1, i8*, i32)* @_ZN12SDKExtension24SDK_OnMetamodPauseChangeEbPcj to i8*), i8* bitcast (i1 (%class.SDKExtension*, %"class.SourceMod::IExtension"*, %"class.SourceMod::IShareSys"*, i8*, i32, i1)* @_ZN12SDKExtension15OnExtensionLoadEPN9SourceMod10IExtensionEPNS0_9IShareSysEPcjb to i8*), i8* bitcast (void (%class.SDKExtension*)* @_ZN12SDKExtension17OnExtensionUnloadEv to i8*), i8* bitcast (void (%class.SDKExtension*)* @_ZN12SDKExtension21OnExtensionsAllLoadedEv to i8*), i8* bitcast (i1 (%class.SDKExtension*)* @_ZN12SDKExtension18IsMetamodExtensionEv to i8*), i8* bitcast (void (%class.SDKExtension*, i1)* @_ZN12SDKExtension22OnExtensionPauseChangeEb to i8*), i8* bitcast (i8* (%class.SDKExtension*)* @_ZN12SDKExtension16GetExtensionNameEv to i8*), i8* bitcast (i8* (%class.SDKExtension*)* @_ZN12SDKExtension15GetExtensionURLEv to i8*), i8* bitcast (i8* (%class.SDKExtension*)* @_ZN12SDKExtension15GetExtensionTagEv to i8*), i8* bitcast (i8* (%class.SDKExtension*)* @_ZN12SDKExtension18GetExtensionAuthorEv to i8*), i8* bitcast (i8* (%class.SDKExtension*)* @_ZN12SDKExtension21GetExtensionVerStringEv to i8*), i8* bitcast (i8* (%class.SDKExtension*)* @_ZN12SDKExtension23GetExtensionDescriptionEv to i8*), i8* bitcast (i8* (%class.SDKExtension*)* @_ZN12SDKExtension22GetExtensionDateStringEv to i8*), i8* bitcast (void (%class.SDKExtension*)* @_ZN12SDKExtension21OnDependenciesDroppedEv to i8*), i8* inttoptr (i32 -4 to i8*), i8* null, i8* bitcast (i32 (%"class.SourceMod::IExtensionInterface"*)* @_ZN9SourceMod19IExtensionInterface19GetExtensionVersionEv to i8*), i8* bitcast (i1 (%class.SDKExtension*, %"class.SourceMod::IExtension"*, %"class.SourceMod::IShareSys"*, i8*, i32, i1)* @_ZThn4_N12SDKExtension15OnExtensionLoadEPN9SourceMod10IExtensionEPNS0_9IShareSysEPcjb to i8*), i8* bitcast (void (%class.SDKExtension*)* @_ZThn4_N12SDKExtension17OnExtensionUnloadEv to i8*), i8* bitcast (void (%class.SDKExtension*)* @_ZThn4_N12SDKExtension21OnExtensionsAllLoadedEv to i8*), i8* bitcast (void (%class.SDKExtension*, i1)* @_ZThn4_N12SDKExtension22OnExtensionPauseChangeEb to i8*), i8* bitcast (i1 (%"class.SourceMod::IExtensionInterface"*, %"class.SourceMod::SMInterface"*)* @_ZN9SourceMod19IExtensionInterface18QueryInterfaceDropEPNS_11SMInterfaceE to i8*), i8* bitcast (void (%"class.SourceMod::IExtensionInterface"*, %"class.SourceMod::SMInterface"*)* @_ZN9SourceMod19IExtensionInterface19NotifyInterfaceDropEPNS_11SMInterfaceE to i8*), i8* bitcast (i1 (%"class.SourceMod::IExtensionInterface"*, i8*, i32)* @_ZN9SourceMod19IExtensionInterface12QueryRunningEPcj to i8*), i8* bitcast (i1 (%class.SDKExtension*)* @_ZThn4_N12SDKExtension18IsMetamodExtensionEv to i8*), i8* bitcast (i8* (%class.SDKExtension*)* @_ZThn4_N12SDKExtension16GetExtensionNameEv to i8*), i8* bitcast (i8* (%class.SDKExtension*)* @_ZThn4_N12SDKExtension15GetExtensionURLEv to i8*), i8* bitcast (i8* (%class.SDKExtension*)* @_ZThn4_N12SDKExtension15GetExtensionTagEv to i8*), i8* bitcast (i8* (%class.SDKExtension*)* @_ZThn4_N12SDKExtension18GetExtensionAuthorEv to i8*), i8* bitcast (i8* (%class.SDKExtension*)* @_ZThn4_N12SDKExtension21GetExtensionVerStringEv to i8*), i8* bitcast (i8* (%class.SDKExtension*)* @_ZThn4_N12SDKExtension23GetExtensionDescriptionEv to i8*), i8* bitcast (i8* (%class.SDKExtension*)* @_ZThn4_N12SDKExtension22GetExtensionDateStringEv to i8*), i8* bitcast (void (%"class.SourceMod::IExtensionInterface"*, %struct.edict_t*, i32, i32)* @_ZN9SourceMod19IExtensionInterface14OnCoreMapStartEP7edict_tii to i8*), i8* bitcast (void (%class.SDKExtension*)* @_ZThn4_N12SDKExtension21OnDependenciesDroppedEv to i8*), i8* bitcast (void (%"class.SourceMod::IExtensionInterface"*)* @_ZN9SourceMod19IExtensionInterface12OnCoreMapEndEv to i8*)]
-@llvm.global_ctors = appending global [1 x { i32, void ()* }] [{ i32, void ()* } { i32 65535, void ()* @_GLOBAL__I_a }]
+@llvm.global_ctors = appending global [1 x { i32, void ()*, i8* }] [{ i32, void ()*, i8* } { i32 65535, void ()* @_GLOBAL__sub_I_extension.cpp, i8* null }]
 
 ; Function Attrs: nounwind
 define internal void @__cxx_global_var_init() #0 section ".text.startup" {
@@ -177,7 +178,7 @@ define linkonce_odr hidden void @_ZN8DefibFixD2Ev(%class.DefibFix* %this) unname
 declare i32 @__cxa_atexit(void (i8*)*, i8*, i8*) #0
 
 ; Function Attrs: nounwind
-define hidden i32 @_Z12HxPlayerDeadv() #1 {
+define hidden i32 @_Z9HxGetDeadv() #1 {
   %1 = alloca i32, align 4
   %iDead1 = alloca i32, align 4
   %iDead2 = alloca i32, align 4
@@ -425,7 +426,7 @@ define hidden i32 @_Z12HxPlayerDeadv() #1 {
 }
 
 ; Function Attrs: nounwind
-define hidden i8* @_Z20GetPlayerByCharacteri(i32 %charaster) #1 {
+define hidden i8* @_Z13HxPlayerSpawni(i32 %charaster) #1 {
   %1 = alloca i8*, align 4
   %2 = alloca i32, align 4
   %iDead = alloca i32, align 4
@@ -436,7 +437,7 @@ define hidden i8* @_Z20GetPlayerByCharacteri(i32 %charaster) #1 {
 
 ; <label>:5                                       ; preds = %0
   store i32 0, i32* @ig_defib, align 4
-  %6 = call i32 @_Z12HxPlayerDeadv()
+  %6 = call i32 @_Z9HxGetDeadv()
   store i32 %6, i32* %iDead, align 4
   %7 = load i32* %iDead, align 4
   %8 = icmp sgt i32 %7, 0
@@ -476,7 +477,7 @@ define hidden i8* @_Z20GetPlayerByCharacteri(i32 %charaster) #1 {
   br label %37
 
 ; <label>:33                                      ; preds = %0
-  %34 = load i8* (i32)** @GetPlayerByCharacter_Actual, align 4
+  %34 = load i8* (i32)** @HxPlayerSpawn_Actual, align 4
   %35 = load i32* %2, align 4
   %36 = call i8* %34(i32 %35)
   store i8* %36, i8** %1
@@ -488,19 +489,19 @@ define hidden i8* @_Z20GetPlayerByCharacteri(i32 %charaster) #1 {
 }
 
 ; Function Attrs: nounwind
-define hidden i8* @_ZN31DefibrillatorOnStartActionClass26DefibrillatorOnStartActionEiPvS0_i(%class.DefibrillatorOnStartActionClass* %this, i32 %reserved, i8* %player, i8* %entity, i32 %reserved2) #1 align 2 {
-  %1 = alloca %class.DefibrillatorOnStartActionClass*, align 4
+define hidden i8* @_ZN17HxDefibStartClass12HxDefibStartEiPvS0_i(%class.HxDefibStartClass* %this, i32 %reserved, i8* %player, i8* %entity, i32 %reserved2) #1 align 2 {
+  %1 = alloca %class.HxDefibStartClass*, align 4
   %2 = alloca i32, align 4
   %3 = alloca i8*, align 4
   %4 = alloca i8*, align 4
   %5 = alloca i32, align 4
   %edict = alloca %struct.edict_t*, align 4
-  store %class.DefibrillatorOnStartActionClass* %this, %class.DefibrillatorOnStartActionClass** %1, align 4
+  store %class.HxDefibStartClass* %this, %class.HxDefibStartClass** %1, align 4
   store i32 %reserved, i32* %2, align 4
   store i8* %player, i8** %3, align 4
   store i8* %entity, i8** %4, align 4
   store i32 %reserved2, i32* %5, align 4
-  %6 = load %class.DefibrillatorOnStartActionClass** %1
+  %6 = load %class.HxDefibStartClass** %1
   %7 = load %class.IServerGameEnts** @gameents, align 4
   %8 = bitcast %class.IServerGameEnts* %7 to %struct.edict_t* (%class.IServerGameEnts*, %class.CBaseEntity*)***
   %9 = load %struct.edict_t* (%class.IServerGameEnts*, %class.CBaseEntity*)*** %8
@@ -522,7 +523,7 @@ define hidden i8* @_ZN31DefibrillatorOnStartActionClass26DefibrillatorOnStartAct
   %22 = load void (%"class.SourceMod::ISourceMod"*, %"class.SourceMod::IExtension"*, i8*, ...)** %21
   %23 = load %"class.SourceMod::IExtension"** @myself, align 4
   call void (%"class.SourceMod::ISourceMod"*, %"class.SourceMod::IExtension"*, i8*, ...)* %22(%"class.SourceMod::ISourceMod"* %18, %"class.SourceMod::IExtension"* %23, i8* getelementptr inbounds ([40 x i8]* @.str7, i32 0, i32 0))
-  %24 = call i32 @_Z12HxPlayerDeadv()
+  %24 = call i32 @_Z9HxGetDeadv()
   %25 = icmp eq i32 %24, -1
   br i1 %25, label %26, label %39
 
@@ -547,49 +548,49 @@ define hidden i8* @_ZN31DefibrillatorOnStartActionClass26DefibrillatorOnStartAct
   br label %40
 
 ; <label>:40                                      ; preds = %39, %0
-  %41 = load { i32, i32 }* @_ZN31DefibrillatorOnStartActionClass33DefibrillatorOnStartAction_ActualE, align 4
+  %41 = load { i32, i32 }* @_ZN17HxDefibStartClass19HxDefibStart_ActualE, align 4
   %42 = extractvalue { i32, i32 } %41, 1
-  %43 = bitcast %class.DefibrillatorOnStartActionClass* %6 to i8*
+  %43 = bitcast %class.HxDefibStartClass* %6 to i8*
   %44 = getelementptr inbounds i8* %43, i32 %42
-  %45 = bitcast i8* %44 to %class.DefibrillatorOnStartActionClass*
+  %45 = bitcast i8* %44 to %class.HxDefibStartClass*
   %46 = extractvalue { i32, i32 } %41, 0
   %47 = and i32 %46, 1
   %48 = icmp ne i32 %47, 0
   br i1 %48, label %49, label %56
 
 ; <label>:49                                      ; preds = %40
-  %50 = bitcast %class.DefibrillatorOnStartActionClass* %45 to i8**
+  %50 = bitcast %class.HxDefibStartClass* %45 to i8**
   %51 = load i8** %50
   %52 = sub i32 %46, 1
   %53 = getelementptr i8* %51, i32 %52
-  %54 = bitcast i8* %53 to i8* (%class.DefibrillatorOnStartActionClass*, i32, i8*, i8*, i32)**
-  %55 = load i8* (%class.DefibrillatorOnStartActionClass*, i32, i8*, i8*, i32)** %54
+  %54 = bitcast i8* %53 to i8* (%class.HxDefibStartClass*, i32, i8*, i8*, i32)**
+  %55 = load i8* (%class.HxDefibStartClass*, i32, i8*, i8*, i32)** %54
   br label %58
 
 ; <label>:56                                      ; preds = %40
-  %57 = inttoptr i32 %46 to i8* (%class.DefibrillatorOnStartActionClass*, i32, i8*, i8*, i32)*
+  %57 = inttoptr i32 %46 to i8* (%class.HxDefibStartClass*, i32, i8*, i8*, i32)*
   br label %58
 
 ; <label>:58                                      ; preds = %56, %49
-  %59 = phi i8* (%class.DefibrillatorOnStartActionClass*, i32, i8*, i8*, i32)* [ %55, %49 ], [ %57, %56 ]
+  %59 = phi i8* (%class.HxDefibStartClass*, i32, i8*, i8*, i32)* [ %55, %49 ], [ %57, %56 ]
   %60 = load i32* %2, align 4
   %61 = load i8** %3, align 4
   %62 = load i8** %4, align 4
   %63 = load i32* %5, align 4
-  %64 = call i8* %59(%class.DefibrillatorOnStartActionClass* %45, i32 %60, i8* %61, i8* %62, i32 %63)
+  %64 = call i8* %59(%class.HxDefibStartClass* %45, i32 %60, i8* %61, i8* %62, i32 %63)
   ret i8* %64
 }
 
 ; Function Attrs: nounwind
-define hidden i8* @_ZN34DefibrillatorOnActionCompleteClass29DefibrillatorOnActionCompleteEPvS0_(%class.DefibrillatorOnActionCompleteClass* %this, i8* %player, i8* %entity) #1 align 2 {
-  %1 = alloca %class.DefibrillatorOnActionCompleteClass*, align 4
+define hidden i8* @_ZN15HxDefibEndClass10HxDefibEndEPvS0_(%class.HxDefibEndClass* %this, i8* %player, i8* %entity) #1 align 2 {
+  %1 = alloca %class.HxDefibEndClass*, align 4
   %2 = alloca i8*, align 4
   %3 = alloca i8*, align 4
   %edict = alloca %struct.edict_t*, align 4
-  store %class.DefibrillatorOnActionCompleteClass* %this, %class.DefibrillatorOnActionCompleteClass** %1, align 4
+  store %class.HxDefibEndClass* %this, %class.HxDefibEndClass** %1, align 4
   store i8* %player, i8** %2, align 4
   store i8* %entity, i8** %3, align 4
-  %4 = load %class.DefibrillatorOnActionCompleteClass** %1
+  %4 = load %class.HxDefibEndClass** %1
   %5 = load %class.IServerGameEnts** @gameents, align 4
   %6 = bitcast %class.IServerGameEnts* %5 to %struct.edict_t* (%class.IServerGameEnts*, %class.CBaseEntity*)***
   %7 = load %struct.edict_t* (%class.IServerGameEnts*, %class.CBaseEntity*)*** %6
@@ -615,39 +616,39 @@ define hidden i8* @_ZN34DefibrillatorOnActionCompleteClass29DefibrillatorOnActio
   br label %22
 
 ; <label>:22                                      ; preds = %15, %0
-  %23 = load { i32, i32 }* @_ZN34DefibrillatorOnActionCompleteClass36DefibrillatorOnActionComplete_ActualE, align 4
+  %23 = load { i32, i32 }* @_ZN15HxDefibEndClass17HxDefibEnd_ActualE, align 4
   %24 = extractvalue { i32, i32 } %23, 1
-  %25 = bitcast %class.DefibrillatorOnActionCompleteClass* %4 to i8*
+  %25 = bitcast %class.HxDefibEndClass* %4 to i8*
   %26 = getelementptr inbounds i8* %25, i32 %24
-  %27 = bitcast i8* %26 to %class.DefibrillatorOnActionCompleteClass*
+  %27 = bitcast i8* %26 to %class.HxDefibEndClass*
   %28 = extractvalue { i32, i32 } %23, 0
   %29 = and i32 %28, 1
   %30 = icmp ne i32 %29, 0
   br i1 %30, label %31, label %38
 
 ; <label>:31                                      ; preds = %22
-  %32 = bitcast %class.DefibrillatorOnActionCompleteClass* %27 to i8**
+  %32 = bitcast %class.HxDefibEndClass* %27 to i8**
   %33 = load i8** %32
   %34 = sub i32 %28, 1
   %35 = getelementptr i8* %33, i32 %34
-  %36 = bitcast i8* %35 to i8* (%class.DefibrillatorOnActionCompleteClass*, i8*, i8*)**
-  %37 = load i8* (%class.DefibrillatorOnActionCompleteClass*, i8*, i8*)** %36
+  %36 = bitcast i8* %35 to i8* (%class.HxDefibEndClass*, i8*, i8*)**
+  %37 = load i8* (%class.HxDefibEndClass*, i8*, i8*)** %36
   br label %40
 
 ; <label>:38                                      ; preds = %22
-  %39 = inttoptr i32 %28 to i8* (%class.DefibrillatorOnActionCompleteClass*, i8*, i8*)*
+  %39 = inttoptr i32 %28 to i8* (%class.HxDefibEndClass*, i8*, i8*)*
   br label %40
 
 ; <label>:40                                      ; preds = %38, %31
-  %41 = phi i8* (%class.DefibrillatorOnActionCompleteClass*, i8*, i8*)* [ %37, %31 ], [ %39, %38 ]
+  %41 = phi i8* (%class.HxDefibEndClass*, i8*, i8*)* [ %37, %31 ], [ %39, %38 ]
   %42 = load i8** %2, align 4
   %43 = load i8** %3, align 4
-  %44 = call i8* %41(%class.DefibrillatorOnActionCompleteClass* %27, i8* %42, i8* %43)
+  %44 = call i8* %41(%class.HxDefibEndClass* %27, i8* %42, i8* %43)
   ret i8* %44
 }
 
 ; Function Attrs: nounwind
-define hidden %class.CBaseEntity* @_Z27CSurvivorDeathModel__CreateP11CBasePlayer(%class.CBasePlayer* %bplayer) #1 {
+define hidden %class.CBaseEntity* @_Z12HxDeathModelP11CBasePlayer(%class.CBasePlayer* %bplayer) #1 {
   %1 = alloca %class.CBasePlayer*, align 4
   %pEdict = alloca %struct.edict_t*, align 4
   %client = alloca i32, align 4
@@ -671,7 +672,7 @@ define hidden %class.CBaseEntity* @_Z27CSurvivorDeathModel__CreateP11CBasePlayer
   %15 = load %struct.edict_t** %pEdict, align 4
   %16 = call i32 %14(%"class.SourceMod::IGameHelpers"* %10, %struct.edict_t* %15)
   store i32 %16, i32* %client, align 4
-  %17 = load %class.CBaseEntity* (%class.CBasePlayer*)** @CSurvivorDeathModel__Create_Actual, align 4
+  %17 = load %class.CBaseEntity* (%class.CBasePlayer*)** @HxDeathModel_Actual, align 4
   %18 = load %class.CBasePlayer** %1, align 4
   %19 = call %class.CBaseEntity* %17(%class.CBasePlayer* %18)
   store %class.CBaseEntity* %19, %class.CBaseEntity** %result, align 4
@@ -686,7 +687,7 @@ define hidden %class.CBaseEntity* @_Z27CSurvivorDeathModel__CreateP11CBasePlayer
   %26 = load %class.Vector* (%class.ICollideable*)*** %25
   %27 = getelementptr inbounds %class.Vector* (%class.ICollideable*)** %26, i64 8
   %28 = load %class.Vector* (%class.ICollideable*)** %27
-  %29 = call %class.Vector* %28(%class.ICollideable* %24)
+  %29 = call dereferenceable(12) %class.Vector* %28(%class.ICollideable* %24)
   %30 = bitcast %class.Vector* %PlayerOrigin to i8*
   %31 = bitcast %class.Vector* %29 to i8*
   call void @llvm.memcpy.p0i8.p0i8.i32(i8* %30, i8* %31, i32 12, i32 4, i1 false)
@@ -738,6 +739,150 @@ define linkonce_odr hidden %class.ICollideable* @_ZN7edict_t14GetCollideableEv(%
 declare void @llvm.memcpy.p0i8.p0i8.i32(i8* nocapture, i8* nocapture readonly, i32, i32, i1) #0
 
 ; Function Attrs: nounwind
+define hidden void @_Z12HxDestroyAllv() #1 {
+  %1 = load %class.CDetour** @hg_getPlayer, align 4
+  %2 = icmp ne %class.CDetour* %1, null
+  br i1 %2, label %3, label %5
+
+; <label>:3                                       ; preds = %0
+  %4 = load %class.CDetour** @hg_getPlayer, align 4
+  call void @_ZN7CDetour7DestroyEv(%class.CDetour* %4)
+  store %class.CDetour* null, %class.CDetour** @hg_getPlayer, align 4
+  br label %5
+
+; <label>:5                                       ; preds = %3, %0
+  %6 = load %class.CDetour** @hg_defibStart, align 4
+  %7 = icmp ne %class.CDetour* %6, null
+  br i1 %7, label %8, label %10
+
+; <label>:8                                       ; preds = %5
+  %9 = load %class.CDetour** @hg_defibStart, align 4
+  call void @_ZN7CDetour7DestroyEv(%class.CDetour* %9)
+  store %class.CDetour* null, %class.CDetour** @hg_defibStart, align 4
+  br label %10
+
+; <label>:10                                      ; preds = %8, %5
+  %11 = load %class.CDetour** @hg_defibEnd, align 4
+  %12 = icmp ne %class.CDetour* %11, null
+  br i1 %12, label %13, label %15
+
+; <label>:13                                      ; preds = %10
+  %14 = load %class.CDetour** @hg_defibEnd, align 4
+  call void @_ZN7CDetour7DestroyEv(%class.CDetour* %14)
+  store %class.CDetour* null, %class.CDetour** @hg_defibEnd, align 4
+  br label %15
+
+; <label>:15                                      ; preds = %13, %10
+  %16 = load %class.CDetour** @hg_deadPlayer, align 4
+  %17 = icmp ne %class.CDetour* %16, null
+  br i1 %17, label %18, label %20
+
+; <label>:18                                      ; preds = %15
+  %19 = load %class.CDetour** @hg_deadPlayer, align 4
+  call void @_ZN7CDetour7DestroyEv(%class.CDetour* %19)
+  store %class.CDetour* null, %class.CDetour** @hg_deadPlayer, align 4
+  br label %20
+
+; <label>:20                                      ; preds = %18, %15
+  ret void
+}
+
+declare void @_ZN7CDetour7DestroyEv(%class.CDetour*) #3
+
+; Function Attrs: nounwind
+define hidden zeroext i1 @_Z7HxStartv() #1 {
+  %1 = alloca i1, align 1
+  %2 = alloca { i32, i32 }, align 4
+  %3 = alloca { i32, i32 }, align 4
+  %4 = load %"class.SourceMod::ISourceMod"** @g_pSM, align 4
+  %5 = bitcast %"class.SourceMod::ISourceMod"* %4 to %"class.SourcePawn::ISourcePawnEngine"* (%"class.SourceMod::ISourceMod"*)***
+  %6 = load %"class.SourcePawn::ISourcePawnEngine"* (%"class.SourceMod::ISourceMod"*)*** %5
+  %7 = getelementptr inbounds %"class.SourcePawn::ISourcePawnEngine"* (%"class.SourceMod::ISourceMod"*)** %6, i64 14
+  %8 = load %"class.SourcePawn::ISourcePawnEngine"* (%"class.SourceMod::ISourceMod"*)** %7
+  %9 = call %"class.SourcePawn::ISourcePawnEngine"* %8(%"class.SourceMod::ISourceMod"* %4)
+  %10 = load %"class.SourceMod::IGameConfig"** @g_pGameConf, align 4
+  call void @_ZN14CDetourManager4InitEPN10SourcePawn17ISourcePawnEngineEPN9SourceMod11IGameConfigE(%"class.SourcePawn::ISourcePawnEngine"* %9, %"class.SourceMod::IGameConfig"* %10)
+  %11 = load %"class.SourceMod::IGameConfig"** @g_pGameConf, align 4
+  %12 = bitcast %"class.SourceMod::IGameConfig"* %11 to i1 (%"class.SourceMod::IGameConfig"*, i8*, i8**)***
+  %13 = load i1 (%"class.SourceMod::IGameConfig"*, i8*, i8**)*** %12
+  %14 = getelementptr inbounds i1 (%"class.SourceMod::IGameConfig"*, i8*, i8**)** %13, i64 3
+  %15 = load i1 (%"class.SourceMod::IGameConfig"*, i8*, i8**)** %14
+  %16 = call zeroext i1 %15(%"class.SourceMod::IGameConfig"* %11, i8* getelementptr inbounds ([26 x i8]* @.str10, i32 0, i32 0), i8** bitcast (i8* (%class.CBaseEntity*, %class.Vector*)** @CBaseEntity__SetAbsOrigin to i8**))
+  %17 = call %class.CDetour* @_ZN14CDetourManager12CreateDetourEPvPS0_PKc(i8* bitcast (i8* (i32)* @_Z13HxPlayerSpawni to i8*), i8** bitcast (i8* (i32)** @HxPlayerSpawn_Actual to i8**), i8* getelementptr inbounds ([21 x i8]* @.str11, i32 0, i32 0))
+  store %class.CDetour* %17, %class.CDetour** @hg_getPlayer, align 4
+  store { i32, i32 } { i32 ptrtoint (i8* (%class.HxDefibStartClass*, i32, i8*, i8*, i32)* @_ZN17HxDefibStartClass12HxDefibStartEiPvS0_i to i32), i32 0 }, { i32, i32 }* %2, align 4
+  %18 = call i8* @_Z11GetCodeAddrM12GenericClassFvvE({ i32, i32 }* byval align 4 %2)
+  %19 = call %class.CDetour* @_ZN14CDetourManager12CreateDetourEPvPS0_PKc(i8* %18, i8** bitcast ({ i32, i32 }* @_ZN17HxDefibStartClass19HxDefibStart_ActualE to i8**), i8* getelementptr inbounds ([27 x i8]* @.str12, i32 0, i32 0))
+  store %class.CDetour* %19, %class.CDetour** @hg_defibStart, align 4
+  store { i32, i32 } { i32 ptrtoint (i8* (%class.HxDefibEndClass*, i8*, i8*)* @_ZN15HxDefibEndClass10HxDefibEndEPvS0_ to i32), i32 0 }, { i32, i32 }* %3, align 4
+  %20 = call i8* @_Z11GetCodeAddrM12GenericClassFvvE({ i32, i32 }* byval align 4 %3)
+  %21 = call %class.CDetour* @_ZN14CDetourManager12CreateDetourEPvPS0_PKc(i8* %20, i8** bitcast ({ i32, i32 }* @_ZN15HxDefibEndClass17HxDefibEnd_ActualE to i8**), i8* getelementptr inbounds ([30 x i8]* @.str13, i32 0, i32 0))
+  store %class.CDetour* %21, %class.CDetour** @hg_defibEnd, align 4
+  %22 = call %class.CDetour* @_ZN14CDetourManager12CreateDetourEPvPS0_PKc(i8* bitcast (%class.CBaseEntity* (%class.CBasePlayer*)* @_Z12HxDeathModelP11CBasePlayer to i8*), i8** bitcast (%class.CBaseEntity* (%class.CBasePlayer*)** @HxDeathModel_Actual to i8**), i8* getelementptr inbounds ([28 x i8]* @.str14, i32 0, i32 0))
+  store %class.CDetour* %22, %class.CDetour** @hg_deadPlayer, align 4
+  %23 = load i8* (%class.CBaseEntity*, %class.Vector*)** @CBaseEntity__SetAbsOrigin, align 4
+  %24 = icmp ne i8* (%class.CBaseEntity*, %class.Vector*)* %23, null
+  br i1 %24, label %25, label %42
+
+; <label>:25                                      ; preds = %0
+  %26 = load %class.CDetour** @hg_getPlayer, align 4
+  %27 = icmp ne %class.CDetour* %26, null
+  br i1 %27, label %28, label %42
+
+; <label>:28                                      ; preds = %25
+  %29 = load %class.CDetour** @hg_defibStart, align 4
+  %30 = icmp ne %class.CDetour* %29, null
+  br i1 %30, label %31, label %42
+
+; <label>:31                                      ; preds = %28
+  %32 = load %class.CDetour** @hg_defibEnd, align 4
+  %33 = icmp ne %class.CDetour* %32, null
+  br i1 %33, label %34, label %42
+
+; <label>:34                                      ; preds = %31
+  %35 = load %class.CDetour** @hg_deadPlayer, align 4
+  %36 = icmp ne %class.CDetour* %35, null
+  br i1 %36, label %37, label %42
+
+; <label>:37                                      ; preds = %34
+  %38 = load %class.CDetour** @hg_getPlayer, align 4
+  call void @_ZN7CDetour12EnableDetourEv(%class.CDetour* %38)
+  %39 = load %class.CDetour** @hg_defibStart, align 4
+  call void @_ZN7CDetour12EnableDetourEv(%class.CDetour* %39)
+  %40 = load %class.CDetour** @hg_defibEnd, align 4
+  call void @_ZN7CDetour12EnableDetourEv(%class.CDetour* %40)
+  %41 = load %class.CDetour** @hg_deadPlayer, align 4
+  call void @_ZN7CDetour12EnableDetourEv(%class.CDetour* %41)
+  store i1 true, i1* %1
+  br label %43
+
+; <label>:42                                      ; preds = %34, %31, %28, %25, %0
+  call void @_Z12HxDestroyAllv()
+  store i1 false, i1* %1
+  br label %43
+
+; <label>:43                                      ; preds = %42, %37
+  %44 = load i1* %1
+  ret i1 %44
+}
+
+declare void @_ZN14CDetourManager4InitEPN10SourcePawn17ISourcePawnEngineEPN9SourceMod11IGameConfigE(%"class.SourcePawn::ISourcePawnEngine"*, %"class.SourceMod::IGameConfig"*) #3
+
+declare %class.CDetour* @_ZN14CDetourManager12CreateDetourEPvPS0_PKc(i8*, i8**, i8*) #3
+
+; Function Attrs: inlinehint nounwind
+define linkonce_odr hidden i8* @_Z11GetCodeAddrM12GenericClassFvvE({ i32, i32 }* byval align 4) #2 {
+  %2 = alloca { i32, i32 }, align 4
+  %mfp = load { i32, i32 }* %0, align 4
+  store { i32, i32 } %mfp, { i32, i32 }* %2, align 4
+  %3 = bitcast { i32, i32 }* %2 to i8**
+  %4 = load i8** %3, align 4
+  ret i8* %4
+}
+
+declare void @_ZN7CDetour12EnableDetourEv(%class.CDetour*) #3
+
+; Function Attrs: nounwind
 define hidden zeroext i1 @_ZN8DefibFix17SDK_OnMetamodLoadEPN8SourceMM7ISmmAPIEPcjb(%class.DefibFix* %this, %"class.SourceMM::ISmmAPI"* %ismm, i8* %error, i32 %maxlength, i1 zeroext %late) unnamed_addr #1 align 2 {
   %1 = alloca i1, align 1
   %2 = alloca %class.DefibFix*, align 4
@@ -766,7 +911,7 @@ define hidden zeroext i1 @_ZN8DefibFix17SDK_OnMetamodLoadEPN8SourceMM7ISmmAPIEPc
   %18 = getelementptr inbounds i8* (i8*, i32*)* (%"class.SourceMM::ISmmAPI"*, i1)** %17, i64 1
   %19 = load i8* (i8*, i32*)* (%"class.SourceMM::ISmmAPI"*, i1)** %18
   %20 = call i8* (i8*, i32*)* (%"class.SourceMM::ISmmAPI"*, i1)* %19(%"class.SourceMM::ISmmAPI"* %15, i1 zeroext true)
-  %21 = call i8* %14(%"class.SourceMM::ISmmAPI"* %10, i8* (i8*, i32*)* %20, i8* getelementptr inbounds ([17 x i8]* @.str10, i32 0, i32 0), i32 -1)
+  %21 = call i8* %14(%"class.SourceMM::ISmmAPI"* %10, i8* (i8*, i32*)* %20, i8* getelementptr inbounds ([17 x i8]* @.str15, i32 0, i32 0), i32 -1)
   %22 = bitcast i8* %21 to %class.IVEngineServer*
   store %class.IVEngineServer* %22, %class.IVEngineServer** @engine, align 4
   %23 = load %class.IVEngineServer** @engine, align 4
@@ -791,7 +936,7 @@ define hidden zeroext i1 @_ZN8DefibFix17SDK_OnMetamodLoadEPN8SourceMM7ISmmAPIEPc
   %36 = load i32 (%"class.SourceMM::ISmmAPI"*, i8*, i32, i8*, ...)** %35
   %37 = load i8** %4, align 4
   %38 = load i32* %maxlen, align 4
-  %39 = call i32 (%"class.SourceMM::ISmmAPI"*, i8*, i32, i8*, ...)* %36(%"class.SourceMM::ISmmAPI"* %32, i8* %37, i32 %38, i8* getelementptr inbounds ([29 x i8]* @.str11, i32 0, i32 0), i8* getelementptr inbounds ([17 x i8]* @.str10, i32 0, i32 0))
+  %39 = call i32 (%"class.SourceMM::ISmmAPI"*, i8*, i32, i8*, ...)* %36(%"class.SourceMM::ISmmAPI"* %32, i8* %37, i32 %38, i8* getelementptr inbounds ([29 x i8]* @.str16, i32 0, i32 0), i8* getelementptr inbounds ([17 x i8]* @.str15, i32 0, i32 0))
   br label %40
 
 ; <label>:40                                      ; preds = %31, %28, %25
@@ -810,7 +955,7 @@ define hidden zeroext i1 @_ZN8DefibFix17SDK_OnMetamodLoadEPN8SourceMM7ISmmAPIEPc
   %50 = getelementptr inbounds i8* (i8*, i32*)* (%"class.SourceMM::ISmmAPI"*, i1)** %49, i64 4
   %51 = load i8* (i8*, i32*)* (%"class.SourceMM::ISmmAPI"*, i1)** %50
   %52 = call i8* (i8*, i32*)* (%"class.SourceMM::ISmmAPI"*, i1)* %51(%"class.SourceMM::ISmmAPI"* %47, i1 zeroext true)
-  %53 = call i8* %46(%"class.SourceMM::ISmmAPI"* %42, i8* (i8*, i32*)* %52, i8* getelementptr inbounds ([18 x i8]* @.str12, i32 0, i32 0), i32 0)
+  %53 = call i8* %46(%"class.SourceMM::ISmmAPI"* %42, i8* (i8*, i32*)* %52, i8* getelementptr inbounds ([18 x i8]* @.str17, i32 0, i32 0), i32 0)
   %54 = bitcast i8* %53 to %class.IServerGameEnts*
   store %class.IServerGameEnts* %54, %class.IServerGameEnts** @gameents, align 4
   %55 = load %class.IServerGameEnts** @gameents, align 4
@@ -835,7 +980,7 @@ define hidden zeroext i1 @_ZN8DefibFix17SDK_OnMetamodLoadEPN8SourceMM7ISmmAPIEPc
   %68 = load i32 (%"class.SourceMM::ISmmAPI"*, i8*, i32, i8*, ...)** %67
   %69 = load i8** %4, align 4
   %70 = load i32* %maxlen, align 4
-  %71 = call i32 (%"class.SourceMM::ISmmAPI"*, i8*, i32, i8*, ...)* %68(%"class.SourceMM::ISmmAPI"* %64, i8* %69, i32 %70, i8* getelementptr inbounds ([29 x i8]* @.str11, i32 0, i32 0), i8* getelementptr inbounds ([18 x i8]* @.str12, i32 0, i32 0))
+  %71 = call i32 (%"class.SourceMM::ISmmAPI"*, i8*, i32, i8*, ...)* %68(%"class.SourceMM::ISmmAPI"* %64, i8* %69, i32 %70, i8* getelementptr inbounds ([29 x i8]* @.str16, i32 0, i32 0), i8* getelementptr inbounds ([18 x i8]* @.str17, i32 0, i32 0))
   br label %72
 
 ; <label>:72                                      ; preds = %63, %60, %57
@@ -873,25 +1018,25 @@ define hidden zeroext i1 @_ZN8DefibFix10SDK_OnLoadEPcjb(%class.DefibFix* %this, 
   %11 = getelementptr inbounds i1 (%"class.SourceMod::IGameConfigManager"*, i8*, %"class.SourceMod::IGameConfig"**, i8*, i32)** %10, i64 3
   %12 = load i1 (%"class.SourceMod::IGameConfigManager"*, i8*, %"class.SourceMod::IGameConfig"**, i8*, i32)** %11
   %13 = getelementptr inbounds [255 x i8]* %conf_error, i32 0, i32 0
-  %14 = call zeroext i1 %12(%"class.SourceMod::IGameConfigManager"* %8, i8* getelementptr inbounds ([9 x i8]* @.str13, i32 0, i32 0), %"class.SourceMod::IGameConfig"** @g_pGameConf, i8* %13, i32 255)
+  %14 = call zeroext i1 %12(%"class.SourceMod::IGameConfigManager"* %8, i8* getelementptr inbounds ([9 x i8]* @.str18, i32 0, i32 0), %"class.SourceMod::IGameConfig"** @g_pGameConf, i8* %13, i32 255)
   br i1 %14, label %20, label %15
 
 ; <label>:15                                      ; preds = %0
   %16 = load i8** %3, align 4
   %17 = load i32* %4, align 4
   %18 = getelementptr inbounds [255 x i8]* %conf_error, i32 0, i32 0
-  %19 = call i32 (i8*, i32, i8*, ...)* @snprintf(i8* %16, i32 %17, i8* getelementptr inbounds ([32 x i8]* @.str14, i32 0, i32 0), i8* %18) #0
+  %19 = call i32 (i8*, i32, i8*, ...)* @snprintf(i8* %16, i32 %17, i8* getelementptr inbounds ([37 x i8]* @.str19, i32 0, i32 0), i8* %18) #0
   store i1 false, i1* %1
   br label %27
 
 ; <label>:20                                      ; preds = %0
-  %21 = call zeroext i1 @_ZN8DefibFix10SetupHooksEv(%class.DefibFix* %7)
+  %21 = call zeroext i1 @_Z7HxStartv()
   br i1 %21, label %26, label %22
 
 ; <label>:22                                      ; preds = %20
   %23 = load i8** %3, align 4
   %24 = load i32* %4, align 4
-  %25 = call i32 (i8*, i32, i8*, ...)* @snprintf(i8* %23, i32 %24, i8* getelementptr inbounds ([32 x i8]* @.str15, i32 0, i32 0)) #0
+  %25 = call i32 (i8*, i32, i8*, ...)* @snprintf(i8* %23, i32 %24, i8* getelementptr inbounds ([27 x i8]* @.str20, i32 0, i32 0)) #0
   store i1 false, i1* %1
   br label %27
 
@@ -908,94 +1053,11 @@ define hidden zeroext i1 @_ZN8DefibFix10SDK_OnLoadEPcjb(%class.DefibFix* %this, 
 declare i32 @snprintf(i8*, i32, i8*, ...) #1
 
 ; Function Attrs: nounwind
-define hidden zeroext i1 @_ZN8DefibFix10SetupHooksEv(%class.DefibFix* %this) #1 align 2 {
-  %1 = alloca i1, align 1
-  %2 = alloca %class.DefibFix*, align 4
-  %3 = alloca { i32, i32 }, align 4
-  %4 = alloca { i32, i32 }, align 4
-  store %class.DefibFix* %this, %class.DefibFix** %2, align 4
-  %5 = load %class.DefibFix** %2
-  %6 = load %"class.SourceMod::ISourceMod"** @g_pSM, align 4
-  %7 = bitcast %"class.SourceMod::ISourceMod"* %6 to %"class.SourcePawn::ISourcePawnEngine"* (%"class.SourceMod::ISourceMod"*)***
-  %8 = load %"class.SourcePawn::ISourcePawnEngine"* (%"class.SourceMod::ISourceMod"*)*** %7
-  %9 = getelementptr inbounds %"class.SourcePawn::ISourcePawnEngine"* (%"class.SourceMod::ISourceMod"*)** %8, i64 14
-  %10 = load %"class.SourcePawn::ISourcePawnEngine"* (%"class.SourceMod::ISourceMod"*)** %9
-  %11 = call %"class.SourcePawn::ISourcePawnEngine"* %10(%"class.SourceMod::ISourceMod"* %6)
-  %12 = load %"class.SourceMod::IGameConfig"** @g_pGameConf, align 4
-  call void @_ZN14CDetourManager4InitEPN10SourcePawn17ISourcePawnEngineEPN9SourceMod11IGameConfigE(%"class.SourcePawn::ISourcePawnEngine"* %11, %"class.SourceMod::IGameConfig"* %12)
-  %13 = load %"class.SourceMod::IGameConfig"** @g_pGameConf, align 4
-  %14 = bitcast %"class.SourceMod::IGameConfig"* %13 to i1 (%"class.SourceMod::IGameConfig"*, i8*, i8**)***
-  %15 = load i1 (%"class.SourceMod::IGameConfig"*, i8*, i8**)*** %14
-  %16 = getelementptr inbounds i1 (%"class.SourceMod::IGameConfig"*, i8*, i8**)** %15, i64 3
-  %17 = load i1 (%"class.SourceMod::IGameConfig"*, i8*, i8**)** %16
-  %18 = call zeroext i1 %17(%"class.SourceMod::IGameConfig"* %13, i8* getelementptr inbounds ([26 x i8]* @.str16, i32 0, i32 0), i8** bitcast (i8* (%class.CBaseEntity*, %class.Vector*)** @CBaseEntity__SetAbsOrigin to i8**))
-  %19 = call %class.CDetour* @_ZN14CDetourManager12CreateDetourEPvPS0_PKc(i8* bitcast (i8* (i32)* @_Z20GetPlayerByCharacteri to i8*), i8** bitcast (i8* (i32)** @GetPlayerByCharacter_Actual to i8**), i8* getelementptr inbounds ([21 x i8]* @.str17, i32 0, i32 0))
-  store %class.CDetour* %19, %class.CDetour** @hg_getPlayer, align 4
-  store { i32, i32 } { i32 ptrtoint (i8* (%class.DefibrillatorOnStartActionClass*, i32, i8*, i8*, i32)* @_ZN31DefibrillatorOnStartActionClass26DefibrillatorOnStartActionEiPvS0_i to i32), i32 0 }, { i32, i32 }* %3, align 4
-  %20 = call i8* @_Z11GetCodeAddrM12GenericClassFvvE({ i32, i32 }* byval align 4 %3)
-  %21 = call %class.CDetour* @_ZN14CDetourManager12CreateDetourEPvPS0_PKc(i8* %20, i8** bitcast ({ i32, i32 }* @_ZN31DefibrillatorOnStartActionClass33DefibrillatorOnStartAction_ActualE to i8**), i8* getelementptr inbounds ([27 x i8]* @.str18, i32 0, i32 0))
-  store %class.CDetour* %21, %class.CDetour** @hg_defibStart, align 4
-  store { i32, i32 } { i32 ptrtoint (i8* (%class.DefibrillatorOnActionCompleteClass*, i8*, i8*)* @_ZN34DefibrillatorOnActionCompleteClass29DefibrillatorOnActionCompleteEPvS0_ to i32), i32 0 }, { i32, i32 }* %4, align 4
-  %22 = call i8* @_Z11GetCodeAddrM12GenericClassFvvE({ i32, i32 }* byval align 4 %4)
-  %23 = call %class.CDetour* @_ZN14CDetourManager12CreateDetourEPvPS0_PKc(i8* %22, i8** bitcast ({ i32, i32 }* @_ZN34DefibrillatorOnActionCompleteClass36DefibrillatorOnActionComplete_ActualE to i8**), i8* getelementptr inbounds ([30 x i8]* @.str19, i32 0, i32 0))
-  store %class.CDetour* %23, %class.CDetour** @hg_defibEnd, align 4
-  %24 = call %class.CDetour* @_ZN14CDetourManager12CreateDetourEPvPS0_PKc(i8* bitcast (%class.CBaseEntity* (%class.CBasePlayer*)* @_Z27CSurvivorDeathModel__CreateP11CBasePlayer to i8*), i8** bitcast (%class.CBaseEntity* (%class.CBasePlayer*)** @CSurvivorDeathModel__Create_Actual to i8**), i8* getelementptr inbounds ([28 x i8]* @.str20, i32 0, i32 0))
-  store %class.CDetour* %24, %class.CDetour** @hg_deadPlayer, align 4
-  %25 = load %class.CDetour** @hg_getPlayer, align 4
-  %26 = icmp ne %class.CDetour* %25, null
-  br i1 %26, label %27, label %44
-
-; <label>:27                                      ; preds = %0
-  %28 = load %class.CDetour** @hg_defibStart, align 4
-  %29 = icmp ne %class.CDetour* %28, null
-  br i1 %29, label %30, label %44
-
-; <label>:30                                      ; preds = %27
-  %31 = load %class.CDetour** @hg_defibEnd, align 4
-  %32 = icmp ne %class.CDetour* %31, null
-  br i1 %32, label %33, label %44
-
-; <label>:33                                      ; preds = %30
-  %34 = load %class.CDetour** @hg_deadPlayer, align 4
-  %35 = icmp ne %class.CDetour* %34, null
-  br i1 %35, label %36, label %44
-
-; <label>:36                                      ; preds = %33
-  %37 = load i8* (%class.CBaseEntity*, %class.Vector*)** @CBaseEntity__SetAbsOrigin, align 4
-  %38 = icmp ne i8* (%class.CBaseEntity*, %class.Vector*)* %37, null
-  br i1 %38, label %39, label %44
-
-; <label>:39                                      ; preds = %36
-  %40 = load %class.CDetour** @hg_getPlayer, align 4
-  call void @_ZN7CDetour12EnableDetourEv(%class.CDetour* %40)
-  %41 = load %class.CDetour** @hg_defibStart, align 4
-  call void @_ZN7CDetour12EnableDetourEv(%class.CDetour* %41)
-  %42 = load %class.CDetour** @hg_defibEnd, align 4
-  call void @_ZN7CDetour12EnableDetourEv(%class.CDetour* %42)
-  %43 = load %class.CDetour** @hg_deadPlayer, align 4
-  call void @_ZN7CDetour12EnableDetourEv(%class.CDetour* %43)
-  br label %45
-
-; <label>:44                                      ; preds = %36, %33, %30, %27, %0
-  call void @_ZN8DefibFix11RemoveHooksEv(%class.DefibFix* %5)
-  store i1 false, i1* %1
-  br label %46
-
-; <label>:45                                      ; preds = %39
-  store i1 true, i1* %1
-  br label %46
-
-; <label>:46                                      ; preds = %45, %44
-  %47 = load i1* %1
-  ret i1 %47
-}
-
-; Function Attrs: nounwind
 define hidden void @_ZN8DefibFix12SDK_OnUnloadEv(%class.DefibFix* %this) unnamed_addr #1 align 2 {
   %1 = alloca %class.DefibFix*, align 4
   store %class.DefibFix* %this, %class.DefibFix** %1, align 4
   %2 = load %class.DefibFix** %1
-  call void @_ZN8DefibFix11RemoveHooksEv(%class.DefibFix* %2)
+  call void @_Z12HxDestroyAllv()
   %3 = load %"class.SourceMod::IGameConfigManager"** @gameconfs, align 4
   %4 = bitcast %"class.SourceMod::IGameConfigManager"* %3 to void (%"class.SourceMod::IGameConfigManager"*, %"class.SourceMod::IGameConfig"*)***
   %5 = load void (%"class.SourceMod::IGameConfigManager"*, %"class.SourceMod::IGameConfig"*)*** %4
@@ -1005,76 +1067,6 @@ define hidden void @_ZN8DefibFix12SDK_OnUnloadEv(%class.DefibFix* %this) unnamed
   call void %7(%"class.SourceMod::IGameConfigManager"* %3, %"class.SourceMod::IGameConfig"* %8)
   ret void
 }
-
-; Function Attrs: nounwind
-define hidden void @_ZN8DefibFix11RemoveHooksEv(%class.DefibFix* %this) #1 align 2 {
-  %1 = alloca %class.DefibFix*, align 4
-  store %class.DefibFix* %this, %class.DefibFix** %1, align 4
-  %2 = load %class.DefibFix** %1
-  %3 = load %class.CDetour** @hg_getPlayer, align 4
-  %4 = icmp ne %class.CDetour* %3, null
-  br i1 %4, label %5, label %7
-
-; <label>:5                                       ; preds = %0
-  %6 = load %class.CDetour** @hg_getPlayer, align 4
-  call void @_ZN7CDetour7DestroyEv(%class.CDetour* %6)
-  store %class.CDetour* null, %class.CDetour** @hg_getPlayer, align 4
-  br label %7
-
-; <label>:7                                       ; preds = %5, %0
-  %8 = load %class.CDetour** @hg_defibStart, align 4
-  %9 = icmp ne %class.CDetour* %8, null
-  br i1 %9, label %10, label %12
-
-; <label>:10                                      ; preds = %7
-  %11 = load %class.CDetour** @hg_defibStart, align 4
-  call void @_ZN7CDetour7DestroyEv(%class.CDetour* %11)
-  store %class.CDetour* null, %class.CDetour** @hg_defibStart, align 4
-  br label %12
-
-; <label>:12                                      ; preds = %10, %7
-  %13 = load %class.CDetour** @hg_defibEnd, align 4
-  %14 = icmp ne %class.CDetour* %13, null
-  br i1 %14, label %15, label %17
-
-; <label>:15                                      ; preds = %12
-  %16 = load %class.CDetour** @hg_defibEnd, align 4
-  call void @_ZN7CDetour7DestroyEv(%class.CDetour* %16)
-  store %class.CDetour* null, %class.CDetour** @hg_defibEnd, align 4
-  br label %17
-
-; <label>:17                                      ; preds = %15, %12
-  %18 = load %class.CDetour** @hg_deadPlayer, align 4
-  %19 = icmp ne %class.CDetour* %18, null
-  br i1 %19, label %20, label %22
-
-; <label>:20                                      ; preds = %17
-  %21 = load %class.CDetour** @hg_deadPlayer, align 4
-  call void @_ZN7CDetour7DestroyEv(%class.CDetour* %21)
-  store %class.CDetour* null, %class.CDetour** @hg_deadPlayer, align 4
-  br label %22
-
-; <label>:22                                      ; preds = %20, %17
-  ret void
-}
-
-declare void @_ZN14CDetourManager4InitEPN10SourcePawn17ISourcePawnEngineEPN9SourceMod11IGameConfigE(%"class.SourcePawn::ISourcePawnEngine"*, %"class.SourceMod::IGameConfig"*) #3
-
-declare %class.CDetour* @_ZN14CDetourManager12CreateDetourEPvPS0_PKc(i8*, i8**, i8*) #3
-
-; Function Attrs: inlinehint nounwind
-define linkonce_odr hidden i8* @_Z11GetCodeAddrM12GenericClassFvvE({ i32, i32 }* byval align 4) #2 {
-  %2 = alloca { i32, i32 }, align 4
-  %mfp = load { i32, i32 }* %0, align 4
-  store { i32, i32 } %mfp, { i32, i32 }* %2, align 4
-  %3 = bitcast { i32, i32 }* %2 to i8**
-  %4 = load i8** %3, align 4
-  ret i8* %4
-}
-
-declare void @_ZN7CDetour12EnableDetourEv(%class.CDetour*) #3
-
-declare void @_ZN7CDetour7DestroyEv(%class.CDetour*) #3
 
 ; Function Attrs: nounwind
 define linkonce_odr hidden i32 @_ZN8SourceMM10ISmmPlugin13GetApiVersionEv(%"class.SourceMM::ISmmPlugin"* %this) unnamed_addr #1 align 2 {
@@ -1351,7 +1343,7 @@ define linkonce_odr hidden void @_ZN5Color8SetColorEiiii(%class.Color* %this, i3
 }
 
 ; Function Attrs: nounwind
-define internal void @_GLOBAL__I_a() #0 section ".text.startup" {
+define internal void @_GLOBAL__sub_I_extension.cpp() #0 section ".text.startup" {
   call void @__cxx_global_var_init()
   call void @__cxx_global_var_init1()
   call void @__cxx_global_var_init2()
@@ -1368,4 +1360,4 @@ attributes #5 = { builtin nounwind }
 
 !llvm.ident = !{!0}
 
-!0 = metadata !{metadata !"Ubuntu clang version 3.4-1ubuntu3 (tags/RELEASE_34/final) (based on LLVM 3.4)"}
+!0 = metadata !{metadata !"Ubuntu clang version 3.5.0-4ubuntu2~trusty2 (tags/RELEASE_350/final) (based on LLVM 3.5.0)"}

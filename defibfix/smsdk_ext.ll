@@ -1,5 +1,5 @@
 ; ModuleID = 'smsdk_ext.cpp'
-target datalayout = "e-p:32:32:32-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:32:64-f32:32:32-f64:32:64-v64:64:64-v128:128:128-a0:0:64-f80:32:32-n8:16:32-S128"
+target datalayout = "e-m:e-p:32:32-f64:32:64-f80:32-n8:16:32-S128"
 target triple = "i386-pc-linux-gnu"
 
 %class.Color = type { [4 x i8] }
@@ -43,11 +43,11 @@ target triple = "i386-pc-linux-gnu"
 @.str5 = private unnamed_addr constant [15 x i8] c"IPlayerManager\00", align 1
 @.str6 = private unnamed_addr constant [19 x i8] c"IGameConfigManager\00", align 1
 @.str7 = private unnamed_addr constant [13 x i8] c"IGameHelpers\00", align 1
-@.str8 = private unnamed_addr constant [17 x i8] c"V10, Accelerator\00", align 1
-@.str9 = private unnamed_addr constant [12 x i8] c"Jan 22 2018\00", align 1
+@.str8 = private unnamed_addr constant [4 x i8] c"V10\00", align 1
+@.str9 = private unnamed_addr constant [12 x i8] c"Feb 22 2018\00", align 1
 @.str10 = private unnamed_addr constant [75 x i8] c"Fixes defibrillator re-revive clone bug (on servers higher than 8 players)\00", align 1
-@.str11 = private unnamed_addr constant [6 x i8] c"1.0.1\00", align 1
-@.str12 = private unnamed_addr constant [19 x i8] c"DefibFix Extension\00", align 1
+@.str11 = private unnamed_addr constant [8 x i8] c"1.1 mod\00", align 1
+@.str12 = private unnamed_addr constant [14 x i8] c"L4D2 DefibFix\00", align 1
 @.str13 = private unnamed_addr constant [9 x i8] c"DefibFix\00", align 1
 @.str14 = private unnamed_addr constant [21 x i8] c"http://www.v10.name/\00", align 1
 @g_PLID = hidden global i32 0, align 4
@@ -66,7 +66,7 @@ target triple = "i386-pc-linux-gnu"
 @.str22 = private unnamed_addr constant [4 x i8] c"GPL\00", align 1
 @_ZTVN9SourceMod19IExtensionInterfaceE = linkonce_odr hidden unnamed_addr constant [21 x i8*] [i8* null, i8* null, i8* bitcast (i32 (%"class.SourceMod::IExtensionInterface"*)* @_ZN9SourceMod19IExtensionInterface19GetExtensionVersionEv to i8*), i8* bitcast (void ()* @__cxa_pure_virtual to i8*), i8* bitcast (void ()* @__cxa_pure_virtual to i8*), i8* bitcast (void ()* @__cxa_pure_virtual to i8*), i8* bitcast (void ()* @__cxa_pure_virtual to i8*), i8* bitcast (i1 (%"class.SourceMod::IExtensionInterface"*, %"class.SourceMod::SMInterface"*)* @_ZN9SourceMod19IExtensionInterface18QueryInterfaceDropEPNS_11SMInterfaceE to i8*), i8* bitcast (void (%"class.SourceMod::IExtensionInterface"*, %"class.SourceMod::SMInterface"*)* @_ZN9SourceMod19IExtensionInterface19NotifyInterfaceDropEPNS_11SMInterfaceE to i8*), i8* bitcast (i1 (%"class.SourceMod::IExtensionInterface"*, i8*, i32)* @_ZN9SourceMod19IExtensionInterface12QueryRunningEPcj to i8*), i8* bitcast (void ()* @__cxa_pure_virtual to i8*), i8* bitcast (void ()* @__cxa_pure_virtual to i8*), i8* bitcast (void ()* @__cxa_pure_virtual to i8*), i8* bitcast (void ()* @__cxa_pure_virtual to i8*), i8* bitcast (void ()* @__cxa_pure_virtual to i8*), i8* bitcast (void ()* @__cxa_pure_virtual to i8*), i8* bitcast (void ()* @__cxa_pure_virtual to i8*), i8* bitcast (void ()* @__cxa_pure_virtual to i8*), i8* bitcast (void (%"class.SourceMod::IExtensionInterface"*, %struct.edict_t*, i32, i32)* @_ZN9SourceMod19IExtensionInterface14OnCoreMapStartEP7edict_tii to i8*), i8* bitcast (void (%"class.SourceMod::IExtensionInterface"*)* @_ZN9SourceMod19IExtensionInterface21OnDependenciesDroppedEv to i8*), i8* bitcast (void (%"class.SourceMod::IExtensionInterface"*)* @_ZN9SourceMod19IExtensionInterface12OnCoreMapEndEv to i8*)]
 @_ZTVN8SourceMM10ISmmPluginE = linkonce_odr hidden unnamed_addr constant [19 x i8*] [i8* null, i8* null, i8* bitcast (i32 (%"class.SourceMM::ISmmPlugin"*)* @_ZN8SourceMM10ISmmPlugin13GetApiVersionEv to i8*), i8* bitcast (void (%"class.SourceMM::ISmmPlugin"*)* @_ZN8SourceMM10ISmmPluginD2Ev to i8*), i8* bitcast (void (%"class.SourceMM::ISmmPlugin"*)* @_ZN8SourceMM10ISmmPluginD0Ev to i8*), i8* bitcast (void ()* @__cxa_pure_virtual to i8*), i8* bitcast (void (%"class.SourceMM::ISmmPlugin"*)* @_ZN8SourceMM10ISmmPlugin16AllPluginsLoadedEv to i8*), i8* bitcast (i1 (%"class.SourceMM::ISmmPlugin"*, i8*, i32)* @_ZN8SourceMM10ISmmPlugin12QueryRunningEPcj to i8*), i8* bitcast (i1 (%"class.SourceMM::ISmmPlugin"*, i8*, i32)* @_ZN8SourceMM10ISmmPlugin6UnloadEPcj to i8*), i8* bitcast (i1 (%"class.SourceMM::ISmmPlugin"*, i8*, i32)* @_ZN8SourceMM10ISmmPlugin5PauseEPcj to i8*), i8* bitcast (i1 (%"class.SourceMM::ISmmPlugin"*, i8*, i32)* @_ZN8SourceMM10ISmmPlugin7UnpauseEPcj to i8*), i8* bitcast (void ()* @__cxa_pure_virtual to i8*), i8* bitcast (void ()* @__cxa_pure_virtual to i8*), i8* bitcast (void ()* @__cxa_pure_virtual to i8*), i8* bitcast (void ()* @__cxa_pure_virtual to i8*), i8* bitcast (void ()* @__cxa_pure_virtual to i8*), i8* bitcast (void ()* @__cxa_pure_virtual to i8*), i8* bitcast (void ()* @__cxa_pure_virtual to i8*), i8* bitcast (void ()* @__cxa_pure_virtual to i8*)]
-@llvm.global_ctors = appending global [1 x { i32, void ()* }] [{ i32, void ()* } { i32 65535, void ()* @_GLOBAL__I_a }]
+@llvm.global_ctors = appending global [1 x { i32, void ()*, i8* }] [{ i32, void ()*, i8* } { i32 65535, void ()* @_GLOBAL__sub_I_smsdk_ext.cpp, i8* null }]
 
 @_ZN12SDKExtensionC1Ev = hidden alias void (%class.SDKExtension*)* @_ZN12SDKExtensionC2Ev
 
@@ -618,7 +618,7 @@ define hidden i8* @_ZN12SDKExtension18GetExtensionAuthorEv(%class.SDKExtension* 
   %1 = alloca %class.SDKExtension*, align 4
   store %class.SDKExtension* %this, %class.SDKExtension** %1, align 4
   %2 = load %class.SDKExtension** %1
-  ret i8* getelementptr inbounds ([17 x i8]* @.str8, i32 0, i32 0)
+  ret i8* getelementptr inbounds ([4 x i8]* @.str8, i32 0, i32 0)
 }
 
 ; Function Attrs: nounwind
@@ -678,7 +678,7 @@ define hidden i8* @_ZN12SDKExtension21GetExtensionVerStringEv(%class.SDKExtensio
   %1 = alloca %class.SDKExtension*, align 4
   store %class.SDKExtension* %this, %class.SDKExtension** %1, align 4
   %2 = load %class.SDKExtension** %1
-  ret i8* getelementptr inbounds ([6 x i8]* @.str11, i32 0, i32 0)
+  ret i8* getelementptr inbounds ([8 x i8]* @.str11, i32 0, i32 0)
 }
 
 ; Function Attrs: nounwind
@@ -698,7 +698,7 @@ define hidden i8* @_ZN12SDKExtension16GetExtensionNameEv(%class.SDKExtension* %t
   %1 = alloca %class.SDKExtension*, align 4
   store %class.SDKExtension* %this, %class.SDKExtension** %1, align 4
   %2 = load %class.SDKExtension** %1
-  ret i8* getelementptr inbounds ([19 x i8]* @.str12, i32 0, i32 0)
+  ret i8* getelementptr inbounds ([14 x i8]* @.str12, i32 0, i32 0)
 }
 
 ; Function Attrs: nounwind
@@ -1540,7 +1540,7 @@ define linkonce_odr hidden void @_ZN5Color8SetColorEiiii(%class.Color* %this, i3
 }
 
 ; Function Attrs: nounwind
-define internal void @_GLOBAL__I_a() #0 section ".text.startup" {
+define internal void @_GLOBAL__sub_I_smsdk_ext.cpp() #0 section ".text.startup" {
   call void @__cxx_global_var_init()
   call void @__cxx_global_var_init1()
   call void @__cxx_global_var_init2()
@@ -1558,4 +1558,4 @@ attributes #7 = { builtin nounwind }
 
 !llvm.ident = !{!0}
 
-!0 = metadata !{metadata !"Ubuntu clang version 3.4-1ubuntu3 (tags/RELEASE_34/final) (based on LLVM 3.4)"}
+!0 = metadata !{metadata !"Ubuntu clang version 3.5.0-4ubuntu2~trusty2 (tags/RELEASE_350/final) (based on LLVM 3.5.0)"}

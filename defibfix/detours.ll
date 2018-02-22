@@ -1,5 +1,5 @@
 ; ModuleID = 'CDetour/detours.cpp'
-target datalayout = "e-p:32:32:32-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:32:64-f32:32:32-f64:32:64-v64:64:64-v128:128:128-a0:0:64-f80:32:32-n8:16:32-S128"
+target datalayout = "e-m:e-p:32:32-f64:32:64-f80:32-n8:16:32-S128"
 target triple = "i386-pc-linux-gnu"
 
 %class.Color = type { [4 x i8] }
@@ -24,7 +24,7 @@ target triple = "i386-pc-linux-gnu"
 @.str = private unnamed_addr constant [39 x i8] c"Could not locate %s - Disabling detour\00", align 1
 @.str3 = private unnamed_addr constant [68 x i8] c"Invalid detour address passed - Disabling detour to prevent crashes\00", align 1
 @.str4 = private unnamed_addr constant [60 x i8] c"Sigscan for %s failed - Disabling detour to prevent crashes\00", align 1
-@llvm.global_ctors = appending global [1 x { i32, void ()* }] [{ i32, void ()* } { i32 65535, void ()* @_GLOBAL__I_a }]
+@llvm.global_ctors = appending global [1 x { i32, void ()*, i8* }] [{ i32, void ()*, i8* } { i32 65535, void ()* @_GLOBAL__sub_I_detours.cpp, i8* null }]
 
 @_ZN7CDetourC1EPvPS0_PKc = hidden alias void (%class.CDetour*, i8*, i8**, i8*)* @_ZN7CDetourC2EPvPS0_PKc
 @_ZN7CDetourC1EPvPS0_S0_ = hidden alias void (%class.CDetour*, i8*, i8**, i8*)* @_ZN7CDetourC2EPvPS0_S0_
@@ -1012,7 +1012,7 @@ define linkonce_odr hidden void @_ZN5Color8SetColorEiiii(%class.Color* %this, i3
 }
 
 ; Function Attrs: nounwind
-define internal void @_GLOBAL__I_a() #0 section ".text.startup" {
+define internal void @_GLOBAL__sub_I_detours.cpp() #0 section ".text.startup" {
   call void @__cxx_global_var_init()
   call void @__cxx_global_var_init1()
   call void @__cxx_global_var_init2()
@@ -1030,4 +1030,4 @@ attributes #7 = { builtin nounwind }
 
 !llvm.ident = !{!0}
 
-!0 = metadata !{metadata !"Ubuntu clang version 3.4-1ubuntu3 (tags/RELEASE_34/final) (based on LLVM 3.4)"}
+!0 = metadata !{metadata !"Ubuntu clang version 3.5.0-4ubuntu2~trusty2 (tags/RELEASE_350/final) (based on LLVM 3.5.0)"}
