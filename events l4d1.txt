@@ -1,0 +1,1439 @@
+player_death
+
+Note:
+Name: 	player_death
+Structure: 	
+short 	userid 	user ID who died
+long 	entityid 	entity ID who died, userid should be used first, to get the dead Player. Otherwise, it is not a player, so use this.
+short 	attacker 	user ID who killed
+string 	attackername 	What type of zombie, so we don't have zombie names
+long 	attackerentid 	if killer not a player, the entindex of who killed. Again, use attacker first
+string 	weapon 	weapon name killer used
+bool 	headshot 	singals a headshot
+bool 	attackerisbot 	is the attacker a bot
+string 	victimname 	What type of zombie, so we don't have zombie names
+bool 	victimisbot 	is the victim a bot
+bool 	abort 	did the victim abort
+long 	type 	damage type
+float 	victim_x 	
+float 	victim_y 	
+float 	victim_z 	
+
+
+player_hurt
+
+Note: Registers all playable classes (Hunter, Smoker, Boomer, Tank, Survivors). See infected_hurt for Witch and Common Infected
+Name: 	player_hurt
+Structure: 	
+1 	local 	Not networked
+short 	userid 	user ID who was hurt
+short 	attacker 	user id who attacked
+long 	attackerentid 	entity id who attacked, if attacker not a player, and userid therefore invalid
+short 	health 	remaining health points
+byte 	armor 	remaining armor points
+string 	weapon 	weapon name attacker used, if not the world
+short 	dmg_health 	damage done to health
+byte 	dmg_armor 	damage done to armor
+byte 	hitgroup 	hitgroup that was damaged
+long 	type 	damage type
+
+
+player_team
+
+Note: player change his team
+Name: 	player_team
+Structure: 	
+short 	userid 	user ID on server
+byte 	team 	team id
+byte 	oldteam 	old team id
+bool 	disconnect 	team change because player disconnects
+string 	name 	
+bool 	isbot 	
+
+
+player_bot_replace
+
+Note: Bot replaced a player
+Name: 	player_bot_replace
+Structure: 	
+short 	player 	user ID of the player
+short 	bot 	user ID of the bot
+
+
+bot_player_replace
+
+Note: Player replaced a bot
+Name: 	bot_player_replace
+Structure: 	
+short 	bot 	user ID of the bot
+short 	player 	user ID of the player
+
+
+player_afk
+
+Note:
+Name: 	player_afk
+Structure: 	
+short 	player 	user ID of the player
+
+
+weapon_fire
+
+Note:
+Name: 	weapon_fire
+Structure: 	
+1 	local 	don't network this, its way too spammy
+short 	userid 	
+string 	weapon 	used weapon name
+short 	weaponid 	used weapon ID
+short 	count 	number of bullets
+
+
+weapon_fire_on_empty
+
+Note:
+Name: 	weapon_fire_on_empty
+Structure: 	
+1 	local 	don't network this, its way too spammy
+short 	userid 	
+string 	weapon 	weapon name used
+short 	count 	number of bullets
+
+
+weapon_reload
+
+Note:
+Name: 	weapon_reload
+Structure: 	
+short 	userid 	
+bool 	manual 	player manually started the reload
+
+
+weapon_zoom
+
+Note:
+Name: 	weapon_zoom
+Structure: 	
+short 	userid 	
+
+
+ability_use
+
+Note:
+Name: 	ability_use
+Structure: 	
+short 	userid 	
+string 	ability 	ability classname
+short 	context 	enum of the way it was used (different for each ability)
+
+
+ammo_pickup
+
+Note:
+Name: 	ammo_pickup
+Structure: 	
+short 	userid 	The player who got some ammo from a weapon_ammo_spawner
+
+
+item_pickup
+
+Note:
+Name: 	item_pickup
+Structure: 	
+short 	userid 	
+string 	item 	either a weapon such as 'tmp' or 'hegrenade', or an item such as 'nvgs'
+
+
+grenade_bounce
+
+Note:
+Name: 	grenade_bounce
+Structure: 	
+short 	userid 	
+
+
+hegrenade_detonate
+
+Note:
+Name: 	hegrenade_detonate
+Structure: 	
+short 	userid 	
+
+
+bullet_impact
+
+Note:
+Name: 	bullet_impact
+Structure: 	
+short 	userid 	
+float 	x 	
+float 	y 	
+float 	z 	
+
+
+player_footstep
+
+Note:
+Name: 	player_footstep
+Structure: 	
+short 	userid 	
+
+
+player_jump
+
+Note:
+Name: 	player_jump
+Structure: 	
+short 	userid 	
+
+
+player_blind
+
+Note:
+Name: 	player_blind
+Structure: 	
+short 	userid 	
+
+
+player_falldamage
+
+Note:
+Name: 	player_falldamage
+Structure: 	
+short 	userid 	Who got hurt
+float 	damage 	for how much
+short 	causer 	Who caused them to do so (if anyone)
+
+
+player_ledge_grab
+
+Note:
+Name: 	player_ledge_grab
+Structure: 	
+short 	userid 	Who grabbed the ledge
+short 	causer 	Who caused them to do so (if anyone)
+bool 	has_upgrade 	whether they have an upgrade to help themself.
+
+
+player_ledge_release
+
+Note:
+Name: 	player_ledge_release
+Structure: 	
+short 	userid 	person who released from the ledge
+
+
+door_moving
+
+Note:
+Name: 	door_moving
+Structure: 	
+long 	entindex 	
+short 	userid 	
+
+
+door_open
+
+Note:
+Name: 	door_open
+Structure: 	
+short 	userid 	Who opened the door
+bool 	checkpoint 	Is the door a checkpoint door
+bool 	closed 	Was the door closed when it started opening?
+
+
+door_close
+
+Note:
+Name: 	door_close
+Structure: 	
+short 	userid 	Who closed the door
+bool 	checkpoint 	Is the door a checkpoint door
+
+
+door_unlocked
+
+Note:
+Name: 	door_unlocked
+Structure: 	
+short 	userid 	Who opened the door
+bool 	checkpoint 	Is the door a checkpoint door
+
+
+rescue_door_open
+
+Note:
+Name: 	rescue_door_open
+Structure: 	
+short 	userid 	Who opened the door
+long 	entindex 	door that opened
+
+
+waiting_checkpoint_door_used
+
+Note: Someone tried to open a checkpoint door that is locked till everyone loads in
+Name: 	waiting_checkpoint_door_used
+Structure: 	
+short 	userid 	player who tried to open it
+long 	entindex 	door that was used
+
+
+waiting_door_used_versus
+
+Note: Someone tried to open a checkpoint door that is locked till everyone loads in
+Name: 	waiting_door_used_versus
+Structure: 	
+short 	userid 	player who tried to open it
+long 	entindex 	door that was used
+
+
+waiting_checkpoint_button_used
+
+Note: Someone tried to push a button that's locked until everyone is gathered
+Name: 	waiting_checkpoint_button_used
+Structure: 	
+short 	userid 	player who tried to open it
+
+
+success_checkpoint_button_used
+
+Note: Someone pushed a button that's locked until everyone is gathered
+Name: 	success_checkpoint_button_used
+Structure: 	
+short 	userid 	player who openned it
+
+
+round_freeze_end
+
+Note:
+Name: 	round_freeze_end
+Structure: 	
+None 	None 	
+
+
+round_start_pre_entity
+
+Note:
+Name: 	round_start_pre_entity
+Structure: 	
+None 	None 	
+
+
+round_start_post_nav
+
+Note:
+Name: 	round_start_post_nav
+Structure: 	
+None 	None 	
+
+
+nav_blocked
+
+Note:
+Name: 	nav_blocked
+Structure: 	
+long 	area 	
+bool 	blocked 	
+
+
+nav_generate
+
+Note:
+Name: 	nav_generate
+Structure: 	
+None 	None 	
+
+
+round_end_message
+
+Note:
+Name: 	round_end_message
+Structure: 	
+byte 	winner 	winner team/user i
+byte 	reason 	reson why team won
+string 	message 	end round message
+
+
+vote_ended
+
+Note:
+Name: 	vote_ended
+Structure: 	
+None 	None 	
+
+
+vote_started
+
+Note:
+Name: 	vote_started
+Structure: 	
+string 	issue 	
+string 	param1 	
+byte 	team 	
+long 	initiator 	entity id of the player who initiated the vote
+
+
+vote_changed
+
+Note:
+Name: 	vote_changed
+Structure: 	
+byte 	yesVotes 	
+byte 	noVotes 	
+byte 	potentialVotes 	
+
+
+vote_passed
+
+Note:
+Name: 	vote_passed
+Structure: 	
+string 	details 	
+string 	param1 	
+byte 	team 	
+
+
+vote_failed
+
+Note:
+Name: 	vote_failed
+Structure: 	
+byte 	team 	
+
+
+vote_cast_yes
+
+Note:
+Name: 	vote_cast_yes
+Structure: 	
+byte 	team 	
+long 	entityid 	entity id of the voter
+
+
+vote_cast_no
+
+Note:
+Name: 	vote_cast_no
+Structure: 	
+byte 	team 	
+long 	entityid 	entity id of the voter
+
+
+infected_hurt
+
+Note: Registers for non-playable classes (Common Infected, Witch). See player_hurt for other playable classes
+Name: 	infected_hurt
+Structure: 	
+1 	local 	don't network this, its way too spammy
+short 	attacker 	player userid who attacked
+long 	entityid 	entity id of infected
+byte 	hitgroup 	hitgroup that was damaged
+short 	amount 	how much damage was done
+long 	type 	damage type
+
+
+infected_death
+
+Note:
+Name: 	infected_death
+Structure: 	
+short 	attacker 	user ID who killed
+bool 	headshot 	singals a headshot
+bool 	minigun 	singals a minigun kill
+bool 	blast 	singals a death from blast damage
+
+
+hostname_changed
+
+Note:
+Name: 	hostname_changed
+Structure: 	
+string 	hostname 	
+
+
+difficulty_changed
+
+Note:
+Name: 	difficulty_changed
+Structure: 	
+short 	newDifficulty 	
+short 	oldDifficulty 	
+
+
+finale_start
+
+Note:
+Name: 	finale_start
+Structure: 	
+short 	rushes 	
+
+
+finale_rush
+
+Note:
+Name: 	finale_rush
+Structure: 	
+None 	None 	
+
+
+finale_escape_start
+
+Note:
+Name: 	finale_escape_start
+Structure: 	
+None 	None 	
+
+
+finale_vehicle_ready
+
+Note:
+Name: 	finale_vehicle_ready
+Structure: 	
+None 	None 	
+
+
+finale_vehicle_leaving
+
+Note:
+Name: 	finale_vehicle_leaving
+Structure: 	
+short 	survivorcount 	number of survivors that made it out
+
+
+finale_win
+
+Note:
+Name: 	finale_win
+Structure: 	
+string 	map_name 	
+short 	difficulty 	
+
+
+mission_lost
+
+Note: As in, the survivor team failed. Opposite of finale_win, but not necessarily during the finale.
+Name: 	mission_lost
+Structure: 	
+None 	None 	
+
+
+finale_radio_start
+
+Note:
+Name: 	finale_radio_start
+Structure: 	
+short 	health 	
+
+
+finale_radio_damaged
+
+Note:
+Name: 	finale_radio_damaged
+Structure: 	
+short 	health 	
+
+
+final_reportscreen
+
+Note: Right before the final report screen comes up, let awards possibly fire
+Name: 	final_reportscreen
+Structure: 	
+None 	None 	
+
+
+map_transition
+
+Note:
+Name: 	map_transition
+Structure: 	
+None 	None 	
+
+
+player_transitioned
+
+Note:
+Name: 	player_transitioned
+Structure: 	
+short 	userid 	the person that just finished transitioning
+
+
+heal_begin
+
+Note:
+Name: 	heal_begin
+Structure: 	
+short 	userid 	person doing the healing
+short 	subject 	person being healed
+
+
+heal_success
+
+Note:
+Name: 	heal_success
+Structure: 	
+short 	userid 	person doing the healing
+short 	subject 	person being healed
+short 	health_restored 	amount of health restored
+
+
+heal_end
+
+Note:
+Name: 	heal_end
+Structure: 	
+short 	userid 	person doing the healing
+short 	subject 	person being healed
+
+
+heal_interrupted
+
+Note:
+Name: 	heal_interrupted
+Structure: 	
+short 	userid 	person who was being healed, but moved.
+short 	subject 	person being healed
+
+
+give_weapon
+
+Note:
+Name: 	give_weapon
+Structure: 	
+short 	userid 	The giver of the weapon
+short 	recipient 	The recipient of the weapon
+short 	weapon 	The ID of the weapon given
+
+
+pills_used
+
+Note:
+Name: 	pills_used
+Structure: 	
+short 	userid 	person who had the pills
+short 	subject 	person swallowing the pills
+
+
+pills_used_fail
+
+Note:
+Name: 	pills_used_fail
+Structure: 	
+short 	userid 	person who tried to use the pills
+
+
+revive_begin
+
+Note:
+Name: 	revive_begin
+Structure: 	
+short 	userid 	person doing the reviving
+short 	subject 	person being revived
+
+
+revive_success
+
+Note:
+Name: 	revive_success
+Structure: 	
+short 	userid 	person doing the reviving
+short 	subject 	person who was revived
+bool 	lastlife 	person revived will die if they fall again
+bool 	ledge_hang 	1 if person revived was ledge hanging
+
+
+revive_end
+
+Note:
+Name: 	revive_end
+Structure: 	
+short 	userid 	person doing the reviving
+short 	subject 	person being revived
+bool 	ledge_hang 	person is ledge hanging
+
+
+drag_begin
+
+Note:
+Name: 	drag_begin
+Structure: 	
+short 	userid 	person doing the dragging
+short 	subject 	person being dragged
+
+
+drag_end
+
+Note:
+Name: 	drag_end
+Structure: 	
+short 	userid 	person doing the dragging
+short 	subject 	person being dragged
+
+
+player_incapacitated
+
+Note: when a player becomes incapacitated
+Name: 	player_incapacitated
+Structure: 	
+short 	userid 	person who became incapacitated
+short 	attacker 	user ID who made us incapacitated
+long 	attackerentid 	if attacker not player, entindex of who made us incapacitated
+string 	weapon 	weapon name attacker used
+long 	type 	damage type
+bool 	has_upgrade 	does this player have an upgrade that lets them help themselves?
+
+
+player_incapacitated_start
+
+Note: when a player is about to become incapacitated, so you can see his last living state
+Name: 	player_incapacitated_start
+Structure: 	
+short 	userid 	person who became incapacitated
+short 	attacker 	user ID who made us incapacitated
+long 	attackerentid 	if attacker not player, entindex of who made us incapacitated
+string 	weapon 	weapon name attacker used
+long 	type 	damage type
+
+
+player_entered_start_area
+
+Note: when a player spawns into the player start area
+Name: 	player_entered_start_area
+Structure: 	
+short 	userid 	person who entered
+
+
+player_first_spawn
+
+Note: when a player spawns for the first time in a given mission
+Name: 	player_first_spawn
+Structure: 	
+short 	userid 	person who spawned
+string 	map_name 	
+bool 	isbot 	
+
+
+player_left_start_area
+
+Note: when a player leaves the player start area
+Name: 	player_left_start_area
+Structure: 	
+short 	userid 	person who left
+
+
+player_entered_checkpoint
+
+Note: when a basecombatcharacter enters a checkpoint area
+Name: 	player_entered_checkpoint
+Structure: 	
+short 	userid 	player who entered
+long 	entityid 	If not a player, the entity index of the one entering
+long 	door 	Entindex of the checkpoint door the player entered to get here.
+long 	area 	
+string 	doorname 	name of the entity they see
+
+
+player_left_checkpoint
+
+Note: when a player leaves a checkpoint area
+Name: 	player_left_checkpoint
+Structure: 	
+short 	userid 	player who left
+long 	entityid 	If not a player, the entity index of the one exiting
+long 	area 	
+
+
+player_shoved
+
+Note:
+Name: 	player_shoved
+Structure: 	
+short 	userid 	player index who was shoved
+short 	attacker 	player index who attacked them
+
+
+entity_shoved
+
+Note:
+Name: 	entity_shoved
+Structure: 	
+short 	entityid 	the entity index of the one who was shoved
+short 	attacker 	player index who attacked them
+
+
+player_jump_apex
+
+Note:
+Name: 	player_jump_apex
+Structure: 	
+short 	userid 	player who jumped
+
+
+player_blocked
+
+Note:
+Name: 	player_blocked
+Structure: 	
+short 	userid 	player index who was trying to move
+short 	blocker 	player index who kept them from moving
+
+
+player_now_it
+
+Note:
+Name: 	player_now_it
+Structure: 	
+short 	userid 	Player who is now it
+short 	attacker 	player that did the it-ing
+bool 	exploded 	whether it was vomit or explosion
+bool 	infected 	is the vomit infectious
+
+
+player_no_longer_it
+
+Note:
+Name: 	player_no_longer_it
+Structure: 	
+short 	userid 	Player who is now no longer it
+
+
+witch_harasser_set
+
+Note:
+Name: 	witch_harasser_set
+Structure: 	
+short 	userid 	Player who woke up the witch
+long 	witchid 	Entindex of witch woken up
+
+
+witch_spawn
+
+Note:
+Name: 	witch_spawn
+Structure: 	
+long 	witchid 	Entindex of witch spawning right now.
+
+
+witch_killed
+
+Note:
+Name: 	witch_killed
+Structure: 	
+short 	userid 	Player who killed the witch
+long 	witchid 	Entindex of witch that was killed.
+bool 	oneshot 	TRUE if the Witch was killed with one shot
+
+
+tank_spawn
+
+Note:
+Name: 	tank_spawn
+Structure: 	
+short 	userid 	User ID of the tank spawning now
+long 	tankid 	Entindex of tank spawning right now.
+
+
+melee_kill
+
+Note:
+Name: 	melee_kill
+Structure: 	
+short 	userid 	Player who bashed the infected
+long 	entityid 	Entindex of infected what got killed
+bool 	ambush 	Infected was unaware when killed
+
+
+area_cleared
+
+Note:
+Name: 	area_cleared
+Structure: 	
+short 	userid 	person who cleared the area
+long 	area 	id of the cleared area
+
+
+award_earned
+
+Note:
+Name: 	award_earned
+Structure: 	
+short 	userid 	player who earned the award
+long 	entityid 	client likes ent id
+long 	subjectentid 	entity id of other party in the award, if any
+short 	award 	id of award earned
+
+
+tongue_grab
+
+Note:
+Name: 	tongue_grab
+Structure: 	
+short 	userid 	player who did the grabbing
+short 	victim 	player that got grabbed
+
+
+tongue_broke_bent
+
+Note:
+Name: 	tongue_broke_bent
+Structure: 	
+short 	userid 	Tongue owner
+
+
+tongue_broke_victim_died
+
+Note:
+Name: 	tongue_broke_victim_died
+Structure: 	
+short 	userid 	Tongue owner
+
+
+tongue_release
+
+Note:
+Name: 	tongue_release
+Structure: 	
+short 	userid 	The tongue owner
+short 	victim 	The (now released) victim
+long 	distance 	Distance the victim was dragged.
+
+
+choke_start
+
+Note:
+Name: 	choke_start
+Structure: 	
+short 	userid 	The choker
+short 	victim 	The person being choked
+bool 	has_upgrade 	Does the victim have an upgrade to help themeselves with?
+
+
+choke_end
+
+Note:
+Name: 	choke_end
+Structure: 	
+short 	userid 	The choker
+short 	victim 	The person being choked
+
+
+choke_stopped
+
+Note:
+Name: 	choke_stopped
+Structure: 	
+short 	userid 	Who stopped it
+short 	victim 	And who was being choked
+
+
+tongue_pull_stopped
+
+Note:
+Name: 	tongue_pull_stopped
+Structure: 	
+short 	userid 	Who stopped it
+short 	victim 	And who was being pulled
+
+
+lunge_shove
+
+Note:
+Name: 	lunge_shove
+Structure: 	
+short 	userid 	player who did the lunging
+short 	victim 	player that got lunged
+
+
+lunge_pounce
+
+Note:
+Name: 	lunge_pounce
+Structure: 	
+short 	userid 	player who did the lunging
+short 	victim 	player that got lunged
+long 	distance 	Distance from pounce start to contact
+bool 	has_upgrade 	Does the victim have an upgrade to help themeselves with?
+
+
+pounce_end
+
+Note:
+Name: 	pounce_end
+Structure: 	
+short 	userid 	Who stopped it
+short 	victim 	And who was being pounced
+
+
+pounce_stopped
+
+Note:
+Name: 	pounce_stopped
+Structure: 	
+short 	userid 	Who stopped it
+short 	victim 	And who was being pounced
+
+
+fatal_vomit
+
+Note:
+Name: 	fatal_vomit
+Structure: 	
+short 	userid 	Who vomited
+short 	victim 	And who was killed or incapped
+
+
+survivor_call_for_help
+
+Note:
+Name: 	survivor_call_for_help
+Structure: 	
+short 	userid 	The actual player entity who is awaiting rescue.
+long 	subject 	SurvivorRescue entity representing the player who needs to be rescued from the closet (used for position)
+
+
+survivor_rescued
+
+Note:
+Name: 	survivor_rescued
+Structure: 	
+short 	rescuer 	player that did the rescuing
+short 	victim 	the survivor being rescued
+
+
+survivor_rescue_abandoned
+
+Note:
+Name: 	survivor_rescue_abandoned
+Structure: 	
+None 	None 	
+
+
+relocated
+
+Note:
+Name: 	relocated
+Structure: 	
+short 	userid 	player who was relocated
+
+
+respawning
+
+Note:
+Name: 	respawning
+Structure: 	
+short 	userid 	player who started respawning
+
+
+tank_frustrated
+
+Note:
+Name: 	tank_frustrated
+Structure: 	
+short 	userid 	player who was culled
+
+
+weapon_given
+
+Note:
+Name: 	weapon_given
+Structure: 	
+short 	userid 	player who got the weapon
+short 	giver 	player that did the giving
+short 	weapon 	weapon id given
+short 	weaponentid 	weapon entity id
+
+
+weapon_give_duplicate_fail
+
+Note:
+Name: 	weapon_give_duplicate_fail
+Structure: 	
+short 	userid 	player who almost got the weapon
+short 	giver 	player that tried to give it
+short 	weapon 	weapon id given
+
+
+break_breakable
+
+Note: Override from gameevents.res
+Name: 	break_breakable
+Structure: 	
+short 	userid 	userid of breaker
+long 	entindex 	entindex of thing breaking
+byte 	material 	BREAK_GLASS, BREAK_WOOD, etc
+bool 	hulkonly 	SF_BREAK_HULK_ONLY
+
+
+achievement_earned
+
+Note:
+Name: 	achievement_earned
+Structure: 	
+byte 	player 	entindex of the player
+short 	achievement 	achievement ID
+
+
+spec_target_updated
+
+Note:
+Name: 	spec_target_updated
+Structure: 	
+None 	None 	
+
+
+spawner_give_item
+
+Note: A spawner has given a player an item (weapon, pills, ammo, health kit, etc)
+Name: 	spawner_give_item
+Structure: 	
+short 	userid 	Item recipient
+string 	item 	Name of item given
+long 	spawner 	entindex of the spawner entity
+
+
+create_panic_event
+
+Note: A panic event has been created, though not necessarily started
+Name: 	create_panic_event
+Structure: 	
+short 	userid 	player who was started the panic
+
+
+explain_pills
+
+Note:
+Name: 	explain_pills
+Structure: 	
+long 	subject 	The weapon_pain_pills spawner that will be indicated
+
+
+explain_weapons
+
+Note:
+Name: 	explain_weapons
+Structure: 	
+long 	subject 	The weapon_pain_pills spawner that will be indicated
+
+
+entity_visible
+
+Note:
+Name: 	entity_visible
+Structure: 	
+short 	userid 	The player who sees the entity
+long 	subject 	Entindex of the entity they see
+string 	classname 	Classname of the entity they see
+string 	entityname 	name of the entity they see
+
+
+boomer_near
+
+Note:
+Name: 	boomer_near
+Structure: 	
+short 	userid 	The boomer
+short 	victim 	The survivor whom the boomer has gotten very close to
+
+
+explain_pre_radio
+
+Note: explain the rescue radio will remind you to ready for the finale
+Name: 	explain_pre_radio
+Structure: 	
+short 	userid 	
+long 	subject 	
+
+
+started_pre_radio
+
+Note: explain the rescue radio will remind you to ready for the finale
+Name: 	started_pre_radio
+Structure: 	
+short 	userid 	
+long 	subject 	
+
+
+explain_radio
+
+Note: explain the rescue radio will start the finale
+Name: 	explain_radio
+Structure: 	
+short 	userid 	
+long 	subject 	
+
+
+explain_gas_truck
+
+Note: explain how pulling the lever on the gas truck will start the finale
+Name: 	explain_gas_truck
+Structure: 	
+short 	userid 	
+long 	subject 	The lever
+
+
+explain_panic_button
+
+Note: explain that pressing this button will start a panic event.
+Name: 	explain_panic_button
+Structure: 	
+short 	userid 	
+long 	subject 	The panic button
+
+
+explain_elevator_button
+
+Note: explain how to operate the hospital elevator button.
+Name: 	explain_elevator_button
+Structure: 	
+short 	userid 	
+long 	subject 	The button
+
+
+explain_lift_button
+
+Note: explain how to operate the lift button.
+Name: 	explain_lift_button
+Structure: 	
+short 	userid 	
+long 	subject 	The lift button
+
+
+explain_church_door
+
+Note: explain how to provoke the crazy church guy.
+Name: 	explain_church_door
+Structure: 	
+short 	userid 	
+long 	subject 	The saferoom door
+
+
+explain_emergency_door
+
+Note: explain how to open the emergency door.
+Name: 	explain_emergency_door
+Structure: 	
+short 	userid 	
+long 	subject 	The door
+
+
+explain_crane
+
+Note: explain how to lower the box on the crane.
+Name: 	explain_crane
+Structure: 	
+short 	userid 	
+long 	subject 	The lever/button
+
+
+explain_bridge
+
+Note: explain how to close the gates to make a bridge.
+Name: 	explain_bridge
+Structure: 	
+short 	userid 	
+long 	subject 	The button
+
+
+explain_gas_can_panic
+
+Note: explain how to shoot the gas can.
+Name: 	explain_gas_can_panic
+Structure: 	
+short 	userid 	
+long 	subject 	The gas can
+
+
+explain_van_panic
+
+Note: explain how to start the van.
+Name: 	explain_van_panic
+Structure: 	
+short 	userid 	
+long 	subject 	The van
+
+
+explain_mainstreet
+
+Note: explain how to lower the forklift
+Name: 	explain_mainstreet
+Structure: 	
+short 	userid 	
+long 	subject 	The forklift
+
+
+explain_train_lever
+
+Note: explain how to operate the train lever.
+Name: 	explain_train_lever
+Structure: 	
+short 	userid 	
+long 	subject 	The lever on box car
+
+
+explain_disturbance
+
+Note: explain that disturbances (car alarm) attract infected horde
+Name: 	explain_disturbance
+Structure: 	
+short 	userid 	
+long 	subject 	The source of disturbance
+
+
+use_target
+
+Note: a new use target has been found
+Name: 	use_target
+Structure: 	
+long 	targetid 	Entindex of the use target
+string 	classname 	classname of the use target
+bool 	isprop 	is this a prop that can be carried
+
+
+player_use
+
+Note: a new use target has been found
+Name: 	player_use
+Structure: 	
+short 	userid 	userid of user
+long 	targetid 	Entindex of the used entity
+
+
+friendly_fire
+
+Note:
+Name: 	friendly_fire
+Structure: 	
+short 	attacker 	player who fired the weapon
+short 	victim 	player who got shot
+short 	guilty 	player who was at fault
+long 	type 	damage type
+
+
+gameinstructor_draw
+
+Note:
+Name: 	gameinstructor_draw
+Structure: 	
+None 	None 	
+
+
+gameinstructor_nodraw
+
+Note:
+Name: 	gameinstructor_nodraw
+Structure: 	
+None 	None 	
+
+
+player_talking_state
+
+Note:
+Name: 	player_talking_state
+Structure: 	
+byte 	player 	
+bool 	istalking 	
+
+
+weapon_pickup
+
+Note:
+Name: 	weapon_pickup
+Structure: 	
+byte 	context 	split screen message context
+byte 	weaponid 	
+byte 	weaponslot 	
+
+
+hunter_punched
+
+Note:
+Name: 	hunter_punched
+Structure: 	
+short 	userid 	player who caused ignition
+long 	hunteruserid 	user ID of Hunter
+bool 	islunging 	TRUE if the Hunter was in the act of lunging
+
+
+hunter_headshot
+
+Note:
+Name: 	hunter_headshot
+Structure: 	
+short 	userid 	player who made the headshot
+long 	hunteruserid 	user ID of Hunter
+bool 	islunging 	TRUE if the Hunter was in the act of lunging
+
+
+zombie_ignited
+
+Note:
+Name: 	zombie_ignited
+Structure: 	
+short 	userid 	player who caused ignition
+long 	entityid 	entity ID of Tank
+string 	victimname 	"Witch", "Tank", "Hunter", "Smoker", or "Infected"
+
+
+boomer_exploded
+
+Note:
+Name: 	boomer_exploded
+Structure: 	
+short 	userid 	Boomer that exploded
+short 	attacker 	player who caused the explosion
+bool 	splashedbile 	Exploding boomer splashed bile on Survivors
+
+
+non_pistol_fired
+
+Note:
+Name: 	non_pistol_fired
+Structure: 	
+short 	userid 	User that fired a non-pistol weapon
+
+
+weapon_fire_at_40
+
+Note:
+Name: 	weapon_fire_at_40
+Structure: 	
+short 	userid 	
+string 	weapon 	used weapon name
+short 	weaponid 	used weapon ID
+short 	count 	number of bullets
+
+
+player_hurt_concise
+
+Note:
+Name: 	player_hurt_concise
+Structure: 	
+short 	userid 	user ID who was hurt
+long 	attackerentid 	entity id who attacked, if attacker not a player, and userid therefore invalid
+short 	dmg_health 	damage done to health
+
+
+tank_killed
+
+Note:
+Name: 	tank_killed
+Structure: 	
+short 	userid 	user ID of dead tank
+short 	attacker 	user id of killer
+bool 	solo 	TRUE if a player single-handedly killed the Tank
+
+
+achievement_write_failed
+
+Note:
+Name: 	achievement_write_failed
+Structure: 	
+None 	None 	
+
+
+ghost_spawn_time
+
+Note:
+Name: 	ghost_spawn_time
+Structure: 	
+short 	userid 	user ID of the player that is becoming a ghost
+short 	spawntime 	How long of a wait until player is a ghost
