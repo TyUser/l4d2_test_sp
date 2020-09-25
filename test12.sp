@@ -170,6 +170,14 @@ public void HxWeapon()
 				{
 					GetEntPropString(i, Prop_Data, "m_ModelName", sBuf2, sizeof(sBuf2)-1);
 
+					if (StrContains(sBuf2, "models/weapons/melee/w_shovel.mdl", true) != -1)
+					{
+						sBuf3 = "shovel			";
+					}
+					if (StrContains(sBuf2, "models/weapons/melee/w_pitchfork.mdl", true) != -1)
+					{
+						sBuf3 = "pitchfork			";
+					}
 					if (StrContains(sBuf2, "models/w_models/weapons/w_eq_adrenaline.mdl", true) != -1)
 					{
 						sBuf3 = "weapon_adrenaline		";
@@ -962,6 +970,14 @@ public Action TyTimer2(Handle timer)
 		ServerCommand("changelevel c13m4_cutthroatcreek");
 	}
 	if (!strcmp(sg_l4d2Map, "c13m4_cutthroatcreek", true))
+	{
+		ServerCommand("changelevel c14m1_junkyard");
+	}
+	if (!strcmp(sg_l4d2Map, "c14m1_junkyard", true))
+	{
+		ServerCommand("changelevel c14m2_lighthouse");
+	}
+	if (!strcmp(sg_l4d2Map, "c14m2_lighthouse", true))
 	{
 		ig_ggg1 = 0;
 	}

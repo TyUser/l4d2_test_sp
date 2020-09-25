@@ -1,214 +1,264 @@
-1		CTerrorPlayer                player                              models/survivors/survivor_mechanic.mdl
-2		SurvivorBot                  player                              models/survivors/survivor_coach.mdl
-3		SurvivorBot                  player                              models/survivors/survivor_gambler.mdl
-4		SurvivorBot                  player                              models/survivors/survivor_producer.mdl
-33		CCSTeam                      cs_team_manager  
-34		CCSTeam                      cs_team_manager  
-35		CCSTeam                      cs_team_manager  
-36		CCSTeam                      cs_team_manager  
-37		CCSTeam                      cs_team_manager  
-38		CBaseEntity                  soundent  
-39		CTerrorPlayerResource        terror_player_manager  
-40		CVoteController              vote_controller  
-41		CTerrorGameRulesProxy        terror_gamerules  
-42		CRopeKeyframe                keyframe_rope  
-43		CRopeKeyframe                keyframe_rope  
-44		CRopeKeyframe                keyframe_rope  
-45		CRopeKeyframe                keyframe_rope  
-46		CRopeKeyframe                keyframe_rope  
-47		CRopeKeyframe                keyframe_rope  
-48		CRopeKeyframe                keyframe_rope  
-49		CRopeKeyframe                move_rope  
-50		CRopeKeyframe                move_rope  
-51		CRopeKeyframe                move_rope  
-52		CRopeKeyframe                move_rope  
-53		CRopeKeyframe                move_rope  
-54		CRopeKeyframe                move_rope  
-55		CSurvivorRescue              info_survivor_rescue                models/editor/playerstart.mdl
-56		CBeamSpotlight               beam_spotlight  
-57		CRopeKeyframe                move_rope  
-58		CSurvivorRescue              info_survivor_rescue                models/editor/playerstart.mdl
-59		CBaseEntity                  infodecal  
-60		CBaseEntity                  infodecal  
-61		CBaseEntity                  infodecal  
-62		CBaseEntity                  infodecal  
-63		CSurvivorRescue              info_survivor_rescue                models/editor/playerstart.mdl
-64		CBaseEntity                  escape_route  
-65		CTerrorViewModel             predicted_viewmodel  
-66		CTerrorViewModel             predicted_viewmodel                 models/v_models/v_pistolA.mdl
-67		CPistol                      weapon_pistol                       models/v_models/v_pistolA.mdl
-68		CTerrorViewModel             predicted_viewmodel  
-69		CTerrorViewModel             predicted_viewmodel                 models/v_models/v_silenced_smg.mdl
-70		CPhysicsProp                 prop_physics                        models/props_interiors/chair_thonet.mdl
-71		CPhysicsProp                 prop_physics                        models/props_interiors/chair_thonet.mdl
-72		CPhysicsProp                 prop_physics                        models/props_interiors/chair_thonet.mdl
-73		CPhysicsProp                 prop_physics                        models/props_interiors/table_motel.mdl
-74		CPhysicsProp                 prop_physics                        models/props_interiors/chair_thonet.mdl
-75		CPhysicsProp                 prop_physics                        models/props_interiors/chair_thonet.mdl
-76		CPhysicsProp                 prop_physics                        models/props_interiors/table_motel.mdl
-77		CPhysicsProp                 prop_physics                        models/props_interiors/chair_thonet.mdl
-78		CPhysicsProp                 prop_physics                        models/props_interiors/chair_thonet.mdl
-79		CPhysicsProp                 prop_physics                        models/props_interiors/table_motel.mdl
-80		CPhysicsProp                 prop_physics                        models/props_interiors/chair_thonet.mdl
-81		CPhysicsProp                 prop_physics                        models/props_interiors/chair_thonet.mdl
-82		CPhysicsProp                 prop_physics                        models/props_interiors/chair_thonet.mdl
-83		CPhysicsProp                 prop_physics                        models/props_interiors/table_motel.mdl
-84		CBaseEntity                  point_spotlight  
-85		CBaseEntity                  point_spotlight  
-86		CBaseEntity                  point_spotlight  
-87		CBaseEntity                  point_spotlight  
-88		CParticleSystem              info_particle_system  
-89		CParticleSystem              info_particle_system  
-90		CPistol                      weapon_pistol                       models/v_models/v_pistolA.mdl
-91		CPhysicsProp                 prop_physics                        models/props_urban/plastic_chair001.mdl
-92		CPhysicsProp                 prop_physics                        models/props_urban/plastic_chair001.mdl
-93		CPhysicsProp                 prop_physics                        models/props_urban/oil_drum001.mdl
-94		CPhysicsProp                 prop_physics                        models/props_urban/oil_drum001.mdl
-95		CFuncTrackTrain              func_tracktrain  
-96		CBaseEntity                  path_track  
-97		CRopeKeyframe                move_rope  
-98		CRopeKeyframe                keyframe_rope  
-99		CRopeKeyframe                keyframe_rope  
-100		CBaseEntity                  path_track  
-101		CBaseButton                  func_button  
-102		CBaseButton                  func_button  
-103		CDynamicProp                 prop_dynamic                        models/props_mill/freightelevatorbutton02.mdl
-104		CDynamicProp                 prop_dynamic                        models/props_lighting/lightbulb01a.mdl
-105		CDynamicProp                 prop_dynamic                        models/props_trainstation/bench_indoor001a.mdl
-106		CDynamicProp                 prop_dynamic                        models/props_trainstation/bench_indoor001a.mdl
-107		CDynamicProp                 prop_dynamic                        models/props_trainstation/bench_indoor001a.mdl
-108		CDynamicProp                 prop_dynamic                        models/props_trainstation/bench_indoor001a.mdl
-109		CBaseTrigger                 info_changelevel  
-110		CBasePropDoor                prop_door_rotating                  models/props_doors/doormain_rural01.mdl
-111		CSurvivorRescue              info_survivor_rescue                models/editor/playerstart.mdl
-112		CSurvivorRescue              info_survivor_rescue                models/editor/playerstart.mdl
-113		CBaseTrigger                 trigger_hurt  
-114		CPhysicsProp                 prop_physics                        models/props_swamp/boardwalk_rail_256_break.mdl
-115		CPhysicsProp                 prop_physics                        models/props_swamp/boardwalk_rail_256_break.mdl
-116		CPhysicsProp                 prop_physics                        models/props_swamp/boardwalk_rail_256_break.mdl
+1		CTerrorPlayer                player                              models/survivors/survivor_coach.mdl
+2		SurvivorBot                  player                              models/survivors/survivor_mechanic.mdl
+3		SurvivorBot                  player                              models/survivors/survivor_producer.mdl
+4		SurvivorBot                  player                              models/survivors/survivor_gambler.mdl
+19		CCSTeam                      cs_team_manager  
+20		CCSTeam                      cs_team_manager  
+21		CCSTeam                      cs_team_manager  
+22		CCSTeam                      cs_team_manager  
+23		CCSTeam                      cs_team_manager  
+24		CBaseEntity                  soundent  
+25		CTerrorPlayerResource        terror_player_manager  
+26		CVoteController              vote_controller  
+27		CTerrorGameRulesProxy        terror_gamerules  
+28		CRopeKeyframe                keyframe_rope  
+29		CRopeKeyframe                keyframe_rope  
+30		CRopeKeyframe                keyframe_rope  
+31		CRopeKeyframe                keyframe_rope  
+32		CRopeKeyframe                keyframe_rope  
+33		CRopeKeyframe                keyframe_rope  
+34		CRopeKeyframe                keyframe_rope  
+35		CRopeKeyframe                move_rope  
+36		CRopeKeyframe                move_rope  
+37		CRopeKeyframe                move_rope  
+38		CRopeKeyframe                move_rope  
+39		CRopeKeyframe                move_rope  
+40		CRopeKeyframe                move_rope  
+41		CSurvivorRescue              info_survivor_rescue                models/editor/playerstart.mdl
+42		CBeamSpotlight               beam_spotlight  
+43		CRopeKeyframe                move_rope  
+44		CSurvivorRescue              info_survivor_rescue                models/editor/playerstart.mdl
+45		CBaseEntity                  infodecal  
+46		CBaseEntity                  infodecal  
+47		CBaseEntity                  infodecal  
+48		CBaseEntity                  infodecal  
+49		CSurvivorRescue              info_survivor_rescue                models/editor/playerstart.mdl
+50		CBaseEntity                  escape_route  
+51		CFirstAidKit                 weapon_first_aid_kit                models/w_models/weapons/w_eq_Medkit.mdl
+52		CFirstAidKit                 weapon_first_aid_kit                models/w_models/weapons/w_eq_Medkit.mdl
+53		CFirstAidKit                 weapon_first_aid_kit                models/w_models/weapons/w_eq_Medkit.mdl
+54		CFirstAidKit                 weapon_first_aid_kit                models/w_models/weapons/w_eq_Medkit.mdl
+55		CFirstAidKit                 weapon_first_aid_kit                models/w_models/weapons/w_eq_Medkit.mdl
+56		CPhysicsProp                 prop_physics                        models/props_interiors/chair_thonet.mdl
+57		CPhysicsProp                 prop_physics                        models/props_interiors/chair_thonet.mdl
+58		CPhysicsProp                 prop_physics                        models/props_interiors/chair_thonet.mdl
+59		CPhysicsProp                 prop_physics                        models/props_interiors/table_motel.mdl
+60		CPhysicsProp                 prop_physics                        models/props_interiors/chair_thonet.mdl
+61		CPhysicsProp                 prop_physics                        models/props_interiors/chair_thonet.mdl
+62		CPhysicsProp                 prop_physics                        models/props_interiors/table_motel.mdl
+63		CPhysicsProp                 prop_physics                        models/props_interiors/chair_thonet.mdl
+64		CPhysicsProp                 prop_physics                        models/props_interiors/chair_thonet.mdl
+65		CPhysicsProp                 prop_physics                        models/props_interiors/table_motel.mdl
+66		CPhysicsProp                 prop_physics                        models/props_interiors/chair_thonet.mdl
+67		CPhysicsProp                 prop_physics                        models/props_interiors/chair_thonet.mdl
+68		CPhysicsProp                 prop_physics                        models/props_interiors/chair_thonet.mdl
+69		CPhysicsProp                 prop_physics                        models/props_interiors/table_motel.mdl
+70		CBaseEntity                  point_spotlight  
+71		CBaseEntity                  point_spotlight  
+72		CBaseEntity                  point_spotlight  
+73		CBaseEntity                  point_spotlight  
+74		CParticleSystem              info_particle_system  
+75		CParticleSystem              info_particle_system  
+76		CFirstAidKit                 weapon_first_aid_kit                models/w_models/weapons/w_eq_Medkit.mdl
+77		CPhysicsProp                 prop_physics                        models/props_urban/plastic_chair001.mdl
+78		CPhysicsProp                 prop_physics                        models/props_urban/plastic_chair001.mdl
+79		CPhysicsProp                 prop_physics                        models/props_urban/oil_drum001.mdl
+80		CPhysicsProp                 prop_physics                        models/props_urban/oil_drum001.mdl
+81		CFuncTrackTrain              func_tracktrain  
+82		CBaseEntity                  path_track  
+83		CRopeKeyframe                move_rope  
+84		CRopeKeyframe                keyframe_rope  
+85		CRopeKeyframe                keyframe_rope  
+86		CBaseEntity                  path_track  
+87		CBaseButton                  func_button  
+88		CBaseButton                  func_button  
+89		CDynamicProp                 prop_dynamic                        models/props_mill/freightelevatorbutton02.mdl
+90		CDynamicProp                 prop_dynamic                        models/props_lighting/lightbulb01a.mdl
+91		CDynamicProp                 prop_dynamic                        models/props_trainstation/bench_indoor001a.mdl
+92		CDynamicProp                 prop_dynamic                        models/props_trainstation/bench_indoor001a.mdl
+93		CDynamicProp                 prop_dynamic                        models/props_trainstation/bench_indoor001a.mdl
+94		CDynamicProp                 prop_dynamic                        models/props_trainstation/bench_indoor001a.mdl
+95		CBaseTrigger                 info_changelevel  
+96		CBasePropDoor                prop_door_rotating                  models/props_doors/doormain_rural01.mdl
+97		CSurvivorRescue              info_survivor_rescue                models/editor/playerstart.mdl
+98		CSurvivorRescue              info_survivor_rescue                models/editor/playerstart.mdl
+99		CBaseTrigger                 trigger_hurt  
+100		CPhysicsProp                 prop_physics                        models/props_swamp/boardwalk_rail_256_break.mdl
+101		CPhysicsProp                 prop_physics                        models/props_swamp/boardwalk_rail_256_break.mdl
+102		CPhysicsProp                 prop_physics                        models/props_swamp/boardwalk_rail_256_break.mdl
+103		CBaseEntity                  func_nav_attribute_region  
+104		CBaseEntity                  func_nav_attribute_region  
+105		CBaseEntity                  func_nav_attribute_region  
+106		CBaseEntity                  func_nav_attribute_region  
+107		CBaseEntity                  func_nav_attribute_region  
+108		CBaseEntity                  func_nav_attribute_region  
+109		CBaseEntity                  func_nav_attribute_region  
+110		CBaseEntity                  func_nav_attribute_region  
+111		CBaseEntity                  func_nav_attribute_region  
+112		CBaseEntity                  func_nav_attribute_region  
+113		CBaseEntity                  func_nav_attribute_region  
+114		CBaseEntity                  func_nav_attribute_region  
+115		CBaseEntity                  func_nav_attribute_region  
+116		CBaseEntity                  func_nav_attribute_region  
 117		CBaseEntity                  func_nav_attribute_region  
 118		CBaseEntity                  func_nav_attribute_region  
 119		CBaseEntity                  func_nav_attribute_region  
 120		CBaseEntity                  func_nav_attribute_region  
-121		CBaseEntity                  func_nav_attribute_region  
-122		CBaseEntity                  func_nav_attribute_region  
-123		CBaseEntity                  func_nav_attribute_region  
-124		CBaseEntity                  func_nav_attribute_region  
+121		CBaseEntity                  info_director  
+122		CPhysicsProp                 prop_physics                        models/props_swamp/boardwalk_rail_256_break.mdl
+123		CPhysicsProp                 prop_physics                        models/props_swamp/boardwalk_rail_256_break.mdl
+124		CPhysicsProp                 prop_physics                        models/props_swamp/boardwalk_rail_256_break.mdl
 125		CBaseEntity                  func_nav_attribute_region  
-126		CBaseEntity                  func_nav_attribute_region  
-127		CBaseEntity                  func_nav_attribute_region  
-128		CBaseEntity                  func_nav_attribute_region  
-129		CBaseEntity                  func_nav_attribute_region  
-130		CBaseEntity                  func_nav_attribute_region  
-131		CBaseEntity                  func_nav_attribute_region  
-132		CBaseEntity                  func_nav_attribute_region  
-133		CBaseEntity                  func_nav_attribute_region  
-134		CBaseEntity                  func_nav_attribute_region  
-135		CBaseEntity                  info_director  
-136		CPhysicsProp                 prop_physics                        models/props_swamp/boardwalk_rail_256_break.mdl
-137		CPhysicsProp                 prop_physics                        models/props_swamp/boardwalk_rail_256_break.mdl
-138		CPhysicsProp                 prop_physics                        models/props_swamp/boardwalk_rail_256_break.mdl
-139		CBaseEntity                  func_nav_attribute_region  
-140		CFuncSimpleLadder            func_simpleladder  
-141		CTerrorViewModel             predicted_viewmodel  
-142		CBaseTrigger                 trigger_multiple  
-143		CBaseTrigger                 trigger_push  
-144		CBaseDoor                    func_door  
-145		CBaseDoor                    func_door  
-146		CBaseDoor                    func_door  
-147		CBaseDoor                    func_door  
-148		CBaseEntity                  ambient_generic  
-149		CBaseEntity                  info_game_event_proxy  
-150		CSurvivorRescue              info_survivor_rescue                models/editor/playerstart.mdl
-151		CSurvivorRescue              info_survivor_rescue                models/editor/playerstart.mdl
-152		CSurvivorRescue              info_survivor_rescue                models/editor/playerstart.mdl
-153		CTerrorViewModel             predicted_viewmodel                 models/v_models/v_silenced_smg.mdl
-154		CPistol                      weapon_pistol                       models/v_models/v_pistolA.mdl
-155		CTerrorViewModel             predicted_viewmodel  
-156		CPhysicsProp                 prop_physics                        models/props_urban/plastic_chair001.mdl
-157		CTerrorViewModel             predicted_viewmodel                 models/v_models/v_silenced_smg.mdl
-158		CPhysicsProp                 prop_physics                        models/props_junk/propanecanister001a.mdl
-159		CPhysicsProp                 prop_physics                        models/props_junk/gascan001a.mdl
-160		CPistol                      weapon_pistol                       models/v_models/v_pistolA.mdl
-161		CWeaponSpawn                 weapon_chainsaw_spawn               models/weapons/melee/w_chainsaw.mdl
-162		CWeaponSpawn                 weapon_adrenaline_spawn             models/w_models/weapons/w_eq_adrenaline.mdl
-163		CWeaponSpawn                 weapon_pain_pills_spawn             models/w_models/weapons/w_eq_painpills.mdl
-164		CWeaponSpawn                 weapon_pain_pills_spawn             models/w_models/weapons/w_eq_painpills.mdl
+126		CFuncSimpleLadder            func_simpleladder  
+127		CFirstAidKit                 weapon_first_aid_kit                models/w_models/weapons/w_eq_Medkit.mdl
+128		CBaseTrigger                 trigger_multiple  
+129		CBaseTrigger                 trigger_push  
+130		CBaseDoor                    func_door  
+131		CBaseDoor                    func_door  
+132		CBaseDoor                    func_door  
+133		CBaseDoor                    func_door  
+134		CBaseEntity                  ambient_generic  
+135		CBaseEntity                  info_game_event_proxy  
+136		CSurvivorRescue              info_survivor_rescue                models/editor/playerstart.mdl
+137		CSurvivorRescue              info_survivor_rescue                models/editor/playerstart.mdl
+138		CSurvivorRescue              info_survivor_rescue                models/editor/playerstart.mdl
+139		CWeaponSpawn                 weapon_pistol_spawn                 models/w_models/weapons/w_pistol_B.mdl
+140		CFirstAidKit                 weapon_first_aid_kit                models/w_models/weapons/w_eq_Medkit.mdl
+141		CFirstAidKit                 weapon_first_aid_kit                models/w_models/weapons/w_eq_Medkit.mdl
+142		CPhysicsProp                 prop_physics                        models/props_urban/plastic_chair001.mdl
+143		CFirstAidKit                 weapon_first_aid_kit                models/w_models/weapons/w_eq_Medkit.mdl
+144		CFirstAidKit                 weapon_first_aid_kit                models/w_models/weapons/w_eq_Medkit.mdl
+145		CPhysicsProp                 prop_physics                        models/props_junk/gascan001a.mdl
+146		CPhysicsProp                 prop_physics                        models/props_junk/propanecanister001a.mdl
+147		CFirstAidKit                 weapon_first_aid_kit                models/w_models/weapons/w_eq_Medkit.mdl
+148		CWeaponSpawn                 weapon_molotov_spawn                models/w_models/weapons/w_eq_molotov.mdl
+149		CWeaponSpawn                 weapon_pipe_bomb_spawn              models/w_models/weapons/w_eq_pipebomb.mdl
+150		CFirstAidKit                 weapon_first_aid_kit                models/w_models/weapons/w_eq_Medkit.mdl
+151		CFirstAidKit                 weapon_first_aid_kit                models/w_models/weapons/w_eq_Medkit.mdl
+152		CWeaponSpawn                 weapon_pain_pills_spawn             models/w_models/weapons/w_eq_painpills.mdl
+153		CWeaponSpawn                 weapon_adrenaline_spawn             models/w_models/weapons/w_eq_adrenaline.mdl
+154		CPainPills                   weapon_pain_pills                   models/w_models/weapons/w_eq_painpills.mdl
+155		CWeaponSpawn                 weapon_defibrillator_spawn          models/w_models/weapons/w_eq_defibrillator.mdl
+156		CFirstAidKit                 weapon_first_aid_kit                models/w_models/weapons/w_eq_Medkit.mdl
+157		CWeaponSpawn                 weapon_molotov_spawn                models/w_models/weapons/w_eq_molotov.mdl
+158		CSurvivorRescue              info_survivor_rescue                models/editor/playerstart.mdl
+159		CSurvivorRescue              info_survivor_rescue                models/editor/playerstart.mdl
+160		CBasePropDoor                prop_door_rotating                  models/props_downtown/door_interior_112_01.mdl
+161		CFirstAidKit                 weapon_first_aid_kit                models/w_models/weapons/w_eq_Medkit.mdl
+162		CPainPills                   weapon_pain_pills                   models/w_models/weapons/w_eq_painpills.mdl
+163		CEnvPhysicsBlocker           env_physics_blocker  
+164		CEnvPhysicsBlocker           env_physics_blocker  
 165		CWeaponSpawn                 weapon_pipe_bomb_spawn              models/w_models/weapons/w_eq_pipebomb.mdl
-166		CWeaponSpawn                 weapon_pipe_bomb_spawn              models/w_models/weapons/w_eq_pipebomb.mdl
-167		CSMG_Silenced                weapon_smg_silenced                 models/v_models/v_silenced_smg.mdl
-168		CWeaponSpawn                 weapon_vomitjar_spawn               models/w_models/weapons/w_eq_bile_flask.mdl
-169		CWeaponSpawn                 weapon_molotov_spawn                models/w_models/weapons/w_eq_molotov.mdl
-172		CSurvivorRescue              info_survivor_rescue                models/editor/playerstart.mdl
-173		CSurvivorRescue              info_survivor_rescue                models/editor/playerstart.mdl
-174		CBasePropDoor                prop_door_rotating                  models/props_downtown/door_interior_112_01.mdl
-175		CWeaponSpawn                 weapon_defibrillator_spawn          models/w_models/weapons/w_eq_defibrillator.mdl
-176		CWeaponSpawn                 weapon_adrenaline_spawn             models/w_models/weapons/w_eq_adrenaline.mdl
-177		Infected                     infected                            models/infected/common_female_tshirt_skirt.mdl
-178		CFirstAidKit                 weapon_first_aid_kit                models/v_models/v_medkit.mdl
-179		CFirstAidKit                 weapon_first_aid_kit                models/v_models/v_medkit.mdl
-180		CFirstAidKit                 weapon_first_aid_kit                models/v_models/v_medkit.mdl
-181		CWeaponSpawn                 weapon_pain_pills_spawn             models/w_models/weapons/w_eq_painpills.mdl
-182		CSMG_Silenced                weapon_smg_silenced                 models/v_models/v_silenced_smg.mdl
-183		CSMG_Silenced                weapon_smg_silenced                 models/v_models/v_silenced_smg.mdl
-184		CWeaponSpawn                 weapon_pain_pills_spawn             models/w_models/weapons/w_eq_painpills.mdl
-188		CWeaponSpawn                 weapon_molotov_spawn                models/w_models/weapons/w_eq_molotov.mdl
-190		CWeaponSpawn                 weapon_defibrillator_spawn          models/w_models/weapons/w_eq_defibrillator.mdl
-194		CWeaponSpawn                 weapon_molotov_spawn                models/w_models/weapons/w_eq_molotov.mdl
-197		CWeaponSpawn                 weapon_molotov_spawn                models/w_models/weapons/w_eq_molotov.mdl
-198		CWeaponSpawn                 weapon_pipe_bomb_spawn              models/w_models/weapons/w_eq_pipebomb.mdl
-201		CWeaponSpawn                 weapon_pain_pills_spawn             models/w_models/weapons/w_eq_painpills.mdl
-203		CWeaponSpawn                 weapon_adrenaline_spawn             models/w_models/weapons/w_eq_adrenaline.mdl
-205		CWeaponSpawn                 weapon_pain_pills_spawn             models/w_models/weapons/w_eq_painpills.mdl
-207		CWeaponSpawn                 weapon_molotov_spawn                models/w_models/weapons/w_eq_molotov.mdl
-210		CWeaponSpawn                 weapon_molotov_spawn                models/w_models/weapons/w_eq_molotov.mdl
-212		CPhysicsProp                 prop_physics                        models/props_junk/dumpster_2.mdl
-213		CWeaponSpawn                 weapon_pistol_spawn                 models/w_models/weapons/w_pistol_B.mdl
-217		CWeaponSpawn                 weapon_pistol_spawn                 models/w_models/weapons/w_pistol_B.mdl
-219		CWeaponSpawn                 weapon_pistol_spawn                 models/w_models/weapons/w_pistol_B.mdl
-220		CWeaponSpawn                 weapon_pistol_spawn                 models/w_models/weapons/w_pistol_B.mdl
-225		CWeaponSpawn                 weapon_pipe_bomb_spawn              models/w_models/weapons/w_eq_pipebomb.mdl
-226		CPhysicsProp                 prop_physics                        models/props_junk/gascan001a.mdl
-233		CPhysicsProp                 prop_physics                        models/props_junk/gascan001a.mdl
-234		CWeaponSpawn                 weapon_molotov_spawn                models/w_models/weapons/w_eq_molotov.mdl
-235		CWeaponSpawn                 weapon_vomitjar_spawn               models/w_models/weapons/w_eq_bile_flask.mdl
-237		CWeaponSpawn                 weapon_pain_pills_spawn             models/w_models/weapons/w_eq_painpills.mdl
-238		CBaseEntity                  info_map_parameters  
-240		CPhysicsProp                 prop_physics                        models/props_junk/propanecanister001a.mdl
-245		CPhysicsProp                 prop_physics                        models/props_junk/propanecanister001a.mdl
-246		CBaseEntity                  func_nav_blocker  
-247		CPhysicsProp                 prop_physics                        models/props_swamp/boardwalk_rail_256_break.mdl
-248		CPhysicsProp                 prop_physics                        models/props_swamp/boardwalk_rail_256_break.mdl
-249		CPhysicsProp                 prop_physics                        models/props_swamp/boardwalk_rail_256_break.mdl
-250		CPhysicsProp                 prop_physics                        models/props_swamp/boardwalk_rail_256_break.mdl
-251		CPhysicsProp                 prop_physics                        models/props_swamp/boardwalk_rail_256_break.mdl
-252		CPhysicsProp                 prop_physics                        models/props_swamp/boardwalk_rail_256_break.mdl
-258		CWeaponSpawn                 weapon_defibrillator_spawn          models/w_models/weapons/w_eq_defibrillator.mdl
-259		CWeaponSpawn                 weapon_pipe_bomb_spawn              models/w_models/weapons/w_eq_pipebomb.mdl
-262		CWeaponSpawn                 weapon_molotov_spawn                models/w_models/weapons/w_eq_molotov.mdl
-263		CWeaponSpawn                 weapon_pain_pills_spawn             models/w_models/weapons/w_eq_painpills.mdl
-268		CWeaponSpawn                 weapon_pipe_bomb_spawn              models/w_models/weapons/w_eq_pipebomb.mdl
-269		CWeaponSpawn                 weapon_vomitjar_spawn               models/w_models/weapons/w_eq_bile_flask.mdl
-270		CPhysicsProp                 prop_physics                        models/props_junk/wheebarrow01a.mdl
-273		CWeaponSpawn                 weapon_pipe_bomb_spawn              models/w_models/weapons/w_eq_pipebomb.mdl
-274		CFuncBrush                   func_brush  
-275		CFuncBrush                   func_brush  
-276		CFuncBrush                   func_brush  
-277		CFuncBrush                   func_brush  
-278		CFuncBrush                   func_brush  
-279		CFuncBrush                   func_brush  
-280		CFuncBrush                   func_brush  
-281		CFuncBrush                   func_brush  
-282		CFuncBrush                   func_brush  
-283		CFuncBrush                   func_brush  
-284		CWeaponSpawn                 weapon_adrenaline_spawn             models/w_models/weapons/w_eq_adrenaline.mdl
-286		CWeaponSpawn                 weapon_pipe_bomb_spawn              models/w_models/weapons/w_eq_pipebomb.mdl
-288		CWeaponSpawn                 weapon_defibrillator_spawn          models/w_models/weapons/w_eq_defibrillator.mdl
-289		CBaseEntity                  func_nav_attribute_region  
-290		CPhysicsProp                 prop_physics                        models/props_foliage/tree_trunk_fallen.mdl
-291		CPhysicsProp                 prop_physics                        models/props_foliage/tree_trunk_fallen.mdl
-292		CFuncAreaPortalWindow        func_areaportalwindow  
-293		CPhysicsProp                 prop_physics                        models/props_swamp/boardwalk_rail_256_break.mdl
+166		CEnvPhysicsBlocker           env_physics_blocker  
+167		CEnvPhysicsBlocker           env_physics_blocker  
+168		CEnvPhysicsBlocker           env_physics_blocker  
+169		CEnvPhysicsBlocker           env_physics_blocker  
+170		CEnvPhysicsBlocker           env_physics_blocker  
+171		CEnvPhysicsBlocker           env_physics_blocker  
+172		CEnvPhysicsBlocker           env_physics_blocker  
+173		CWeaponSpawn                 weapon_adrenaline_spawn             models/w_models/weapons/w_eq_adrenaline.mdl
+174		CWeaponSpawn                 weapon_pipe_bomb_spawn              models/w_models/weapons/w_eq_pipebomb.mdl
+175		CEnvPhysicsBlocker           env_physics_blocker  
+176		CEnvPhysicsBlocker           env_physics_blocker  
+177		CWeaponSpawn                 weapon_molotov_spawn                models/w_models/weapons/w_eq_molotov.mdl
+178		CEnvPhysicsBlocker           env_physics_blocker  
+179		CWeaponSpawn                 weapon_pain_pills_spawn             models/w_models/weapons/w_eq_painpills.mdl
+180		CEnvPhysicsBlocker           env_physics_blocker  
+181		CWeaponSpawn                 weapon_adrenaline_spawn             models/w_models/weapons/w_eq_adrenaline.mdl
+182		CWeaponSpawn                 weapon_molotov_spawn                models/w_models/weapons/w_eq_molotov.mdl
+183		CWeaponSpawn                 weapon_pipe_bomb_spawn              models/w_models/weapons/w_eq_pipebomb.mdl
+184		CEnvPhysicsBlocker           env_physics_blocker  
+185		CWeaponSpawn                 weapon_defibrillator_spawn          models/w_models/weapons/w_eq_defibrillator.mdl
+186		CEnvPhysicsBlocker           env_physics_blocker  
+187		CEnvPhysicsBlocker           env_physics_blocker  
+188		CDynamicProp                 prop_dynamic                        models/props_fairgrounds/alligator.mdl
+189		CTerrorViewModel             predicted_viewmodel  
+190		CTerrorViewModel             predicted_viewmodel                 models/v_models/v_pistolA.mdl
+191		CWeaponSpawn                 weapon_molotov_spawn                models/w_models/weapons/w_eq_molotov.mdl
+192		CSubMachinegun               weapon_smg                          models/v_models/v_smg.mdl
+193		CTerrorViewModel             predicted_viewmodel  
+194		CTerrorViewModel             predicted_viewmodel                 models/v_models/v_smg.mdl
+195		CPistol                      weapon_pistol                       models/v_models/v_pistolA.mdl
+196		CTerrorViewModel             predicted_viewmodel  
+197		CTerrorViewModel             predicted_viewmodel                 models/v_models/v_smg.mdl
+198		CPhysicsProp                 prop_physics                        models/props_junk/dumpster_2.mdl
+199		CPistol                      weapon_pistol                       models/v_models/v_pistolA.mdl
+200		CTerrorViewModel             predicted_viewmodel  
+201		CWeaponSpawn                 weapon_pistol_spawn                 models/w_models/weapons/w_pistol_B.mdl
+202		CTerrorViewModel             predicted_viewmodel                 models/v_models/v_smg.mdl
+203		CWeaponSpawn                 weapon_pistol_spawn                 models/w_models/weapons/w_pistol_B.mdl
+204		CPistol                      weapon_pistol                       models/v_models/v_pistolA.mdl
+205		Infected                     infected                            models/infected/common_male_tshirt_cargos.mdl
+206		Infected                     infected                            models/infected/common_male_tshirt_cargos.mdl
+207		CWeaponSpawn                 weapon_adrenaline_spawn             models/w_models/weapons/w_eq_adrenaline.mdl
+208		Infected                     infected                            models/infected/common_female_tshirt_skirt.mdl
+209		CWeaponSpawn                 weapon_vomitjar_spawn               models/w_models/weapons/w_eq_bile_flask.mdl
+210		Infected                     infected                            models/infected/common_female_tshirt_skirt.mdl
+211		CWeaponSpawn                 weapon_pain_pills_spawn             models/w_models/weapons/w_eq_painpills.mdl
+212		CPhysicsProp                 prop_physics                        models/props_junk/gascan001a.mdl
+213		CSubMachinegun               weapon_smg                          models/v_models/v_smg.mdl
+214		CSMG_Silenced                weapon_smg_silenced                 models/v_models/v_silenced_smg.mdl
+215		CPistol                      weapon_pistol                       models/v_models/v_pistolA.mdl
+216		CFirstAidKit                 weapon_first_aid_kit                models/v_models/v_medkit.mdl
+217		CFirstAidKit                 weapon_first_aid_kit                models/v_models/v_medkit.mdl
+218		CPhysicsProp                 prop_physics                        models/props_junk/gascan001a.mdl
+219		CSubMachinegun               weapon_smg                          models/v_models/v_smg.mdl
+220		CWeaponSpawn                 weapon_defibrillator_spawn          models/w_models/weapons/w_eq_defibrillator.mdl
+221		CFirstAidKit                 weapon_first_aid_kit                models/v_models/v_medkit.mdl
+223		CWeaponSpawn                 weapon_vomitjar_spawn               models/w_models/weapons/w_eq_bile_flask.mdl
+224		CBaseEntity                  info_map_parameters  
+229		CPhysicsProp                 prop_physics                        models/props_junk/propanecanister001a.mdl
+232		CBaseEntity                  func_nav_blocker  
+233		CPhysicsProp                 prop_physics                        models/props_swamp/boardwalk_rail_256_break.mdl
+234		CPhysicsProp                 prop_physics                        models/props_swamp/boardwalk_rail_256_break.mdl
+235		CPhysicsProp                 prop_physics                        models/props_swamp/boardwalk_rail_256_break.mdl
+236		CPhysicsProp                 prop_physics                        models/props_swamp/boardwalk_rail_256_break.mdl
+237		CPhysicsProp                 prop_physics                        models/props_swamp/boardwalk_rail_256_break.mdl
+238		CPhysicsProp                 prop_physics                        models/props_swamp/boardwalk_rail_256_break.mdl
+243		CWeaponSpawn                 weapon_vomitjar_spawn               models/w_models/weapons/w_eq_bile_flask.mdl
+245		CWeaponSpawn                 weapon_pain_pills_spawn             models/w_models/weapons/w_eq_painpills.mdl
+246		CWeaponSpawn                 weapon_pipe_bomb_spawn              models/w_models/weapons/w_eq_pipebomb.mdl
+247		CWeaponSpawn                 weapon_pain_pills_spawn             models/w_models/weapons/w_eq_painpills.mdl
+248		CWeaponSpawn                 weapon_pipe_bomb_spawn              models/w_models/weapons/w_eq_pipebomb.mdl
+249		CWeaponSpawn                 weapon_molotov_spawn                models/w_models/weapons/w_eq_molotov.mdl
+251		CWeaponSpawn                 weapon_vomitjar_spawn               models/w_models/weapons/w_eq_bile_flask.mdl
+252		CWeaponSpawn                 weapon_pipe_bomb_spawn              models/w_models/weapons/w_eq_pipebomb.mdl
+253		CWeaponSpawn                 weapon_defibrillator_spawn          models/w_models/weapons/w_eq_defibrillator.mdl
+255		CWeaponSpawn                 weapon_pain_pills_spawn             models/w_models/weapons/w_eq_painpills.mdl
+256		CPhysicsProp                 prop_physics                        models/props_junk/wheebarrow01a.mdl
+258		CWeaponSpawn                 weapon_pain_pills_spawn             models/w_models/weapons/w_eq_painpills.mdl
+260		CFuncBrush                   func_brush  
+261		CFuncBrush                   func_brush  
+262		CFuncBrush                   func_brush  
+263		CFuncBrush                   func_brush  
+264		CFuncBrush                   func_brush  
+265		CFuncBrush                   func_brush  
+266		CFuncBrush                   func_brush  
+267		CFuncBrush                   func_brush  
+268		CFuncBrush                   func_brush  
+269		CFuncBrush                   func_brush  
+270		CWeaponSpawn                 weapon_molotov_spawn                models/w_models/weapons/w_eq_molotov.mdl
+271		CWeaponSpawn                 weapon_pain_pills_spawn             models/w_models/weapons/w_eq_painpills.mdl
+274		CWeaponSpawn                 weapon_pipe_bomb_spawn              models/w_models/weapons/w_eq_pipebomb.mdl
+275		CBaseEntity                  func_nav_attribute_region  
+276		CPhysicsProp                 prop_physics                        models/props_foliage/tree_trunk_fallen.mdl
+277		CPhysicsProp                 prop_physics                        models/props_foliage/tree_trunk_fallen.mdl
+278		CFuncAreaPortalWindow        func_areaportalwindow  
+279		CPhysicsProp                 prop_physics                        models/props_swamp/boardwalk_rail_256_break.mdl
+280		CFuncSimpleLadder            func_simpleladder  
+281		CFuncSimpleLadder            func_simpleladder  
+282		CFuncSimpleLadder            func_simpleladder  
+283		CFuncSimpleLadder            func_simpleladder  
+284		CFuncSimpleLadder            func_simpleladder  
+285		CFuncSimpleLadder            func_simpleladder  
+286		CFuncSimpleLadder            func_simpleladder  
+287		CFuncSimpleLadder            func_simpleladder  
+288		CFuncSimpleLadder            func_simpleladder  
+289		CFuncSimpleLadder            func_simpleladder  
+290		CFuncSimpleLadder            func_simpleladder  
+291		CFuncSimpleLadder            func_simpleladder  
+292		CFuncSimpleLadder            func_simpleladder  
+293		CFuncSimpleLadder            func_simpleladder  
 294		CFuncSimpleLadder            func_simpleladder  
 295		CFuncSimpleLadder            func_simpleladder  
 296		CFuncSimpleLadder            func_simpleladder  
@@ -317,319 +367,322 @@
 399		CFuncSimpleLadder            func_simpleladder  
 400		CFuncSimpleLadder            func_simpleladder  
 401		CFuncSimpleLadder            func_simpleladder  
-402		CFuncSimpleLadder            func_simpleladder  
-403		CFuncSimpleLadder            func_simpleladder  
-404		CFuncSimpleLadder            func_simpleladder  
-405		CFuncSimpleLadder            func_simpleladder  
-406		CFuncSimpleLadder            func_simpleladder  
-407		CFuncSimpleLadder            func_simpleladder  
-408		CFuncSimpleLadder            func_simpleladder  
-409		CFuncSimpleLadder            func_simpleladder  
-410		CFuncSimpleLadder            func_simpleladder  
-411		CFuncSimpleLadder            func_simpleladder  
-412		CFuncSimpleLadder            func_simpleladder  
-413		CFuncSimpleLadder            func_simpleladder  
-414		CFuncSimpleLadder            func_simpleladder  
-415		CFuncSimpleLadder            func_simpleladder  
-416		CWeaponSpawn                 weapon_vomitjar_spawn               models/w_models/weapons/w_eq_bile_flask.mdl
-420		CWeaponSpawn                 weapon_grenade_launcher_spawn       models/w_models/weapons/w_grenade_launcher.mdl
-425		CPhysicsProp                 prop_physics                        models/props_junk/gascan001a.mdl
-426		CPhysicsProp                 prop_physics                        models/props_junk/propanecanister001a.mdl
-429		CWeaponSpawn                 weapon_spawn                        models/w_models/weapons/w_sniper_military.mdl
-431		CPhysicsProp                 prop_physics                        models/props_urban/oil_drum001.mdl
-432		CPhysicsProp                 prop_physics                        models/props_urban/oil_drum001.mdl
-433		CPhysicsProp                 prop_physics                        models/props_urban/oil_drum001.mdl
-434		CBasePropDoor                prop_door_rotating                  models/props_downtown/door_interior_112_01.mdl
-435		CPhysicsProp                 prop_physics                        models/props_junk/dumpster_2.mdl
-436		CFuncAreaPortalWindow        func_areaportalwindow  
-437		CFuncBrush                   func_brush  
-438		CFuncBrush                   func_brush  
-439		CFuncAreaPortalWindow        func_areaportalwindow  
-440		CFuncBrush                   func_brush  
-441		CFuncAreaPortalWindow        func_areaportalwindow  
-442		CBasePropDoor                prop_door_rotating                  models/props_downtown/door_interior_112_01.mdl
-443		CBasePropDoor                prop_door_rotating                  models/props_downtown/door_interior_112_01.mdl
-444		CBaseEntity                  func_nav_attribute_region  
-445		CBasePropDoor                prop_door_rotating                  models/props_downtown/door_interior_112_01.mdl
-446		CWeaponSpawn                 weapon_upgradepack_incendiary_spawn  models/w_models/weapons/w_eq_incendiary_ammopack.mdl
+402		CWeaponSpawn                 weapon_molotov_spawn                models/w_models/weapons/w_eq_molotov.mdl
+404		CWeaponSpawn                 weapon_adrenaline_spawn             models/w_models/weapons/w_eq_adrenaline.mdl
+407		CWeaponSpawn                 weapon_grenade_launcher_spawn       models/w_models/weapons/w_grenade_launcher.mdl
+408		CPhysicsProp                 prop_physics                        models/props_junk/propanecanister001a.mdl
+409		CPhysicsProp                 prop_physics                        models/props_junk/gascan001a.mdl
+410		CPhysicsProp                 prop_physics                        models/props_junk/propanecanister001a.mdl
+414		CWeaponSpawn                 weapon_grenade_launcher_spawn       models/w_models/weapons/w_grenade_launcher.mdl
+415		CWeaponSpawn                 weapon_spawn                        models/w_models/weapons/w_sniper_scout.mdl
+416		CWeaponSpawn                 weapon_upgradepack_incendiary_spawn  models/w_models/weapons/w_eq_incendiary_ammopack.mdl
+417		CPhysicsProp                 prop_physics                        models/props_urban/oil_drum001.mdl
+418		CPhysicsProp                 prop_physics                        models/props_urban/oil_drum001.mdl
+419		CPhysicsProp                 prop_physics                        models/props_urban/oil_drum001.mdl
+420		CBasePropDoor                prop_door_rotating                  models/props_downtown/door_interior_112_01.mdl
+421		CPhysicsProp                 prop_physics                        models/props_junk/dumpster_2.mdl
+422		CFuncAreaPortalWindow        func_areaportalwindow  
+423		CFuncBrush                   func_brush  
+424		CFuncBrush                   func_brush  
+425		CFuncAreaPortalWindow        func_areaportalwindow  
+426		CFuncBrush                   func_brush  
+427		CFuncAreaPortalWindow        func_areaportalwindow  
+428		CBasePropDoor                prop_door_rotating                  models/props_downtown/door_interior_112_01.mdl
+429		CBasePropDoor                prop_door_rotating                  models/props_downtown/door_interior_112_01.mdl
+430		CBaseEntity                  func_nav_attribute_region  
+431		CBasePropDoor                prop_door_rotating                  models/props_downtown/door_interior_112_01.mdl
+433		CPhysicsProp                 prop_physics                        models/props_windows/window_farmhouse_big.mdl
+434		CPhysicsProp                 prop_physics                        models/props_windows/window_farmhouse_big.mdl
+435		CPhysicsProp                 prop_physics                        models/props_windows/window_farmhouse_big.mdl
+436		CPhysicsProp                 prop_physics                        models/props_windows/window_farmhouse_big.mdl
+437		CPhysicsProp                 prop_physics                        models/props_windows/window_farmhouse_big.mdl
+438		CPhysicsProp                 prop_physics                        models/props_windows/window_farmhouse_big.mdl
+439		CPhysicsProp                 prop_physics                        models/props_windows/window_farmhouse_big.mdl
+440		CPhysicsProp                 prop_physics                        models/props_windows/window_farmhouse_big.mdl
+441		CBasePropDoor                prop_door_rotating                  models/props_downtown/door_interior_112_01.mdl
+442		CWeaponSpawn                 weapon_melee_spawn                  models/weapons/melee/w_fireaxe.mdl
+443		CWeaponSpawn                 weapon_melee_spawn                  models/weapons/melee/w_frying_pan.mdl
+444		CWeaponSpawn                 weapon_melee_spawn                  models/weapons/melee/w_fireaxe.mdl
+445		CPhysicsProp                 prop_physics                        models/props_windows/window_farmhouse_big.mdl
+446		CPhysicsProp                 prop_physics                        models/props_windows/window_farmhouse_big.mdl
 447		CPhysicsProp                 prop_physics                        models/props_windows/window_farmhouse_big.mdl
-448		CPhysicsProp                 prop_physics                        models/props_windows/window_farmhouse_big.mdl
-449		CPhysicsProp                 prop_physics                        models/props_windows/window_farmhouse_big.mdl
-450		CPhysicsProp                 prop_physics                        models/props_windows/window_farmhouse_big.mdl
-451		CPhysicsProp                 prop_physics                        models/props_windows/window_farmhouse_big.mdl
-452		CPhysicsProp                 prop_physics                        models/props_windows/window_farmhouse_big.mdl
-453		CPhysicsProp                 prop_physics                        models/props_windows/window_farmhouse_big.mdl
-454		CPhysicsProp                 prop_physics                        models/props_windows/window_farmhouse_big.mdl
-455		CBasePropDoor                prop_door_rotating                  models/props_downtown/door_interior_112_01.mdl
-456		CWeaponSpawn                 weapon_melee_spawn                  models/weapons/melee/w_fireaxe.mdl
-457		CWeaponSpawn                 weapon_melee_spawn                  models/weapons/melee/w_frying_pan.mdl
-458		CWeaponSpawn                 weapon_melee_spawn                  models/weapons/melee/w_fireaxe.mdl
-459		CPhysicsProp                 prop_physics                        models/props_windows/window_farmhouse_big.mdl
-460		CPhysicsProp                 prop_physics                        models/props_windows/window_farmhouse_big.mdl
-461		CPhysicsProp                 prop_physics                        models/props_windows/window_farmhouse_big.mdl
-462		CDynamicProp                 prop_dynamic                        models/props_vehicles/flatnose_truck_glass.mdl
-463		CFuncBrush                   func_brush  
-464		CBaseUpgradeItem             upgrade_laser_sight                 models/w_models/Weapons/w_laser_sights.mdl
-467		CWeaponSpawn                 weapon_melee_spawn                  models/weapons/melee/w_frying_pan.mdl
-468		CWeaponSpawn                 weapon_melee_spawn                  models/weapons/melee/w_fireaxe.mdl
-469		CParticleSystem              info_particle_system  
-470		CParticleSystem              info_particle_system  
-471		CFuncBrush                   func_brush  
-472		CWeaponSpawn                 weapon_melee_spawn                  models/weapons/melee/w_frying_pan.mdl
-473		CWeaponSpawn                 weapon_melee_spawn                  models/weapons/melee/w_frying_pan.mdl
-474		CBaseTrigger                 trigger_push  
-475		CBaseTrigger                 trigger_hurt  
-476		CRopeKeyframe                keyframe_rope  
-477		CRopeKeyframe                keyframe_rope  
-478		CRopeKeyframe                keyframe_rope  
-479		CRopeKeyframe                keyframe_rope  
-480		CPhysicsProp                 prop_physics                        models/props_swamp/boardwalk_rail_256_break.mdl
-481		CFuncSimpleLadder            func_simpleladder  
+448		CDynamicProp                 prop_dynamic                        models/props_vehicles/flatnose_truck_glass.mdl
+449		CFuncBrush                   func_brush  
+452		CWeaponSpawn                 weapon_upgradepack_incendiary_spawn  models/w_models/weapons/w_eq_incendiary_ammopack.mdl
+453		CWeaponSpawn                 weapon_melee_spawn                  models/weapons/melee/w_frying_pan.mdl
+454		CWeaponSpawn                 weapon_melee_spawn                  models/weapons/melee/w_fireaxe.mdl
+455		CParticleSystem              info_particle_system  
+456		CParticleSystem              info_particle_system  
+457		CFuncBrush                   func_brush  
+458		CWeaponSpawn                 weapon_melee_spawn                  models/weapons/melee/w_frying_pan.mdl
+459		CWeaponSpawn                 weapon_melee_spawn                  models/weapons/melee/w_frying_pan.mdl
+460		CBaseTrigger                 trigger_push  
+461		CBaseTrigger                 trigger_hurt  
+462		CRopeKeyframe                keyframe_rope  
+463		CRopeKeyframe                keyframe_rope  
+464		CRopeKeyframe                keyframe_rope  
+465		CRopeKeyframe                keyframe_rope  
+466		CPhysicsProp                 prop_physics                        models/props_swamp/boardwalk_rail_256_break.mdl
+467		CFuncSimpleLadder            func_simpleladder  
+468		CFuncSimpleLadder            func_simpleladder  
+469		CRopeKeyframe                move_rope  
+470		CBaseEntity                  ambient_generic  
+471		CPhysBox                     func_physbox  
+472		CRopeKeyframe                move_rope  
+473		CRopeKeyframe                move_rope  
+474		CRopeKeyframe                move_rope  
+475		CRopeKeyframe                move_rope  
+476		CPhysBox                     func_physbox  
+477		CRopeKeyframe                move_rope  
+478		CRopeKeyframe                move_rope  
+479		CRopeKeyframe                move_rope  
+480		CRopeKeyframe                move_rope  
+481		CPhysicsProp                 prop_physics                        models/props_swamp/boardwalk_rail_256_break.mdl
 482		CFuncSimpleLadder            func_simpleladder  
-483		CRopeKeyframe                move_rope  
-484		CBaseEntity                  ambient_generic  
-485		CPhysBox                     func_physbox  
-486		CRopeKeyframe                move_rope  
-487		CRopeKeyframe                move_rope  
-488		CRopeKeyframe                move_rope  
-489		CRopeKeyframe                move_rope  
-490		CPhysBox                     func_physbox  
-491		CRopeKeyframe                move_rope  
-492		CRopeKeyframe                move_rope  
-493		CRopeKeyframe                move_rope  
-494		CRopeKeyframe                move_rope  
-495		CPhysicsProp                 prop_physics                        models/props_swamp/boardwalk_rail_256_break.mdl
-496		CFuncSimpleLadder            func_simpleladder  
-497		CFuncSimpleLadder            func_simpleladder  
-498		CPhysicsProp                 prop_physics                        models/props_swamp/boardwalk_rail_256_break.mdl
-499		CPrecipitation               func_precipitation  
-500		CPrecipitation               func_precipitation  
+483		CFuncSimpleLadder            func_simpleladder  
+484		CPhysicsProp                 prop_physics                        models/props_swamp/boardwalk_rail_256_break.mdl
+485		CPrecipitation               func_precipitation  
+486		CPrecipitation               func_precipitation  
+487		CFuncBrush                   func_brush  
+488		CPhysicsProp                 prop_physics                        models/props_debris/wood_chunk05a.mdl
+489		CPhysicsProp                 prop_physics                        models/props_debris/wood_chunk05b.mdl
+491		CBreakable                   func_breakable  
+492		CFuncBrush                   func_brush  
+493		CFuncSimpleLadder            func_simpleladder  
+494		CBasePropDoor                prop_door_rotating                  models/props_doors/doormain_rural01.mdl
+495		CSurvivorRescue              info_survivor_rescue                models/editor/playerstart.mdl
+496		CSurvivorRescue              info_survivor_rescue                models/editor/playerstart.mdl
+499		CBreakable                   func_breakable  
+500		CFuncBrush                   func_brush  
 501		CFuncBrush                   func_brush  
-502		CPhysicsProp                 prop_physics                        models/props_debris/wood_chunk05a.mdl
-503		CPhysicsProp                 prop_physics                        models/props_debris/wood_chunk05b.mdl
-504		CWeaponSpawn                 weapon_upgradepack_incendiary_spawn  models/w_models/weapons/w_eq_incendiary_ammopack.mdl
-505		CBreakable                   func_breakable  
-506		CFuncBrush                   func_brush  
-507		CFuncSimpleLadder            func_simpleladder  
-508		CBasePropDoor                prop_door_rotating                  models/props_doors/doormain_rural01.mdl
-509		CSurvivorRescue              info_survivor_rescue                models/editor/playerstart.mdl
-510		CSurvivorRescue              info_survivor_rescue                models/editor/playerstart.mdl
-511		CWeaponSpawn                 weapon_upgradepack_incendiary_spawn  models/w_models/weapons/w_eq_incendiary_ammopack.mdl
-513		CBreakable                   func_breakable  
-514		CFuncBrush                   func_brush  
-515		CFuncBrush                   func_brush  
-516		CBasePropDoor                prop_door_rotating                  models/props_downtown/door_interior_112_01.mdl
-517		CFuncSimpleLadder            func_simpleladder  
-518		CFuncSimpleLadder            func_simpleladder  
-519		CWeaponAmmoSpawn             weapon_ammo_spawn                   models/props/terror/ammo_stack.mdl
-520		CWeaponSpawn                 weapon_first_aid_kit_spawn          models/w_models/weapons/w_eq_Medkit.mdl
-522		CWeaponSpawn                 weapon_spawn                        models/w_models/weapons/w_smg_a.mdl
-523		CWeaponSpawn                 weapon_spawn                        models/w_models/weapons/w_shotgun.mdl
-527		CWeaponSpawn                 weapon_upgradepack_incendiary_spawn  models/w_models/weapons/w_eq_incendiary_ammopack.mdl
-529		CSpotlightEnd                spotlight_end  
-530		CBeam                        beam                                sprites/glow_test02.vmt
-531		CSpotlightEnd                spotlight_end  
-532		CBaseEntity                  info_map_parameters_versus  
-533		CFuncSimpleLadder            func_simpleladder  
-534		CFuncSimpleLadder            func_simpleladder  
-535		CFuncSimpleLadder            func_simpleladder  
-536		CFuncSimpleLadder            func_simpleladder  
-537		CPhysicsProp                 prop_physics                        models/props_junk/garbage_plasticbottle001a_fullsheet.mdl
-538		CPhysicsProp                 prop_physics                        models/props_junk/garbage_plasticbottle001a_fullsheet.mdl
-539		CPhysicsProp                 prop_physics                        models/props_junk/garbage_plasticbottle001a_fullsheet.mdl
-540		CPhysicsProp                 prop_physics                        models/props_urban/plastic_basin001.mdl
-541		CPhysicsProp                 prop_physics                        models/props_urban/plastic_icechest001.mdl
-542		CPhysicsProp                 prop_physics                        models/props_urban/plastic_icechest_lid001.mdl
-543		CPhysicsProp                 prop_physics                        models/props_urban/plastic_icechest001.mdl
-544		CPhysicsProp                 prop_physics                        models/props_urban/plastic_water_jug001.mdl
-545		CPhysicsProp                 prop_physics                        models/props_junk/furnituremattress001a.mdl
-546		CPhysicsProp                 prop_physics                        models/props_junk/furnituremattress001a.mdl
-547		CPhysicsProp                 prop_physics                        models/props_junk/furnituremattress001a.mdl
-548		CPhysicsProp                 prop_physics                        models/props_junk/furnituremattress001a.mdl
-549		CPhysicsProp                 prop_physics                        models/props_junk/furnituremattress001a.mdl
-550		CPhysicsProp                 prop_physics                        models/props_junk/furnituremattress001a.mdl
-551		CFuncSimpleLadder            func_simpleladder  
-552		CPhysicsProp                 prop_physics                        models/props_urban/plastic_basin002.mdl
-553		CPhysicsProp                 prop_physics                        models/props_urban/plastic_icechest001.mdl
-554		CPhysicsProp                 prop_physics                        models/props_urban/plastic_icechest_lid001.mdl
-555		CRopeKeyframe                keyframe_rope  
-556		CRopeKeyframe                keyframe_rope  
-557		CRopeKeyframe                keyframe_rope  
-558		CRopeKeyframe                keyframe_rope  
-559		CBeam                        beam                                sprites/glow_test02.vmt
-560		CPhysicsProp                 prop_physics                        models/props_urban/plastic_chair001.mdl
-561		CSpotlightEnd                spotlight_end  
-562		CBeam                        beam                                sprites/glow_test02.vmt
-563		CPhysicsProp                 prop_physics                        models/props_urban/plastic_chair001.mdl
-564		CPhysicsProp                 prop_physics                        models/props_urban/plastic_chair001.mdl
-565		CPhysicsProp                 prop_physics                        models/props_urban/plastic_chair001.mdl
-566		CSpotlightEnd                spotlight_end  
-567		CBeam                        beam                                sprites/glow_test02.vmt
-568		CBaseEntity                  scene_manager  
-569		CPhysicsProp                 prop_physics                        models/props_urban/plastic_chair001.mdl
-570		CPhysicsProp                 prop_physics                        models/props_urban/plastic_chair001.mdl
-571		CPhysicsProp                 prop_physics                        models/props_junk/wheebarrow01a.mdl
-572		CRopeKeyframe                move_rope  
-573		CRopeKeyframe                move_rope  
-574		CBaseEntity                  info_target  
-575		CBaseEntity                  info_remarkable  
-576		CBaseEntity                  info_remarkable  
-577		CBaseEntity                  info_remarkable  
-578		CBaseEntity                  info_remarkable  
-579		CBaseEntity                  info_remarkable  
-580		CBaseEntity                  info_remarkable  
-581		CBaseEntity                  info_remarkable  
-582		CBaseEntity                  info_remarkable  
-583		CPhysicsProp                 prop_physics                        models/props_urban/tire001.mdl
-584		CPhysicsProp                 prop_physics                        models/props_junk/dumpster_2.mdl
-585		CPhysicsProp                 prop_physics                        models/props_windows/window_farmhouse_big.mdl
-586		CPhysicsProp                 prop_physics                        models/props_windows/window_farmhouse_big.mdl
-587		CPhysicsProp                 prop_physics                        models/props_windows/window_farmhouse_big.mdl
-588		CPhysicsProp                 prop_physics                        models/props_fortifications/traffic_barrier001.mdl
-589		CPhysicsProp                 prop_physics                        models/props_fortifications/traffic_barrier001.mdl
-590		CRopeKeyframe                move_rope  
-591		CRopeKeyframe                keyframe_rope  
-592		CRopeKeyframe                keyframe_rope  
-593		CRopeKeyframe                keyframe_rope  
-594		CRopeKeyframe                keyframe_rope  
-595		CRopeKeyframe                keyframe_rope  
-596		CRopeKeyframe                keyframe_rope  
-597		CRopeKeyframe                keyframe_rope  
-598		CRopeKeyframe                keyframe_rope  
+502		CBasePropDoor                prop_door_rotating                  models/props_downtown/door_interior_112_01.mdl
+503		CFuncSimpleLadder            func_simpleladder  
+504		CFuncSimpleLadder            func_simpleladder  
+505		CWeaponAmmoSpawn             weapon_ammo_spawn                   models/props/terror/ammo_stack.mdl
+506		CWeaponSpawn                 weapon_first_aid_kit_spawn          models/w_models/weapons/w_eq_Medkit.mdl
+508		CWeaponSpawn                 weapon_spawn                        models/w_models/weapons/w_smg_uzi.mdl
+509		CWeaponSpawn                 weapon_spawn                        models/w_models/weapons/w_shotgun.mdl
+512		CWeaponSpawn                 weapon_upgradepack_incendiary_spawn  models/w_models/weapons/w_eq_incendiary_ammopack.mdl
+514		CWeaponSpawn                 weapon_upgradepack_incendiary_spawn  models/w_models/weapons/w_eq_incendiary_ammopack.mdl
+515		CSpotlightEnd                spotlight_end  
+516		CBeam                        beam                                sprites/glow_test02.vmt
+517		CSpotlightEnd                spotlight_end  
+518		CBaseEntity                  info_map_parameters_versus  
+519		CFuncSimpleLadder            func_simpleladder  
+520		CFuncSimpleLadder            func_simpleladder  
+521		CFuncSimpleLadder            func_simpleladder  
+522		CFuncSimpleLadder            func_simpleladder  
+523		CPhysicsProp                 prop_physics                        models/props_junk/garbage_plasticbottle001a_fullsheet.mdl
+524		CPhysicsProp                 prop_physics                        models/props_junk/garbage_plasticbottle001a_fullsheet.mdl
+525		CPhysicsProp                 prop_physics                        models/props_junk/garbage_plasticbottle001a_fullsheet.mdl
+526		CPhysicsProp                 prop_physics                        models/props_urban/plastic_basin001.mdl
+527		CPhysicsProp                 prop_physics                        models/props_urban/plastic_icechest001.mdl
+528		CPhysicsProp                 prop_physics                        models/props_urban/plastic_icechest_lid001.mdl
+529		CPhysicsProp                 prop_physics                        models/props_urban/plastic_icechest001.mdl
+530		CPhysicsProp                 prop_physics                        models/props_urban/plastic_water_jug001.mdl
+531		CPhysicsProp                 prop_physics                        models/props_junk/furnituremattress001a.mdl
+532		CPhysicsProp                 prop_physics                        models/props_junk/furnituremattress001a.mdl
+533		CPhysicsProp                 prop_physics                        models/props_junk/furnituremattress001a.mdl
+534		CPhysicsProp                 prop_physics                        models/props_junk/furnituremattress001a.mdl
+535		CPhysicsProp                 prop_physics                        models/props_junk/furnituremattress001a.mdl
+536		CPhysicsProp                 prop_physics                        models/props_junk/furnituremattress001a.mdl
+537		CFuncSimpleLadder            func_simpleladder  
+538		CPhysicsProp                 prop_physics                        models/props_urban/plastic_basin002.mdl
+539		CPhysicsProp                 prop_physics                        models/props_urban/plastic_icechest001.mdl
+540		CPhysicsProp                 prop_physics                        models/props_urban/plastic_icechest_lid001.mdl
+541		CRopeKeyframe                keyframe_rope  
+542		CRopeKeyframe                keyframe_rope  
+543		CRopeKeyframe                keyframe_rope  
+544		CRopeKeyframe                keyframe_rope  
+545		CBeam                        beam                                sprites/glow_test02.vmt
+546		CPhysicsProp                 prop_physics                        models/props_urban/plastic_chair001.mdl
+547		CSpotlightEnd                spotlight_end  
+548		CBeam                        beam                                sprites/glow_test02.vmt
+549		CPhysicsProp                 prop_physics                        models/props_urban/plastic_chair001.mdl
+550		CPhysicsProp                 prop_physics                        models/props_urban/plastic_chair001.mdl
+551		CPhysicsProp                 prop_physics                        models/props_urban/plastic_chair001.mdl
+552		CSpotlightEnd                spotlight_end  
+553		CBeam                        beam                                sprites/glow_test02.vmt
+554		CBaseEntity                  scene_manager  
+555		CPhysicsProp                 prop_physics                        models/props_urban/plastic_chair001.mdl
+556		CPhysicsProp                 prop_physics                        models/props_urban/plastic_chair001.mdl
+557		CPhysicsProp                 prop_physics                        models/props_junk/wheebarrow01a.mdl
+558		CRopeKeyframe                move_rope  
+559		CRopeKeyframe                move_rope  
+560		CBaseEntity                  info_target  
+561		CBaseEntity                  info_remarkable  
+562		CBaseEntity                  info_remarkable  
+563		CBaseEntity                  info_remarkable  
+564		CBaseEntity                  info_remarkable  
+565		CBaseEntity                  info_remarkable  
+566		CBaseEntity                  info_remarkable  
+567		CBaseEntity                  info_remarkable  
+568		CBaseEntity                  info_remarkable  
+569		CPhysicsProp                 prop_physics                        models/props_urban/tire001.mdl
+570		CPhysicsProp                 prop_physics                        models/props_junk/dumpster_2.mdl
+571		CPhysicsProp                 prop_physics                        models/props_windows/window_farmhouse_big.mdl
+572		CPhysicsProp                 prop_physics                        models/props_windows/window_farmhouse_big.mdl
+573		CPhysicsProp                 prop_physics                        models/props_windows/window_farmhouse_big.mdl
+574		CPhysicsProp                 prop_physics                        models/props_fortifications/traffic_barrier001.mdl
+575		CPhysicsProp                 prop_physics                        models/props_fortifications/traffic_barrier001.mdl
+576		CRopeKeyframe                move_rope  
+577		CRopeKeyframe                keyframe_rope  
+578		CRopeKeyframe                keyframe_rope  
+579		CRopeKeyframe                keyframe_rope  
+580		CRopeKeyframe                keyframe_rope  
+581		CRopeKeyframe                keyframe_rope  
+582		CRopeKeyframe                keyframe_rope  
+583		CRopeKeyframe                keyframe_rope  
+584		CRopeKeyframe                keyframe_rope  
+585		CRopeKeyframe                move_rope  
+586		CRopeKeyframe                keyframe_rope  
+587		CPhysicsProp                 prop_physics                        models/props_junk/furnituremattress001a.mdl
+588		CPhysicsProp                 prop_physics                        models/props_urban/plastic_water_jug001.mdl
+589		CPhysicsProp                 prop_physics                        models/props_urban/plastic_water_jug001.mdl
+590		CPropDoorRotatingCheckpoint  prop_door_rotating_checkpoint       models/props_doors/checkpoint_door_02.mdl
+591		CBaseEntity                  info_landmark  
+592		CWeaponSpawn                 weapon_spawn                        models/w_models/weapons/w_shotgun.mdl
+593		CWeaponSpawn                 weapon_first_aid_kit_spawn          models/w_models/weapons/w_eq_Medkit.mdl
+594		CWeaponSpawn                 weapon_first_aid_kit_spawn          models/w_models/weapons/w_eq_Medkit.mdl
+595		CWeaponSpawn                 weapon_first_aid_kit_spawn          models/w_models/weapons/w_eq_Medkit.mdl
+596		CWeaponSpawn                 weapon_first_aid_kit_spawn          models/w_models/weapons/w_eq_Medkit.mdl
+597		CWeaponSpawn                 weapon_spawn                        models/w_models/weapons/w_smg_a.mdl
+598		CWeaponAmmoSpawn             weapon_ammo_spawn                   models/props/terror/ammo_stack.mdl
 599		CRopeKeyframe                move_rope  
 600		CRopeKeyframe                keyframe_rope  
-601		CPhysicsProp                 prop_physics                        models/props_junk/furnituremattress001a.mdl
-602		CPhysicsProp                 prop_physics                        models/props_urban/plastic_water_jug001.mdl
-603		CPhysicsProp                 prop_physics                        models/props_urban/plastic_water_jug001.mdl
-604		CPropDoorRotatingCheckpoint  prop_door_rotating_checkpoint       models/props_doors/checkpoint_door_02.mdl
-605		CBaseEntity                  info_landmark  
-606		CWeaponSpawn                 weapon_spawn                        models/w_models/weapons/w_pumpshotgun_A.mdl
-607		CWeaponSpawn                 weapon_first_aid_kit_spawn          models/w_models/weapons/w_eq_Medkit.mdl
-608		CWeaponSpawn                 weapon_first_aid_kit_spawn          models/w_models/weapons/w_eq_Medkit.mdl
-609		CWeaponSpawn                 weapon_first_aid_kit_spawn          models/w_models/weapons/w_eq_Medkit.mdl
-610		CWeaponSpawn                 weapon_first_aid_kit_spawn          models/w_models/weapons/w_eq_Medkit.mdl
-611		CWeaponSpawn                 weapon_spawn                        models/w_models/weapons/w_smg_uzi.mdl
-612		CWeaponAmmoSpawn             weapon_ammo_spawn                   models/props/terror/ammo_stack.mdl
-613		CRopeKeyframe                move_rope  
-614		CRopeKeyframe                keyframe_rope  
-615		CRopeKeyframe                keyframe_rope  
-616		CRopeKeyframe                keyframe_rope  
-617		CBasePropDoor                prop_door_rotating                  models/props_doors/doormain_rural01.mdl
-618		CPhysicsProp                 prop_physics                        models/props_urban/plastic_chair001.mdl
-619		CPhysicsProp                 prop_physics                        models/props_urban/plastic_chair001.mdl
-620		CBaseEntity                  info_remarkable  
-621		CPhysicsProp                 prop_physics                        models/props_junk/garbage_plasticbottle001a_fullsheet.mdl
-622		CBaseEntity                  info_remarkable  
-623		CPhysicsProp                 prop_physics                        models/props_urban/plastic_chair001.mdl
-624		CPhysicsProp                 prop_physics                        models/props_urban/plastic_water_jug001.mdl
-625		CPhysicsProp                 prop_physics                        models/props_urban/plastic_water_jug001.mdl
-626		CBaseEntity                  info_remarkable  
-627		CBaseEntity                  info_remarkable  
-628		CBaseEntity                  info_remarkable  
-629		CBaseEntity                  info_remarkable  
-630		CBaseEntity                  info_remarkable  
-631		CBaseEntity                  info_remarkable  
-632		CBaseEntity                  info_remarkable  
-633		CBaseEntity                  env_player_blocker  
-634		CDynamicProp                 prop_dynamic                        models/props_docks/dock02_pole02a.mdl
-635		CDynamicProp                 prop_dynamic                        models/props_urban/porch_light003.mdl
-636		CBaseEntity                  env_player_blocker  
-637		CDynamicProp                 prop_dynamic                        models/props_urban/boat002.mdl
-638		CBaseEntity                  env_player_blocker  
-639		CDynamicProp                 prop_dynamic                        models/props/cs_office/shelves_metal.mdl
-640		CBaseEntity                  env_player_blocker  
-680		CPhysicsProp                 prop_physics                        models/props_urban/oil_drum001.mdl
-681		CPhysicsProp                 prop_physics                        models/props_urban/oil_drum001.mdl
-682		CDynamicProp                 prop_dynamic                        models/props_urban/pontoon_drum001.mdl
-683		CDynamicProp                 prop_dynamic                        models/props_urban/pontoon_drum001.mdl
-684		CDynamicProp                 prop_dynamic                        models/props_urban/pontoon_drum001.mdl
-685		CDynamicProp                 prop_dynamic                        models/props_urban/pontoon_drum001.mdl
-686		CDynamicProp                 prop_dynamic                        models/props_urban/pontoon_drum001.mdl
-687		CDynamicProp                 prop_dynamic                        models/props_urban/pontoon_drum001.mdl
-688		CDynamicProp                 prop_dynamic                        models/props_urban/pontoon_drum001.mdl
-689		CDynamicProp                 prop_dynamic                        models/props_urban/pontoon_drum001.mdl
-690		CDynamicProp                 prop_dynamic                        models/props_urban/pontoon_drum001.mdl
-691		CDynamicProp                 prop_dynamic                        models/props_urban/pontoon_drum001.mdl
-693		CPhysicsProp                 prop_physics                        models/props_urban/shopping_cart001.mdl
-694		CPhysicsProp                 prop_physics                        models/props_urban/shopping_cart001.mdl
-695		CPhysicsProp                 prop_physics                        models/props_urban/shopping_cart001.mdl
-696		CPhysicsProp                 prop_physics                        models/props_urban/shopping_cart001.mdl
-697		CPhysicsProp                 prop_physics                        models/props/de_prodigy/wood_pallet_01.mdl
-698		CPhysicsProp                 prop_physics                        models/props/de_prodigy/wood_pallet_01.mdl
-702		CPhysicsProp                 prop_physics                        models/props_swamp/boardwalk_rail_256_break.mdl
-703		CPhysicsProp                 prop_physics                        models/props_swamp/boardwalk_rail_256_break.mdl
-704		CPhysicsProp                 prop_physics                        models/props_swamp/boardwalk_rail_chunk01.mdl
-705		CPhysicsProp                 prop_physics                        models/props_swamp/boardwalk_rail_chunk05.mdl
-706		CPhysicsProp                 prop_physics                        models/props_swamp/boardwalk_rail_chunk04.mdl
-707		CPhysicsProp                 prop_physics                        models/props_swamp/boardwalk_rail_chunk01.mdl
-708		CPhysicsProp                 prop_physics                        models/props_swamp/boardwalk_rail_chunk01.mdl
-709		CPhysicsProp                 prop_physics                        models/props_swamp/boardwalk_rail_chunk05.mdl
-710		CPhysicsProp                 prop_physics                        models/props_swamp/boardwalk_rail_chunk01.mdl
-711		CPhysicsProp                 prop_physics                        models/props_swamp/boardwalk_rail_chunk04.mdl
-757		CPhysicsProp                 prop_physics                        models/props_signs/sign_horizontal_09.mdl
-758		CPhysicsProp                 prop_physics                        models/props_urban/tire001.mdl
-759		CPhysicsProp                 prop_physics                        models/props_urban/tire001.mdl
-760		CPhysicsProp                 prop_physics                        models/props_urban/tire001.mdl
-761		CPhysicsProp                 prop_physics                        models/props_urban/tire001.mdl
-762		CPhysicsProp                 prop_physics                        models/props_urban/tire001.mdl
-765		CPhysicsProp                 prop_physics                        models/props_urban/plastic_bucket001.mdl
-766		CPhysicsProp                 prop_physics                        models/props_swamp/boardwalk_rail_chunk01.mdl
-767		CDynamicProp                 prop_dynamic                        models/props_critters/crow_group.mdl
-768		CDynamicProp                 prop_dynamic                        models/props_critters/crow_group.mdl
-769		CDynamicProp                 prop_dynamic                        models/props_critters/crow_group.mdl
-770		CDynamicProp                 prop_dynamic                        models/props_critters/crow_group.mdl
-771		CSprite                      env_sprite                          sprites/glow.vmt
-772		CPhysicsProp                 prop_physics                        models/props_urban/plastic_bucket001.mdl
-773		CPhysicsProp                 prop_physics                        models/props_urban/plastic_bucket001.mdl
-774		CPhysicsProp                 prop_physics                        models/props_urban/plastic_bucket001.mdl
-775		CPhysicsProp                 prop_physics                        models/props_urban/plastic_bucket001.mdl
-776		CPhysicsProp                 prop_physics                        models/props_urban/plastic_bucket001.mdl
-777		CSprite                      env_sprite                          sprites/glow.vmt
+601		CRopeKeyframe                keyframe_rope  
+602		CRopeKeyframe                keyframe_rope  
+603		CBasePropDoor                prop_door_rotating                  models/props_doors/doormain_rural01.mdl
+604		CPhysicsProp                 prop_physics                        models/props_urban/plastic_chair001.mdl
+605		CPhysicsProp                 prop_physics                        models/props_urban/plastic_chair001.mdl
+606		CBaseEntity                  info_remarkable  
+607		CPhysicsProp                 prop_physics                        models/props_junk/garbage_plasticbottle001a_fullsheet.mdl
+608		CBaseEntity                  info_remarkable  
+609		CPhysicsProp                 prop_physics                        models/props_urban/plastic_chair001.mdl
+610		CPhysicsProp                 prop_physics                        models/props_urban/plastic_water_jug001.mdl
+611		CPhysicsProp                 prop_physics                        models/props_urban/plastic_water_jug001.mdl
+612		CBaseEntity                  info_remarkable  
+613		CBaseEntity                  info_remarkable  
+614		CBaseEntity                  info_remarkable  
+615		CBaseEntity                  info_remarkable  
+616		CBaseEntity                  info_remarkable  
+617		CBaseEntity                  info_remarkable  
+618		CBaseEntity                  info_remarkable  
+619		CBaseEntity                  env_player_blocker  
+620		CDynamicProp                 prop_dynamic                        models/props_docks/dock02_pole02a.mdl
+621		CDynamicProp                 prop_dynamic                        models/props_urban/porch_light003.mdl
+622		CBaseEntity                  env_player_blocker  
+623		CDynamicProp                 prop_dynamic                        models/props_urban/boat002.mdl
+624		CBaseEntity                  env_player_blocker  
+625		CDynamicProp                 prop_dynamic                        models/props/cs_office/shelves_metal.mdl
+626		CBaseEntity                  env_player_blocker  
+666		CPhysicsProp                 prop_physics                        models/props_urban/oil_drum001.mdl
+667		CPhysicsProp                 prop_physics                        models/props_urban/oil_drum001.mdl
+668		CDynamicProp                 prop_dynamic                        models/props_urban/pontoon_drum001.mdl
+669		CDynamicProp                 prop_dynamic                        models/props_urban/pontoon_drum001.mdl
+670		CDynamicProp                 prop_dynamic                        models/props_urban/pontoon_drum001.mdl
+671		CDynamicProp                 prop_dynamic                        models/props_urban/pontoon_drum001.mdl
+672		CDynamicProp                 prop_dynamic                        models/props_urban/pontoon_drum001.mdl
+673		CDynamicProp                 prop_dynamic                        models/props_urban/pontoon_drum001.mdl
+674		CDynamicProp                 prop_dynamic                        models/props_urban/pontoon_drum001.mdl
+675		CDynamicProp                 prop_dynamic                        models/props_urban/pontoon_drum001.mdl
+676		CDynamicProp                 prop_dynamic                        models/props_urban/pontoon_drum001.mdl
+677		CDynamicProp                 prop_dynamic                        models/props_urban/pontoon_drum001.mdl
+679		CPhysicsProp                 prop_physics                        models/props_urban/shopping_cart001.mdl
+680		CPhysicsProp                 prop_physics                        models/props_urban/shopping_cart001.mdl
+681		CPhysicsProp                 prop_physics                        models/props_urban/shopping_cart001.mdl
+682		CPhysicsProp                 prop_physics                        models/props_urban/shopping_cart001.mdl
+683		CPhysicsProp                 prop_physics                        models/props/de_prodigy/wood_pallet_01.mdl
+684		CPhysicsProp                 prop_physics                        models/props/de_prodigy/wood_pallet_01.mdl
+688		CPhysicsProp                 prop_physics                        models/props_swamp/boardwalk_rail_256_break.mdl
+689		CPhysicsProp                 prop_physics                        models/props_swamp/boardwalk_rail_256_break.mdl
+690		CPhysicsProp                 prop_physics                        models/props_swamp/boardwalk_rail_chunk01.mdl
+691		CPhysicsProp                 prop_physics                        models/props_swamp/boardwalk_rail_chunk05.mdl
+692		CPhysicsProp                 prop_physics                        models/props_swamp/boardwalk_rail_chunk04.mdl
+693		CPhysicsProp                 prop_physics                        models/props_swamp/boardwalk_rail_chunk01.mdl
+694		CPhysicsProp                 prop_physics                        models/props_swamp/boardwalk_rail_chunk01.mdl
+695		CPhysicsProp                 prop_physics                        models/props_swamp/boardwalk_rail_chunk05.mdl
+696		CPhysicsProp                 prop_physics                        models/props_swamp/boardwalk_rail_chunk01.mdl
+697		CPhysicsProp                 prop_physics                        models/props_swamp/boardwalk_rail_chunk04.mdl
+743		CPhysicsProp                 prop_physics                        models/props_signs/sign_horizontal_09.mdl
+744		CPhysicsProp                 prop_physics                        models/props_urban/tire001.mdl
+745		CPhysicsProp                 prop_physics                        models/props_urban/tire001.mdl
+746		CPhysicsProp                 prop_physics                        models/props_urban/tire001.mdl
+747		CPhysicsProp                 prop_physics                        models/props_urban/tire001.mdl
+748		CPhysicsProp                 prop_physics                        models/props_urban/tire001.mdl
+751		CPhysicsProp                 prop_physics                        models/props_urban/plastic_bucket001.mdl
+752		CPhysicsProp                 prop_physics                        models/props_swamp/boardwalk_rail_chunk01.mdl
+753		CDynamicProp                 prop_dynamic                        models/props_critters/crow_group.mdl
+754		CDynamicProp                 prop_dynamic                        models/props_critters/crow_group.mdl
+755		CDynamicProp                 prop_dynamic                        models/props_critters/crow_group.mdl
+756		CDynamicProp                 prop_dynamic                        models/props_critters/crow_group.mdl
+757		CSprite                      env_sprite                          sprites/glow.vmt
+758		CPhysicsProp                 prop_physics                        models/props_urban/plastic_bucket001.mdl
+759		CPhysicsProp                 prop_physics                        models/props_urban/plastic_bucket001.mdl
+760		CPhysicsProp                 prop_physics                        models/props_urban/plastic_bucket001.mdl
+761		CPhysicsProp                 prop_physics                        models/props_urban/plastic_bucket001.mdl
+762		CPhysicsProp                 prop_physics                        models/props_urban/plastic_bucket001.mdl
+763		CSprite                      env_sprite                          sprites/glow.vmt
+764		CParticleSystem              info_particle_system  
+765		CParticleSystem              info_particle_system  
+766		CParticleSystem              info_particle_system  
+767		CParticleSystem              info_particle_system  
+768		CParticleSystem              info_particle_system  
+769		CParticleSystem              info_particle_system  
+770		CParticleSystem              info_particle_system  
+771		CParticleSystem              info_particle_system  
+772		CParticleSystem              info_particle_system  
+773		CParticleSystem              info_particle_system  
+774		CParticleSystem              info_particle_system  
+775		CParticleSystem              info_particle_system  
+776		CParticleSystem              info_particle_system  
+777		CParticleSystem              info_particle_system  
 778		CParticleSystem              info_particle_system  
 779		CParticleSystem              info_particle_system  
-780		CParticleSystem              info_particle_system  
-781		CParticleSystem              info_particle_system  
-782		CParticleSystem              info_particle_system  
-783		CParticleSystem              info_particle_system  
-784		CParticleSystem              info_particle_system  
-785		CParticleSystem              info_particle_system  
-786		CParticleSystem              info_particle_system  
+780		CSprite                      env_sprite                          sprites/glow.vmt
+781		CPhysicsProp                 prop_physics                        models/props_urban/plastic_bucket001.mdl
+782		CPhysicsProp                 prop_physics                        models/props_urban/plastic_bucket001.mdl
+783		CPhysicsProp                 prop_physics                        models/props_urban/plastic_bucket001.mdl
+784		CPhysicsProp                 prop_physics                        models/props_urban/plastic_bucket001.mdl
+785		CPhysicsProp                 prop_physics                        models/props_urban/plastic_bucket001.mdl
+786		CPhysicsProp                 prop_physics                        models/props_urban/plastic_bucket001.mdl
 787		CParticleSystem              info_particle_system  
 788		CParticleSystem              info_particle_system  
 789		CParticleSystem              info_particle_system  
 790		CParticleSystem              info_particle_system  
 791		CParticleSystem              info_particle_system  
-792		CParticleSystem              info_particle_system  
-793		CParticleSystem              info_particle_system  
-794		CSprite                      env_sprite                          sprites/glow.vmt
-795		CPhysicsProp                 prop_physics                        models/props_urban/plastic_bucket001.mdl
-796		CPhysicsProp                 prop_physics                        models/props_urban/plastic_bucket001.mdl
-797		CPhysicsProp                 prop_physics                        models/props_urban/plastic_bucket001.mdl
-798		CPhysicsProp                 prop_physics                        models/props_urban/plastic_bucket001.mdl
-799		CPhysicsProp                 prop_physics                        models/props_urban/plastic_bucket001.mdl
-800		CPhysicsProp                 prop_physics                        models/props_urban/plastic_bucket001.mdl
-801		CParticleSystem              info_particle_system  
-802		CParticleSystem              info_particle_system  
-803		CParticleSystem              info_particle_system  
-804		CParticleSystem              info_particle_system  
-805		CParticleSystem              info_particle_system  
-821		CBaseEntity                  ambient_generic  
-822		CDynamicProp                 prop_dynamic                        models/props_swamp/winch.mdl
-823		CRopeKeyframe                move_rope  
-824		CRopeKeyframe                keyframe_rope  
-825		CRopeKeyframe                keyframe_rope  
-826		CRopeKeyframe                keyframe_rope  
-827		CRopeKeyframe                keyframe_rope  
-828		CDynamicProp                 prop_dynamic                        models/props_swamp/ferry.mdl
-829		CBaseFlex                    func_orator  
-831		CPhysicsProp                 prop_physics                        models/props_junk/furnituremattress001a.mdl
-832		CBaseEntity                  info_gamemode  
-833		CSceneEntity                 logic_choreographed_scene  
-834		CBaseEntity                  info_game_event_proxy  
-835		CBaseEntity                  info_game_event_proxy  
-836		CSurvivorPosition            info_survivor_position  
-837		CSurvivorPosition            info_survivor_position  
-838		CSurvivorPosition            info_survivor_position  
+807		CBaseEntity                  ambient_generic  
+808		CDynamicProp                 prop_dynamic                        models/props_swamp/winch.mdl
+809		CRopeKeyframe                move_rope  
+810		CRopeKeyframe                keyframe_rope  
+811		CRopeKeyframe                keyframe_rope  
+812		CRopeKeyframe                keyframe_rope  
+813		CRopeKeyframe                keyframe_rope  
+814		CDynamicProp                 prop_dynamic                        models/props_swamp/ferry.mdl
+815		CBaseFlex                    func_orator  
+816		CWeaponSpawn                 weapon_pistol_spawn                 models/w_models/weapons/w_pistol_B.mdl
+817		CPhysicsProp                 prop_physics                        models/props_junk/furnituremattress001a.mdl
+818		CBaseEntity                  info_gamemode  
+819		CSceneEntity                 logic_choreographed_scene  
+820		CBaseEntity                  info_game_event_proxy  
+821		CBaseEntity                  info_game_event_proxy  
+822		CSurvivorPosition            info_survivor_position  
+823		CSurvivorPosition            info_survivor_position  
+824		CSurvivorPosition            info_survivor_position  
+825		CFuncPlayerInfectedClip      func_playerinfected_clip  
+826		CFuncPlayerInfectedClip      func_playerinfected_clip  
+827		CFuncPlayerInfectedClip      func_playerinfected_clip  
+828		CFuncPlayerInfectedClip      func_playerinfected_clip  
+829		CFuncPlayerInfectedClip      func_playerinfected_clip  
+830		CFuncPlayerInfectedClip      func_playerinfected_clip  
+831		CFuncPlayerInfectedClip      func_playerinfected_clip  
+832		CFuncPlayerInfectedClip      func_playerinfected_clip  
+833		CFuncPlayerInfectedClip      func_playerinfected_clip  
+834		CFuncPlayerInfectedClip      func_playerinfected_clip  
+835		CFuncPlayerInfectedClip      func_playerinfected_clip  
+836		CFuncPlayerInfectedClip      func_playerinfected_clip  
+837		CFuncPlayerInfectedClip      func_playerinfected_clip  
+838		CFuncPlayerInfectedClip      func_playerinfected_clip  
 839		CFuncPlayerInfectedClip      func_playerinfected_clip  
 840		CFuncPlayerInfectedClip      func_playerinfected_clip  
 841		CFuncPlayerInfectedClip      func_playerinfected_clip  
@@ -643,7 +696,7 @@
 849		CFuncPlayerInfectedClip      func_playerinfected_clip  
 850		CFuncPlayerInfectedClip      func_playerinfected_clip  
 851		CFuncPlayerInfectedClip      func_playerinfected_clip  
-852		CFuncPlayerInfectedClip      func_playerinfected_clip  
+852		CFuncSimpleLadder            func_simpleladder  
 853		CFuncPlayerInfectedClip      func_playerinfected_clip  
 854		CFuncPlayerInfectedClip      func_playerinfected_clip  
 855		CFuncPlayerInfectedClip      func_playerinfected_clip  
@@ -652,212 +705,198 @@
 858		CFuncPlayerInfectedClip      func_playerinfected_clip  
 859		CFuncPlayerInfectedClip      func_playerinfected_clip  
 860		CFuncPlayerInfectedClip      func_playerinfected_clip  
-861		CFuncPlayerInfectedClip      func_playerinfected_clip  
-862		CFuncPlayerInfectedClip      func_playerinfected_clip  
-863		CFuncPlayerInfectedClip      func_playerinfected_clip  
-864		CFuncPlayerInfectedClip      func_playerinfected_clip  
-865		CFuncPlayerInfectedClip      func_playerinfected_clip  
-866		CFuncSimpleLadder            func_simpleladder  
-867		CFuncPlayerInfectedClip      func_playerinfected_clip  
-868		CFuncPlayerInfectedClip      func_playerinfected_clip  
-869		CFuncPlayerInfectedClip      func_playerinfected_clip  
-870		CFuncPlayerInfectedClip      func_playerinfected_clip  
-871		CFuncPlayerInfectedClip      func_playerinfected_clip  
-872		CFuncPlayerInfectedClip      func_playerinfected_clip  
-873		CFuncPlayerInfectedClip      func_playerinfected_clip  
-874		CFuncPlayerInfectedClip      func_playerinfected_clip  
-875		CRopeKeyframe                move_rope  
-876		CDynamicProp                 prop_dynamic                        models/ghostanim.mdl
-877		CBaseEntity                  point_viewcontrol_survivor  
-878		CBaseEntity                  point_viewcontrol_survivor  
-879		CBaseEntity                  point_viewcontrol_survivor  
-880		CBaseEntity                  point_viewcontrol_survivor  
-881		CSurvivorPosition            info_survivor_position  
-882		CPhysBox                     func_physbox  
-883		CBreakable                   func_breakable  
-884		CBaseEntity                  func_illusionary  
-885		CWeaponSpawn                 weapon_melee_spawn                  models/weapons/melee/w_fireaxe.mdl
-889		CFuncAreaPortalWindow        func_areaportalwindow  
+861		CRopeKeyframe                move_rope  
+862		CDynamicProp                 prop_dynamic                        models/ghostanim.mdl
+863		CBaseEntity                  point_viewcontrol_survivor  
+864		CBaseEntity                  point_viewcontrol_survivor  
+865		CBaseEntity                  point_viewcontrol_survivor  
+866		CBaseEntity                  point_viewcontrol_survivor  
+867		CSurvivorPosition            info_survivor_position  
+868		CPhysBox                     func_physbox  
+869		CBreakable                   func_breakable  
+870		CBaseEntity                  func_illusionary  
+871		CWeaponSpawn                 weapon_melee_spawn                  models/weapons/melee/w_frying_pan.mdl
+875		CFuncAreaPortalWindow        func_areaportalwindow  
+876		CFuncAreaPortalWindow        func_areaportalwindow  
+877		CFuncAreaPortalWindow        func_areaportalwindow  
+878		CFuncAreaPortalWindow        func_areaportalwindow  
+879		CFuncBrush                   func_brush  
+880		CFuncBrush                   func_brush  
+881		CFuncBrush                   func_brush  
+882		CFuncBrush                   func_brush  
+883		CFuncAreaPortalWindow        func_areaportalwindow  
+884		CFuncBrush                   func_brush  
+885		CFuncAreaPortalWindow        func_areaportalwindow  
+886		CFuncBrush                   func_brush  
+887		CFuncBrush                   func_brush  
+888		CFuncAreaPortalWindow        func_areaportalwindow  
+889		CFuncBrush                   func_brush  
 890		CFuncAreaPortalWindow        func_areaportalwindow  
 891		CFuncAreaPortalWindow        func_areaportalwindow  
-892		CFuncAreaPortalWindow        func_areaportalwindow  
+892		CFuncBrush                   func_brush  
 893		CFuncBrush                   func_brush  
-894		CFuncBrush                   func_brush  
-895		CFuncBrush                   func_brush  
+894		CFuncAreaPortalWindow        func_areaportalwindow  
+895		CFuncAreaPortalWindow        func_areaportalwindow  
 896		CFuncBrush                   func_brush  
-897		CFuncAreaPortalWindow        func_areaportalwindow  
-898		CFuncBrush                   func_brush  
-899		CFuncAreaPortalWindow        func_areaportalwindow  
-900		CFuncBrush                   func_brush  
+897		CFuncBrush                   func_brush  
+898		CFuncAreaPortalWindow        func_areaportalwindow  
+899		CFuncBrush                   func_brush  
+900		CFuncAreaPortalWindow        func_areaportalwindow  
 901		CFuncBrush                   func_brush  
 902		CFuncAreaPortalWindow        func_areaportalwindow  
 903		CFuncBrush                   func_brush  
 904		CFuncAreaPortalWindow        func_areaportalwindow  
-905		CFuncAreaPortalWindow        func_areaportalwindow  
-906		CFuncBrush                   func_brush  
+905		CFuncBrush                   func_brush  
+906		CFuncAreaPortalWindow        func_areaportalwindow  
 907		CFuncBrush                   func_brush  
 908		CFuncAreaPortalWindow        func_areaportalwindow  
-909		CFuncAreaPortalWindow        func_areaportalwindow  
-910		CFuncBrush                   func_brush  
+909		CFuncBrush                   func_brush  
+910		CFuncAreaPortalWindow        func_areaportalwindow  
 911		CFuncBrush                   func_brush  
 912		CFuncAreaPortalWindow        func_areaportalwindow  
-913		CFuncBrush                   func_brush  
-914		CFuncAreaPortalWindow        func_areaportalwindow  
+913		CBaseEntity                  func_areaportal  
+914		CBaseEntity                  func_areaportal  
 915		CFuncBrush                   func_brush  
 916		CFuncAreaPortalWindow        func_areaportalwindow  
-917		CFuncBrush                   func_brush  
-918		CFuncAreaPortalWindow        func_areaportalwindow  
-919		CFuncBrush                   func_brush  
-920		CFuncAreaPortalWindow        func_areaportalwindow  
-921		CFuncBrush                   func_brush  
-922		CFuncAreaPortalWindow        func_areaportalwindow  
-923		CFuncBrush                   func_brush  
-924		CFuncAreaPortalWindow        func_areaportalwindow  
-925		CFuncBrush                   func_brush  
-926		CFuncAreaPortalWindow        func_areaportalwindow  
-927		CBaseEntity                  func_areaportal  
-928		CBaseEntity                  func_areaportal  
-929		CFuncBrush                   func_brush  
-930		CFuncAreaPortalWindow        func_areaportalwindow  
-931		CFuncAreaPortalWindow        func_areaportalwindow  
-932		CFuncBrush                   func_brush  
-933		CFuncAreaPortalWindow        func_areaportalwindow  
-934		CFuncBrush                   func_brush  
-935		CFuncAreaPortalWindow        func_areaportalwindow  
-936		CFuncBrush                   func_brush  
-937		CFuncAreaPortalWindow        func_areaportalwindow  
-938		CFuncBrush                   func_brush  
-939		CFuncAreaPortalWindow        func_areaportalwindow  
-940		CFuncBrush                   func_brush  
-941		CBaseEntity                  ambient_generic  
-942		CPhysBox                     func_physbox  
-943		CPhysBox                     func_physbox  
-944		CWeaponSpawn                 weapon_spawn                        models/w_models/weapons/w_pumpshotgun_A.mdl
-945		CWeaponSpawn                 weapon_spawn                        models/w_models/weapons/w_smg_uzi.mdl
-946		CBaseEntity                  info_ambient_mob_end  
-947		CBaseEntity                  info_ambient_mob_start  
-948		CBaseEntity                  info_ambient_mob_start  
-949		CBaseEntity                  info_ambient_mob_end  
-950		CBaseEntity                  info_ambient_mob_start  
-951		CBaseEntity                  info_ambient_mob_end  
-952		CWeaponSpawn                 weapon_spawn                        models/w_models/weapons/w_smg_a.mdl
-953		CWeaponSpawn                 weapon_spawn                        models/w_models/weapons/w_shotgun.mdl
-954		CWeaponSpawn                 weapon_spawn                        models/w_models/weapons/w_shotgun.mdl
-955		CWeaponSpawn                 weapon_spawn                        models/w_models/weapons/w_smg_uzi.mdl
-956		CWeaponSpawn                 weapon_melee_spawn                  models/weapons/melee/w_bat.mdl
-957		CWeaponSpawn                 weapon_melee_spawn                  models/weapons/melee/w_machete.mdl
-958		CWeaponSpawn                 weapon_melee_spawn                  models/weapons/melee/w_machete.mdl
-959		CWeaponSpawn                 weapon_melee_spawn                  models/weapons/melee/w_cricket_bat.mdl
-960		CFuncPlayerInfectedClip      func_playerinfected_clip  
-961		CFuncPlayerInfectedClip      func_playerinfected_clip  
-962		CFuncPlayerInfectedClip      func_playerinfected_clip  
-963		CFuncPlayerInfectedClip      func_playerinfected_clip  
-964		CFuncPlayerInfectedClip      func_playerinfected_clip  
-965		CFuncPlayerInfectedClip      func_playerinfected_clip  
-966		CFuncPlayerInfectedClip      func_playerinfected_clip  
-967		CFuncPlayerInfectedClip      func_playerinfected_clip  
-968		CFuncPlayerInfectedClip      func_playerinfected_clip  
-969		CFuncPlayerInfectedClip      func_playerinfected_clip  
-970		CFuncPlayerInfectedClip      func_playerinfected_clip  
-971		CParticleSystem              info_particle_system  
-972		CBaseEntity                  ambient_generic  
-973		CFuncPlayerInfectedClip      func_playerinfected_clip  
-974		CParticleSystem              info_particle_system  
-975		CDynamicProp                 prop_dynamic                        models/props_vehicles/pickup_truck_78_glass.mdl
-976		CBaseTrigger                 trigger_once  
-977		CDynamicProp                 prop_dynamic                        models/props_vehicles/pickup_truck_78_glass.mdl
-978		CWeaponSpawn                 weapon_melee_spawn                  models/weapons/melee/w_fireaxe.mdl
-979		CWeaponSpawn                 weapon_melee_spawn                  models/weapons/melee/w_cricket_bat.mdl
-980		CWeaponSpawn                 weapon_melee_spawn                  models/weapons/melee/w_machete.mdl
-981		CWeaponSpawn                 weapon_melee_spawn                  models/weapons/melee/w_machete.mdl
-982		CWeaponSpawn                 weapon_melee_spawn                  models/weapons/melee/w_frying_pan.mdl
-983		CBaseEntity                  env_physimpact  
-984		CBaseEntity                  env_physimpact  
-985		CBaseEntity                  env_physimpact  
-986		CBaseTrigger                 trigger_hurt  
-987		CFuncSimpleLadder            func_simpleladder  
-988		CFuncSimpleLadder            func_simpleladder  
-989		CFogController               env_fog_controller  
-994		CFuncPlayerInfectedClip      func_playerinfected_clip  
-995		CFuncSimpleLadder            func_simpleladder  
-996		CFuncBrush                   func_block_charge  
-997		CFuncBrush                   func_block_charge  
-998		CFuncBrush                   func_block_charge  
-999		CFuncBrush                   func_block_charge  
-1000		CFuncBrush                   func_block_charge  
-1001		CFuncBrush                   func_block_charge  
-1004		CBaseTrigger                 trigger_once  
-1015		CBaseEntity                  func_nav_blocker  
-1016		CColorCorrection             color_correction  
-1017		CPostProcessController       postprocess_controller  
-1018		CBaseTrigger                 trigger_hurt_ghost  
-1019		CDynamicProp                 prop_dynamic                        models/props_vehicles/cara_82hatchback_wrecked_glass.mdl
-1020		CPhysicsProp                 prop_physics                        models/props_vehicles/cara_82hatchback_wrecked.mdl
-1022		CDynamicProp                 prop_dynamic                        models/props_vehicles/cara_84sedan_glass.mdl
-1023		CPhysicsProp                 prop_physics                        models/props_vehicles/cara_84sedan.mdl
-1025		CDynamicProp                 prop_dynamic                        models/props_vehicles/cara_69sedan_glass.mdl
-1026		CPhysicsProp                 prop_physics                        models/props_vehicles/cara_69sedan.mdl
-1028		CDynamicProp                 prop_dynamic                        models/props_vehicles/cara_82hatchback_glass.mdl
-1029		CPhysicsProp                 prop_physics                        models/props_vehicles/cara_82hatchback.mdl
-1031		CDynamicProp                 prop_dynamic                        models/props_vehicles/cara_95sedan_glass.mdl
-1032		CPhysicsProp                 prop_physics                        models/props_vehicles/cara_95sedan.mdl
-1034		CBeamSpotlight               beam_spotlight  
-1035		CBeamSpotlight               beam_spotlight  
-1036		CBaseEntity                  light_spot  
-1037		CSprite                      env_sprite                          sprites/redglow1.vmt
-1038		CBaseEntity                  light_spot  
-1039		CSprite                      env_sprite                          sprites/redglow1.vmt
-1040		CBaseEntity                  info_target  
-1041		CBaseEntity                  info_target  
-1042		CBaseEntity                  info_target  
-1043		CBaseEntity                  info_target  
-1044		CColorCorrection             color_correction  
-1045		CColorCorrection             color_correction  
-1046		CFogController               env_fog_controller  
-1047		CPostProcessController       postprocess_controller  
-1048		CPostProcessController       postprocess_controller  
-1049		CEnvTonemapController        env_tonemap_controller  
-1050		CEnvTonemapController        env_tonemap_controller_ghost  
-1051		CEnvTonemapController        env_tonemap_controller_infected  
-1053		CShadowControl               shadow_control  
-1054		CFogController               env_fog_controller  
-1055		CEnvWind                     env_wind  
-1056		CSprite                      env_sprite                          sprites/glow06.vmt
-1057		CSprite                      env_sprite                          sprites/glow06.vmt
-1058		CSprite                      env_sprite                          sprites/glow06.vmt
-1059		CSprite                      env_sprite                          sprites/glow06.vmt
-1060		CSprite                      env_sprite                          sprites/glow06.vmt
-1061		CSprite                      env_sprite                          sprites/light_glow03.vmt
-1067		CBaseEntity                  func_nav_blocker  
-1068		CBaseEntity                  func_nav_blocker  
-1069		CBaseEntity                  func_nav_blocker  
-1070		CBaseEntity                  func_nav_blocker  
-1071		CBaseEntity                  func_nav_blocker  
-1074		CBaseEntity                  info_gamemode  
-1143		CBaseEntity                  func_nav_blocker  
-1172		CBaseEntity                  info_gamemode  
-1173		CBaseEntity                  func_clip_vphysics  
-1189		CBaseEntity                  func_nav_blocker  
-1190		CBaseEntity                  func_nav_blocker  
-1197		CBaseEntity                  func_nav_blocker  
-1203		CBaseEntity                  point_viewcontrol_multiplayer  
-1204		CBaseEntity                  point_viewcontrol_multiplayer  
-1205		CBaseEntity                  info_game_event_proxy  
-1206		CBaseEntity                  info_game_event_proxy  
-1207		CBaseButton                  func_button  
-1208		CBaseEntity                  ambient_generic  
-1209		CBaseEntity                  ambient_generic  
-1210		CBaseEntity                  logic_script  
-1211		CBaseEntity                  ambient_music  
-1212		CBaseEntity                  ambient_music  
-1213		CBaseEntity                  ambient_music  
-1214		CBaseEntity                  ambient_music  
-1215		CBaseEntity                  ambient_music  
-1216		CDynamicProp                 prop_dynamic                        models/props_unique/jukebox01.mdl
-1217		CDynamicProp                 prop_dynamic                        models/props_unique/jukebox01_menu.mdl
-1218		CBaseEntity                  info_gamemode  
-1227		CParticleSystem              info_particle_system  
-1233		CWaterLODControl             water_lod_control  
+917		CFuncAreaPortalWindow        func_areaportalwindow  
+918		CFuncBrush                   func_brush  
+919		CFuncAreaPortalWindow        func_areaportalwindow  
+920		CFuncBrush                   func_brush  
+921		CFuncAreaPortalWindow        func_areaportalwindow  
+922		CFuncBrush                   func_brush  
+923		CFuncAreaPortalWindow        func_areaportalwindow  
+924		CFuncBrush                   func_brush  
+925		CFuncAreaPortalWindow        func_areaportalwindow  
+926		CFuncBrush                   func_brush  
+927		CBaseEntity                  ambient_generic  
+928		CPhysBox                     func_physbox  
+929		CPhysBox                     func_physbox  
+930		CWeaponSpawn                 weapon_spawn                        models/w_models/weapons/w_shotgun.mdl
+931		CWeaponSpawn                 weapon_spawn                        models/w_models/weapons/w_smg_mp5.mdl
+932		CBaseEntity                  info_ambient_mob_end  
+933		CBaseEntity                  info_ambient_mob_start  
+934		CBaseEntity                  info_ambient_mob_start  
+935		CBaseEntity                  info_ambient_mob_end  
+936		CBaseEntity                  info_ambient_mob_start  
+937		CBaseEntity                  info_ambient_mob_end  
+938		CWeaponSpawn                 weapon_spawn                        models/w_models/weapons/w_smg_uzi.mdl
+939		CWeaponSpawn                 weapon_spawn                        models/w_models/weapons/w_shotgun.mdl
+940		CWeaponSpawn                 weapon_spawn                        models/w_models/weapons/w_pumpshotgun_A.mdl
+941		CWeaponSpawn                 weapon_spawn                        models/w_models/weapons/w_smg_a.mdl
+942		CWeaponSpawn                 weapon_melee_spawn                  models/weapons/melee/w_pitchfork.mdl
+943		CWeaponSpawn                 weapon_melee_spawn                  models/weapons/melee/w_machete.mdl
+944		CWeaponSpawn                 weapon_melee_spawn                  models/weapons/melee/w_bat.mdl
+945		CWeaponSpawn                 weapon_melee_spawn                  models/weapons/melee/w_shovel.mdl
+946		CFuncPlayerInfectedClip      func_playerinfected_clip  
+947		CFuncPlayerInfectedClip      func_playerinfected_clip  
+948		CFuncPlayerInfectedClip      func_playerinfected_clip  
+949		CFuncPlayerInfectedClip      func_playerinfected_clip  
+950		CFuncPlayerInfectedClip      func_playerinfected_clip  
+951		CFuncPlayerInfectedClip      func_playerinfected_clip  
+952		CFuncPlayerInfectedClip      func_playerinfected_clip  
+953		CFuncPlayerInfectedClip      func_playerinfected_clip  
+954		CFuncPlayerInfectedClip      func_playerinfected_clip  
+955		CFuncPlayerInfectedClip      func_playerinfected_clip  
+956		CFuncPlayerInfectedClip      func_playerinfected_clip  
+957		CParticleSystem              info_particle_system  
+958		CBaseEntity                  ambient_generic  
+959		CFuncPlayerInfectedClip      func_playerinfected_clip  
+960		CParticleSystem              info_particle_system  
+961		CDynamicProp                 prop_dynamic                        models/props_vehicles/pickup_truck_78_glass.mdl
+962		CBaseTrigger                 trigger_once  
+963		CDynamicProp                 prop_dynamic                        models/props_vehicles/pickup_truck_78_glass.mdl
+964		CWeaponSpawn                 weapon_melee_spawn                  models/weapons/melee/w_bat.mdl
+965		CWeaponSpawn                 weapon_melee_spawn                  models/w_models/weapons/w_knife_t.mdl
+966		CWeaponSpawn                 weapon_melee_spawn                  models/weapons/melee/w_pitchfork.mdl
+967		CWeaponSpawn                 weapon_melee_spawn                  models/weapons/melee/w_shovel.mdl
+968		CWeaponSpawn                 weapon_melee_spawn                  models/weapons/melee/w_bat.mdl
+969		CBaseEntity                  env_physimpact  
+970		CBaseEntity                  env_physimpact  
+971		CBaseEntity                  env_physimpact  
+972		CBaseTrigger                 trigger_hurt  
+973		CFuncSimpleLadder            func_simpleladder  
+974		CFuncSimpleLadder            func_simpleladder  
+975		CFogController               env_fog_controller  
+980		CFuncPlayerInfectedClip      func_playerinfected_clip  
+981		CFuncSimpleLadder            func_simpleladder  
+982		CFuncBrush                   func_block_charge  
+983		CFuncBrush                   func_block_charge  
+984		CFuncBrush                   func_block_charge  
+985		CFuncBrush                   func_block_charge  
+986		CFuncBrush                   func_block_charge  
+987		CFuncBrush                   func_block_charge  
+990		CBaseTrigger                 trigger_once  
+1001		CBaseEntity                  func_nav_blocker  
+1002		CColorCorrection             color_correction  
+1003		CPostProcessController       postprocess_controller  
+1004		CBaseTrigger                 trigger_hurt_ghost  
+1005		CDynamicProp                 prop_dynamic                        models/props_vehicles/cara_82hatchback_wrecked_glass.mdl
+1006		CPhysicsProp                 prop_physics                        models/props_vehicles/cara_82hatchback_wrecked.mdl
+1008		CDynamicProp                 prop_dynamic                        models/props_vehicles/cara_84sedan_glass.mdl
+1009		CPhysicsProp                 prop_physics                        models/props_vehicles/cara_84sedan.mdl
+1011		CDynamicProp                 prop_dynamic                        models/props_vehicles/cara_69sedan_glass.mdl
+1012		CPhysicsProp                 prop_physics                        models/props_vehicles/cara_69sedan.mdl
+1014		CDynamicProp                 prop_dynamic                        models/props_vehicles/cara_82hatchback_glass.mdl
+1015		CPhysicsProp                 prop_physics                        models/props_vehicles/cara_82hatchback.mdl
+1017		CDynamicProp                 prop_dynamic                        models/props_vehicles/cara_95sedan_glass.mdl
+1018		CPhysicsProp                 prop_physics                        models/props_vehicles/cara_95sedan.mdl
+1020		CBeamSpotlight               beam_spotlight  
+1021		CBeamSpotlight               beam_spotlight  
+1022		CBaseEntity                  light_spot  
+1023		CSprite                      env_sprite                          sprites/redglow1.vmt
+1024		CBaseEntity                  light_spot  
+1025		CSprite                      env_sprite                          sprites/redglow1.vmt
+1026		CBaseEntity                  info_target  
+1027		CBaseEntity                  info_target  
+1028		CBaseEntity                  info_target  
+1029		CBaseEntity                  info_target  
+1030		CColorCorrection             color_correction  
+1031		CColorCorrection             color_correction  
+1032		CFogController               env_fog_controller  
+1033		CPostProcessController       postprocess_controller  
+1034		CPostProcessController       postprocess_controller  
+1035		CEnvTonemapController        env_tonemap_controller  
+1036		CEnvTonemapController        env_tonemap_controller_ghost  
+1037		CEnvTonemapController        env_tonemap_controller_infected  
+1039		CShadowControl               shadow_control  
+1040		CFogController               env_fog_controller  
+1041		CEnvWind                     env_wind  
+1042		CSprite                      env_sprite                          sprites/glow06.vmt
+1043		CSprite                      env_sprite                          sprites/glow06.vmt
+1044		CSprite                      env_sprite                          sprites/glow06.vmt
+1045		CSprite                      env_sprite                          sprites/glow06.vmt
+1046		CSprite                      env_sprite                          sprites/glow06.vmt
+1047		CSprite                      env_sprite                          sprites/light_glow03.vmt
+1053		CBaseEntity                  func_nav_blocker  
+1054		CBaseEntity                  func_nav_blocker  
+1055		CBaseEntity                  func_nav_blocker  
+1056		CBaseEntity                  func_nav_blocker  
+1057		CBaseEntity                  func_nav_blocker  
+1060		CBaseEntity                  info_gamemode  
+1129		CBaseEntity                  func_nav_blocker  
+1158		CBaseEntity                  info_gamemode  
+1159		CBaseEntity                  func_clip_vphysics  
+1175		CBaseEntity                  func_nav_blocker  
+1176		CBaseEntity                  func_nav_blocker  
+1183		CBaseEntity                  func_nav_blocker  
+1189		CBaseEntity                  point_viewcontrol_multiplayer  
+1190		CBaseEntity                  point_viewcontrol_multiplayer  
+1191		CBaseEntity                  info_game_event_proxy  
+1192		CBaseEntity                  info_game_event_proxy  
+1193		CBaseButton                  func_button  
+1194		CBaseEntity                  ambient_generic  
+1195		CBaseEntity                  ambient_generic  
+1196		CBaseEntity                  logic_script  
+1197		CBaseEntity                  ambient_music  
+1198		CBaseEntity                  ambient_music  
+1199		CBaseEntity                  ambient_music  
+1200		CBaseEntity                  ambient_music  
+1201		CBaseEntity                  ambient_music  
+1202		CDynamicProp                 prop_dynamic                        models/props_unique/jukebox01.mdl
+1203		CDynamicProp                 prop_dynamic                        models/props_unique/jukebox01_menu.mdl
+1204		CBaseEntity                  info_gamemode  
+1213		CParticleSystem              info_particle_system  
+1219		CWaterLODControl             water_lod_control  
 
-Всего энтити 861
+Всего энтити 900
 
