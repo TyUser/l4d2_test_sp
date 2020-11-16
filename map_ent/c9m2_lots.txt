@@ -1,5 +1,5 @@
-1		CTerrorPlayer                player                              models/survivors/survivor_manager.mdl
-2		SurvivorBot                  player                              models/survivors/survivor_namvet.mdl
+1		CTerrorPlayer                player                              models/survivors/survivor_namvet.mdl
+2		SurvivorBot                  player                              models/survivors/survivor_manager.mdl
 3		SurvivorBot                  player                              models/survivors/survivor_teenangst.mdl
 4		SurvivorBot                  player                              models/survivors/survivor_biker.mdl
 19		CCSTeam                      cs_team_manager  
@@ -145,13 +145,13 @@
 159		CBaseEntity                  escape_route  
 160		CWeaponSpawn                 weapon_spawn                        models/w_models/weapons/w_shotgun_spas.mdl
 161		CWeaponSpawn                 weapon_spawn                        models/w_models/weapons/w_sniper_mini14.mdl
-162		CWeaponSpawn                 weapon_spawn                        models/w_models/weapons/w_rifle_sg552.mdl
+162		CWeaponSpawn                 weapon_spawn                        models/w_models/weapons/w_rifle_ak47.mdl
 163		CBaseEntity                  info_remarkable  
-164		CGrenadeLauncher             weapon_grenade_launcher             models/w_models/weapons/w_grenade_launcher.mdl
-165		CItemUpgradePackIncendiary     weapon_upgradepack_incendiary       models/w_models/weapons/w_eq_incendiary_ammopack.mdl
-166		CSniper_Military             weapon_sniper_military              models/w_models/weapons/w_sniper_military.mdl
-167		CBaseEntity                  scene_manager  
-168		CEnvPhysicsBlocker           env_physics_blocker  
+164		CBaseEntity                  scene_manager  
+165		CEnvPhysicsBlocker           env_physics_blocker  
+166		CEnvPhysicsBlocker           env_physics_blocker  
+167		CEnvPhysicsBlocker           env_physics_blocker  
+168		CWeaponSpawn                 weapon_molotov_spawn                models/w_models/weapons/w_eq_molotov.mdl
 169		CEnvPhysicsBlocker           env_physics_blocker  
 170		CEnvPhysicsBlocker           env_physics_blocker  
 171		CEnvPhysicsBlocker           env_physics_blocker  
@@ -171,44 +171,44 @@
 185		CEnvPhysicsBlocker           env_physics_blocker  
 186		CEnvPhysicsBlocker           env_physics_blocker  
 187		CEnvPhysicsBlocker           env_physics_blocker  
-188		CEnvPhysicsBlocker           env_physics_blocker  
-189		CEnvPhysicsBlocker           env_physics_blocker  
+188		CPhysicsProp                 prop_physics                        models/props_junk/gascan001a.mdl
+189		CPhysicsProp                 prop_physics                        models/props_junk/gascan001a.mdl
 190		CEnvPhysicsBlocker           env_physics_blocker  
 191		CTriggerPlayerMovement       trigger_playermovement  
-192		CPhysicsProp                 prop_physics                        models/props_junk/gascan001a.mdl
-193		CPhysicsProp                 prop_physics                        models/props_junk/gascan001a.mdl
-194		CEnvPhysicsBlocker           env_physics_blocker  
+192		CEnvPhysicsBlocker           env_physics_blocker  
+193		CTerrorViewModel             predicted_viewmodel  
+194		CTerrorViewModel             predicted_viewmodel                 models/v_models/v_pistolA.mdl
 195		CPhysicsProp                 prop_physics                        models/props_junk/propanecanister001a.mdl
 196		CPhysicsProp                 prop_physics                        models/props_junk/dumpster.mdl
 197		CPhysicsProp                 prop_physics                        models/props_junk/dumpster.mdl
-198		CTerrorViewModel             predicted_viewmodel  
-199		CTerrorViewModel             predicted_viewmodel                 models/v_models/v_pistolA.mdl
-200		CFirstAidKit                 weapon_first_aid_kit                models/v_models/v_medkit.mdl
-201		CTerrorViewModel             predicted_viewmodel  
+198		CPistol                      weapon_pistol                       models/v_models/v_pistolA.mdl
+199		CTerrorViewModel             predicted_viewmodel  
+200		CPhysicsProp                 prop_physics                        models/props_junk/propanecanister001a.mdl
+201		CWeaponSpawn                 weapon_spawn                        models/w_models/weapons/w_sniper_mini14.mdl
 202		CTerrorViewModel             predicted_viewmodel                 models/v_models/v_rifle_AK47.mdl
 203		CPistol                      weapon_pistol                       models/v_models/v_pistolA.mdl
 204		CTerrorViewModel             predicted_viewmodel  
-205		CTerrorViewModel             predicted_viewmodel                 models/v_models/v_sniper_military.mdl
+205		CTerrorViewModel             predicted_viewmodel                 models/v_models/v_snip_awp.mdl
 206		CPistol                      weapon_pistol                       models/v_models/v_pistolA.mdl
 207		CTerrorViewModel             predicted_viewmodel  
 208		CRagdollProp                 prop_ragdoll                        models/deadbodies/dead_military_male01.mdl
-209		CTerrorViewModel             predicted_viewmodel                 models/v_models/v_autoshotgun.mdl
+209		CTerrorViewModel             predicted_viewmodel                 models/v_models/v_shotgun_spas.mdl
 210		CPistol                      weapon_pistol                       models/v_models/v_pistolA.mdl
-211		CSniper_Military             weapon_sniper_military              models/v_models/v_sniper_military.mdl
-212		Infected                     infected                            models/infected/common_police_male01.mdl
+211		Infected                     infected                            models/infected/common_female01.mdl
+212		Infected                     infected                            models/infected/common_military_male01.mdl
 213		Infected                     infected                            models/infected/common_male_suit.mdl
 214		CWeaponSpawn                 weapon_first_aid_kit_spawn          models/w_models/weapons/w_eq_Medkit.mdl
 215		CWeaponSpawn                 weapon_first_aid_kit_spawn          models/w_models/weapons/w_eq_Medkit.mdl
 216		CWeaponSpawn                 weapon_first_aid_kit_spawn          models/w_models/weapons/w_eq_Medkit.mdl
 217		CPropMinigun                 prop_minigun_l4d1                   models/w_models/weapons/w_minigun.mdl
-218		Infected                     infected                            models/infected/common_male_fallen_survivor_l4d1.mdl
-219		Infected                     infected                            models/infected/common_male_suit.mdl
-220		Infected                     infected                            models/infected/common_male02.mdl
-221		Infected                     infected                            models/infected/common_male02.mdl
-222		CFirstAidKit                 weapon_first_aid_kit                models/v_models/v_medkit.mdl
-223		Infected                     infected                            models/infected/common_police_male01.mdl
-224		CPhysicsProp                 prop_physics                        models/props_junk/gascan001a.mdl
-225		CWeaponSpawn                 weapon_pistol_spawn                 models/w_models/weapons/w_pistol_B.mdl
+218		Infected                     infected                            models/infected/common_female01_suit.mdl
+219		Infected                     infected                            models/infected/common_male02.mdl
+220		Infected                     infected                            models/infected/common_male01.mdl
+221		Infected                     infected                            models/infected/common_police_male01.mdl
+222		Infected                     infected                            models/infected/common_male02.mdl
+223		Infected                     infected                            models/infected/common_military_male01.mdl
+224		Infected                     infected                            models/infected/common_male_suit.mdl
+225		Infected                     infected                            models/infected/common_male01.mdl
 226		CFuncSimpleLadder            func_simpleladder  
 227		CBaseEntity                  func_illusionary  
 228		CFuncSimpleLadder            func_simpleladder  
@@ -226,14 +226,14 @@
 240		CSurvivorRescue              info_survivor_rescue                models/editor/playerstart.mdl
 241		CSurvivorRescue              info_survivor_rescue                models/editor/playerstart.mdl
 242		CSurvivorRescue              info_survivor_rescue                models/editor/playerstart.mdl
-243		Infected                     infected                            models/infected/common_male_suit.mdl
-244		Infected                     infected                            models/infected/common_male01.mdl
-245		Infected                     infected                            models/infected/common_female01_suit.mdl
-246		Infected                     infected                            models/infected/common_female01.mdl
-247		Infected                     infected                            models/infected/common_male02.mdl
-248		Infected                     infected                            models/infected/common_female01_suit.mdl
-249		CPhysicsProp                 prop_physics                        models/props_junk/propanecanister001a.mdl
-250		Infected                     infected                            models/infected/common_police_male01.mdl
+243		Infected                     infected                            models/infected/common_male01.mdl
+244		Infected                     infected                            models/infected/common_female01.mdl
+245		Infected                     infected                            models/infected/common_male01.mdl
+246		Infected                     infected                            models/infected/common_military_male01.mdl
+247		Infected                     infected                            models/infected/common_worker_male01.mdl
+248		Infected                     infected                            models/infected/common_male_suit.mdl
+249		Infected                     infected                            models/infected/common_male01.mdl
+250		CPhysicsProp                 prop_physics                        models/props_junk/propanecanister001a.mdl
 251		CFuncSimpleLadder            func_simpleladder  
 252		CParticleSystem              info_particle_system  
 253		CBaseTrigger                 trigger_hurt  
@@ -314,15 +314,15 @@
 328		CRopeKeyframe                keyframe_rope  
 329		CFuncSimpleLadder            func_simpleladder  
 330		CParticleSystem              info_particle_system  
-331		CPhysicsProp                 prop_physics                        models/props_junk/gascan001a.mdl
-332		CSMG_Silenced                weapon_smg_silenced                 models/v_models/v_silenced_smg.mdl
-333		CPistol                      weapon_pistol                       models/v_models/v_pistolA.mdl
-334		Infected                     infected                            models/infected/common_male02.mdl
-335		CFirstAidKit                 weapon_first_aid_kit                models/v_models/v_medkit.mdl
-336		CRifle_AK47                  weapon_rifle_ak47                   models/v_models/v_rifle_AK47.mdl
+331		Infected                     infected                            models/infected/common_male01.mdl
+332		Infected                     infected                            models/infected/common_military_male01.mdl
+333		Infected                     infected                            models/infected/common_male01.mdl
+334		Infected                     infected                            models/infected/common_worker_male01.mdl
+335		Infected                     infected                            models/infected/common_male01.mdl
+336		Infected                     infected                            models/infected/common_military_male01.mdl
 337		CRopeKeyframe                move_rope  
 338		CRopeKeyframe                keyframe_rope  
-339		CAutoShotgun                 weapon_autoshotgun                  models/v_models/v_autoshotgun.mdl
+339		Infected                     infected                            models/infected/common_female01_suit.mdl
 340		CFuncSimpleLadder            func_simpleladder  
 341		CFuncSimpleLadder            func_simpleladder  
 342		CBasePropDoor                prop_door_rotating                  models/props_doors/doormainmetal01.mdl
@@ -331,6 +331,7 @@
 345		CFuncSimpleLadder            func_simpleladder  
 346		CPhysicsProp                 prop_physics                        models/props_junk/dumpster.mdl
 347		CPhysicsProp                 prop_physics                        models/props_junk/dumpster.mdl
+348		Infected                     infected                            models/infected/common_female01.mdl
 349		CFuncSimpleLadder            func_simpleladder  
 350		CFuncSimpleLadder            func_simpleladder  
 351		CBasePropDoor                prop_door_rotating                  models/props_doors/doormainmetal01.mdl
@@ -415,10 +416,20 @@
 430		CFuncAreaPortalWindow        func_areaportalwindow  
 431		CFuncAreaPortalWindow        func_areaportalwindow  
 432		CFuncBrush                   func_brush  
-433		CSceneEntity                 instanced_scripted_scene  
+433		Infected                     infected                            models/infected/common_female01_suit.mdl
+434		Infected                     infected                            models/infected/common_male02.mdl
 435		CPhysicsProp                 prop_physics                        models/props_junk/garbage_plasticbottle001a.mdl
-449		CWeaponSpawn                 weapon_pipe_bomb_spawn              models/w_models/weapons/w_eq_pipebomb.mdl
-450		CWeaponSpawn                 weapon_vomitjar_spawn               models/w_models/weapons/w_eq_bile_flask.mdl
+436		Infected                     infected                            models/infected/common_female01.mdl
+437		Infected                     infected                            models/infected/common_military_male01.mdl
+438		CFirstAidKit                 weapon_first_aid_kit                models/v_models/v_medkit.mdl
+439		CFirstAidKit                 weapon_first_aid_kit                models/v_models/v_medkit.mdl
+440		CSniper_AWP                  weapon_sniper_awp                   models/v_models/v_snip_awp.mdl
+441		CWeaponSpawn                 weapon_adrenaline_spawn             models/w_models/weapons/w_eq_adrenaline.mdl
+442		CFirstAidKit                 weapon_first_aid_kit                models/v_models/v_medkit.mdl
+443		CSceneEntity                 instanced_scripted_scene  
+445		CRifle_AK47                  weapon_rifle_ak47                   models/v_models/v_rifle_AK47.mdl
+446		CShotgun_SPAS                weapon_shotgun_spas                 models/v_models/v_shotgun_spas.mdl
+453		CWeaponSpawn                 weapon_vomitjar_spawn               models/w_models/weapons/w_eq_bile_flask.mdl
 454		CSprite                      env_sprite                          sprites/glow.vmt
 455		CDynamicProp                 prop_dynamic                        models/props_vehicles/deliveryvan_armored.mdl
 456		CFuncMoveLinear              func_movelinear  
@@ -432,31 +443,30 @@
 464		CFuncSimpleLadder            func_simpleladder  
 465		CFuncSimpleLadder            func_simpleladder  
 466		CFuncSimpleLadder            func_simpleladder  
-467		CWeaponSpawn                 weapon_molotov_spawn                models/w_models/weapons/w_eq_molotov.mdl
 468		CWeaponAmmoSpawn             weapon_ammo_spawn                   models/props/terror/ammo_stack.mdl
 469		CFuncPlayerInfectedClip      func_playerinfected_clip  
+477		CBaseUpgradeItem             upgrade_laser_sight                 models/w_models/Weapons/w_laser_sights.mdl
 487		CFuncPlayerInfectedClip      func_playerinfected_clip  
-489		CWeaponSpawn                 weapon_adrenaline_spawn             models/w_models/weapons/w_eq_adrenaline.mdl
+493		CWeaponSpawn                 weapon_upgradepack_incendiary_spawn  models/w_models/weapons/w_eq_incendiary_ammopack.mdl
 501		CPhysicsProp                 prop_physics                        models/props_interiors/sawhorse.mdl
 507		CPhysicsProp                 prop_physics                        models/props_interiors/sawhorse.mdl
 508		CPhysicsProp                 prop_physics                        models/props_interiors/sawhorse.mdl
 512		CPhysicsProp                 prop_physics                        models/props_interiors/sawhorse.mdl
 513		CPhysicsProp                 prop_physics                        models/props_interiors/sawhorse.mdl
-520		CWeaponSpawn                 weapon_upgradepack_explosive_spawn  models/w_models/weapons/w_eq_explosive_ammopack.mdl
 521		CPhysicsProp                 prop_physics                        models/props_junk/gascan001a.mdl
 522		CPhysicsProp                 prop_physics                        models/props_junk/gascan001a.mdl
 523		CFuncPlayerInfectedClip      func_playerinfected_clip  
 528		CFuncPlayerInfectedClip      func_playerinfected_clip  
 529		CFuncPlayerInfectedClip      func_playerinfected_clip  
-541		CWeaponSpawn                 weapon_molotov_spawn                models/w_models/weapons/w_eq_molotov.mdl
+537		CWeaponSpawn                 weapon_vomitjar_spawn               models/w_models/weapons/w_eq_bile_flask.mdl
+542		CWeaponSpawn                 weapon_pain_pills_spawn             models/w_models/weapons/w_eq_painpills.mdl
 544		CFuncPlayerInfectedClip      func_playerinfected_clip  
-548		CWeaponSpawn                 weapon_adrenaline_spawn             models/w_models/weapons/w_eq_adrenaline.mdl
-555		CWeaponSpawn                 weapon_vomitjar_spawn               models/w_models/weapons/w_eq_bile_flask.mdl
-559		CWeaponSpawn                 weapon_pipe_bomb_spawn              models/w_models/weapons/w_eq_pipebomb.mdl
+549		CWeaponSpawn                 weapon_adrenaline_spawn             models/w_models/weapons/w_eq_adrenaline.mdl
+553		CWeaponSpawn                 weapon_pipe_bomb_spawn              models/w_models/weapons/w_eq_pipebomb.mdl
+561		CWeaponSpawn                 weapon_pipe_bomb_spawn              models/w_models/weapons/w_eq_pipebomb.mdl
 564		CFuncPlayerInfectedClip      func_playerinfected_clip  
-567		CWeaponSpawn                 weapon_vomitjar_spawn               models/w_models/weapons/w_eq_bile_flask.mdl
-568		CWeaponSpawn                 weapon_pain_pills_spawn             models/w_models/weapons/w_eq_painpills.mdl
-571		CWeaponSpawn                 weapon_adrenaline_spawn             models/w_models/weapons/w_eq_adrenaline.mdl
+570		CWeaponSpawn                 weapon_molotov_spawn                models/w_models/weapons/w_eq_molotov.mdl
+574		CWeaponSpawn                 weapon_pistol_magnum_spawn          models/w_models/weapons/w_desert_eagle.mdl
 577		CBaseEntity                  info_target  
 582		CDynamicProp                 prop_dynamic                        models/props_industrial/vehicle_lift01.mdl
 583		CButtonTimed                 func_button_timed  
@@ -539,7 +549,7 @@
 662		CRopeKeyframe                move_rope  
 663		CRopeKeyframe                move_rope  
 664		CRopeKeyframe                move_rope  
-666		CWeaponSpawn                 weapon_spawn                        models/w_models/weapons/w_autoshot_m4super.mdl
+666		CWeaponSpawn                 weapon_spawn                        models/w_models/weapons/w_shotgun_spas.mdl
 667		CWeaponSpawn                 weapon_spawn                        models/w_models/weapons/w_rifle_ak47.mdl
 668		CFuncBrush                   func_brush  
 669		CFuncAreaPortalWindow        func_areaportalwindow  
@@ -550,6 +560,7 @@
 674		CBaseEntity                  env_spark  
 675		CFuncSimpleLadder            func_simpleladder  
 676		CBreakable                   func_breakable  
+677		CWeaponSpawn                 weapon_pain_pills_spawn             models/w_models/weapons/w_eq_painpills.mdl
 684		CFuncSimpleLadder            func_simpleladder  
 685		CBasePropDoor                prop_door_rotating                  models/props_doors/doormainmetal01.mdl
 689		CPhysicsProp                 prop_physics                        models/props_vehicles/cara_95sedan_wrecked.mdl
@@ -559,6 +570,7 @@
 696		CBaseEntity                  info_remarkable  
 697		CBaseEntity                  func_illusionary  
 698		CFuncSimpleLadder            func_simpleladder  
+699		CWeaponSpawn                 weapon_pipe_bomb_spawn              models/w_models/weapons/w_eq_pipebomb.mdl
 704		CPhysicsProp                 prop_physics                        models/props_urban/skylight.mdl
 705		CPhysicsProp                 prop_physics                        models/props_urban/skylight.mdl
 706		CPhysicsProp                 prop_physics                        models/props_urban/skylight.mdl
@@ -583,13 +595,14 @@
 729		CBaseTrigger                 trigger_hurt  
 730		CSprite                      env_sprite                          sprites/glow.vmt
 734		CBreakable                   func_breakable  
-735		CPhysicsProp                 prop_physics                        models/props_junk/gascan001a.mdl
-736		CPhysicsProp                 prop_physics                        models/props_junk/gascan001a.mdl
-744		CWeaponSpawn                 weapon_pain_pills_spawn             models/w_models/weapons/w_eq_painpills.mdl
+745		CPhysicsProp                 prop_physics                        models/props_junk/gascan001a.mdl
+746		CPhysicsProp                 prop_physics                        models/props_junk/gascan001a.mdl
+747		CWeaponSpawn                 weapon_molotov_spawn                models/w_models/weapons/w_eq_molotov.mdl
 748		CSprite                      env_sprite                          sprites/glow.vmt
 749		CSprite                      env_sprite                          sprites/glow.vmt
 750		CBaseTrigger                 trigger_once  
 751		CFuncPlayerInfectedClip      func_playerinfected_clip  
+752		CPhysicsProp                 prop_physics                        models/props_junk/gascan001a.mdl
 756		CFuncSimpleLadder            func_simpleladder  
 757		CFuncSimpleLadder            func_simpleladder  
 758		CFuncSimpleLadder            func_simpleladder  
@@ -606,13 +619,12 @@
 772		CFuncAreaPortalWindow        func_areaportalwindow  
 773		CFuncBrush                   func_brush  
 774		CFuncAreaPortalWindow        func_areaportalwindow  
-777		CWeaponSpawn                 weapon_pain_pills_spawn             models/w_models/weapons/w_eq_painpills.mdl
-778		CWeaponSpawn                 weapon_pistol_magnum_spawn          models/w_models/weapons/w_desert_eagle.mdl
 779		CBaseEntity                  info_remarkable  
 782		CBasePropDoor                prop_door_rotating                  models/props_doors/doormainmetal01.mdl
 784		CFuncSimpleLadder            func_simpleladder  
 785		CBaseEntity                  func_areaportal  
 786		CBaseEntity                  info_remarkable  
+787		CWeaponSpawn                 weapon_pistol_spawn                 models/w_models/weapons/w_pistol_B.mdl
 792		CFuncSimpleLadder            func_simpleladder  
 797		CFuncBrush                   func_brush  
 798		CFuncBrush                   func_brush  
@@ -730,16 +742,15 @@
 942		CBaseTrigger                 trigger_multiple  
 943		CBaseEntity                  info_game_event_proxy  
 944		CBaseEntity                  func_illusionary  
-987		CWeaponSpawn                 weapon_melee_spawn                  models/weapons/melee/w_fireaxe.mdl
-988		CWeaponSpawn                 weapon_melee_spawn                  models/weapons/melee/w_bat.mdl
+987		CWeaponSpawn                 weapon_melee_spawn                  models/weapons/melee/w_cricket_bat.mdl
+988		CWeaponSpawn                 weapon_melee_spawn                  models/weapons/melee/w_frying_pan.mdl
 989		CWeaponSpawn                 weapon_melee_spawn                  models/weapons/melee/w_bat.mdl
-993		CWeaponSpawn                 weapon_melee_spawn                  models/weapons/melee/w_frying_pan.mdl
+991		CWeaponSpawn                 weapon_melee_spawn                  models/weapons/melee/w_bat.mdl
 999		CWeaponSpawn                 weapon_melee_spawn                  models/weapons/melee/w_frying_pan.mdl
-1049		CWeaponSpawn                 weapon_chainsaw_spawn               models/weapons/melee/w_chainsaw.mdl
-1056		CWeaponSpawn                 weapon_spawn                        models/w_models/weapons/w_sniper_awp.mdl
-1057		CWeaponSpawn                 weapon_spawn                        models/w_models/weapons/w_rifle_ak47.mdl
-1058		CWeaponSpawn                 weapon_spawn                        models/w_models/weapons/w_sniper_military.mdl
-1059		CWeaponSpawn                 weapon_melee_spawn                  models/weapons/melee/w_frying_pan.mdl
+1047		CWeaponSpawn                 weapon_chainsaw_spawn               models/weapons/melee/w_chainsaw.mdl
+1056		CWeaponSpawn                 weapon_spawn                        models/w_models/weapons/w_rifle_m16a2.mdl
+1058		CWeaponSpawn                 weapon_spawn                        models/w_models/weapons/w_sniper_awp.mdl
+1059		CWeaponSpawn                 weapon_melee_spawn                  models/weapons/melee/w_tonfa.mdl
 1060		CWeaponSpawn                 weapon_melee_spawn                  models/weapons/melee/w_tonfa.mdl
 1062		CSurvivorPosition            info_survivor_position  
 1063		CSurvivorPosition            info_survivor_position  
@@ -801,5 +812,5 @@
 1146		CFuncBrush                   func_brush  
 1147		CFuncBrush                   func_brush  
 
-Всего энтити 803
+Всего энтити 814
 
